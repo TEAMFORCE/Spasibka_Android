@@ -1,0 +1,46 @@
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Форма (shape) -->
+    <item>
+        <vector
+            android:width="24dp"
+            android:height="24dp"
+            android:tintMode="src_atop"
+            android:viewportWidth="20"
+            android:viewportHeight="20">
+            <path
+                android:pathData="M6,0.6L14,0.6A5.4,5.4 0,0 1,19.4 6L19.4,14A5.4,5.4 0,0 1,14 19.4L6,19.4A5.4,5.4 0,0 1,0.6 14L0.6,6A5.4,5.4 0,0 1,6 0.6z"
+                android:strokeWidth="1.2"
+                android:strokeColor="#EAEAEA" />
+        </vector>
+    </item>
+    <!-- Бекграунд (shape) -->
+    <item>
+        <vector
+            android:width="24dp"
+            android:height="24dp"
+            android:tintMode="src_atop"
+            android:viewportWidth="20"
+            android:viewportHeight="20">
+
+            <path
+                android:name="background"
+                android:pathData="M6,0.6L14,0.6A5.4,5.4 0,0 1,19.4 6L19.4,14A5.4,5.4 0,0 1,14 19.4L6,19.4A5.4,5.4 0,0 1,0.6 14L0.6,6A5.4,5.4 0,0 1,6 0.6z"
+                android:fillColor="#F15929"/>
+        </vector>
+    </item>
+
+    <!-- Вектор -->
+    <item>
+        <vector
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportWidth="20"
+            android:viewportHeight="20">
+            <path
+                android:name="tick"
+                android:fillColor="#ffffff"
+                android:pathData="M16.354,6.854L8.354,14.854C8.307,14.9 8.252,14.937 8.191,14.962C8.131,14.987 8.066,15 8,15C7.934,15 7.869,14.987 7.808,14.962C7.748,14.937 7.692,14.9 7.646,14.854L4.146,11.354C4.052,11.26 4,11.133 4,11C4,10.867 4.052,10.74 4.146,10.646C4.24,10.552 4.367,10.5 4.5,10.5C4.632,10.5 4.76,10.552 4.854,10.646L8,13.793L15.646,6.146C15.74,6.052 15.867,6 16,6C16.132,6 16.26,6.052 16.354,6.146C16.447,6.24 16.5,6.367 16.5,6.5C16.5,6.633 16.447,6.76 16.354,6.854Z" />
+        </vector>
+    </item>
+</layer-list>

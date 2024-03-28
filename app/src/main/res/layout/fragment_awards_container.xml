@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_status_bar"
+    tools:context=".presentation.fragment.awardsScreen.AwardsContainerFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_white_rounded_top"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_centered" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggle_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_16dp"
+            app:checkedButton="@id/all_awards_btn"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableToggleButton
+                android:id="@+id/all_awards_btn"
+                style="@style/ThirdStyleButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hapticFeedbackEnabled="true"
+                android:text="@string/awards_all"
+                android:transitionName="transitionToTemplates" />
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableToggleButton
+                android:id="@+id/my_awards_btn"
+                style="@style/ThirdStyleButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hapticFeedbackEnabled="true"
+                android:text="@string/awards_my"
+                android:transitionName="transitionToTemplates" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    </LinearLayout>
+
+</com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout>

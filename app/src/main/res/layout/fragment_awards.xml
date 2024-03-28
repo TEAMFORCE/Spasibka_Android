@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/whole_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".presentation.fragment.awardsScreen.AwardsFragment">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:animateLayoutChanges="true"
+        android:animationCache="true"
+        android:id="@+id/shimmerLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        app:shimmer_repeat_mode="restart"
+        app:shimmer_clip_to_children="true"
+        app:shimmer_shape="linear">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.chip.Chip
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:textSize="14sp"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                app:chipBackgroundColor="@color/shimmerColor"
+                android:textColor="@color/shimmerColor"
+                tools:text="Победители"
+                android:textAppearance="@style/StandardText3Medium.Black"
+                app:chipMinTouchTargetSize="40dp"
+                android:layout_marginEnd="10dp"
+                android:elevation="8dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize30Percent"/>
+
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:textSize="14sp"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                app:chipBackgroundColor="@color/shimmerColor"
+                android:textColor="@color/shimmerColor"
+                tools:text="Победители"
+                android:textAppearance="@style/StandardText3Medium.Black"
+                app:chipMinTouchTargetSize="40dp"
+                android:elevation="8dp"
+                android:layout_marginEnd="10dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize30Percent"/>
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:textSize="14sp"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                app:chipBackgroundColor="@color/shimmerColor"
+                android:textColor="@color/shimmerColor"
+                tools:text="Победители"
+                android:textAppearance="@style/StandardText3Medium.Black"
+                app:chipMinTouchTargetSize="40dp"
+                android:elevation="8dp"
+                android:layout_marginEnd="10dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize30Percent"/>
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:textSize="14sp"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                app:chipBackgroundColor="@color/shimmerColor"
+                android:textColor="@color/shimmerColor"
+                tools:text="Победители"
+                android:textAppearance="@style/StandardText3Medium.Black"
+                app:chipMinTouchTargetSize="40dp"
+                android:elevation="8dp"
+                android:layout_marginEnd="10dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize30Percent"/>
+        </LinearLayout>
+
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <com.teamforce.thanksapp.presentation.theme.ThemableTabLayout
+        android:id="@+id/tabGroup"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/transparent"
+        android:overScrollMode="always"
+        app:singleSelection="true"
+        app:tabGravity="start"
+        android:visibility="gone"
+        android:paddingHorizontal="@dimen/margin_16dp"
+        app:tabIndicatorColor="@null"
+        app:tabMinWidth="55dp"
+        app:tabMode="scrollable"
+        app:tabPaddingEnd="4dp"
+        app:tabPaddingStart="4dp"
+        app:tabRippleColor="@null"
+        app:tabTextAppearance="@style/StandardText3Medium.Black">
+
+
+    </com.teamforce.thanksapp.presentation.theme.ThemableTabLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <include
+        android:id="@+id/empty_list_layout"
+        layout="@layout/empty_list" />
+
+</LinearLayout>

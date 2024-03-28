@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/margin_16dp"
+    android:paddingTop="30dp"
+    tools:context=".presentation.fragment.dialogFragments.CustomDialogFragment">
+
+    <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+        android:id="@+id/title"
+        style="@style/Headline6Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        tools:text="@string/onboarding_join_to_community"
+        android:textAlignment="center" />
+
+    <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrastSecondary
+        android:id="@+id/subtitle"
+        style="@style/StandardText3.Gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        tools:text="@string/onboarding_join_to_community_refresh"
+        android:textAlignment="center" />
+
+
+    <com.teamforce.thanksapp.presentation.theme.ThemableDefaultButton
+        android:id="@+id/continue_btn"
+        style="@style/DefaultButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/background_active_and_disabled_btn"
+        android:elevation="20dp"
+        android:paddingVertical="17dp"
+        android:stateListAnimator="@null"
+        android:text="@string/yes"
+        tools:text="Перейти"
+        android:textAllCaps="true" />
+
+    <com.teamforce.thanksapp.presentation.theme.ThemableNotFilledButton
+        android:id="@+id/cancel_button"
+        style="@style/NotFilledButton.White"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/general_background"
+        android:paddingVertical="17dp"
+        android:text="@string/onboarding_cancel"
+        android:textAllCaps="true"
+        android:textColor="@color/general_contrast" />
+
+</LinearLayout>

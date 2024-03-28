@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/stat_card"
+    app:cardCornerRadius="12dp"
+    android:layout_marginVertical="4dp"
+    app:cardBackgroundColor="@color/general_brand"
+    tools:cardBackgroundColor="@color/general_brand">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/stat_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Командная работа"
+            android:layout_marginEnd="4dp"
+            style="@style/SmallText2.White"/>
+
+        <TextView
+            android:id="@+id/stat_percent_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="12%"
+            style="@style/SmallText2.White"/>
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_status_bar"
+    tools:context=".presentation.fragment.benefitCafeScreen.reviews.ReviewsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_white_rounded_top"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_offset" />
+
+        <include
+            android:id="@+id/error"
+            layout="@layout/error_internet_connection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/margin_16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="horizontal">
+
+                        <com.teamforce.thanksapp.presentation.customViews.RatingBarSvg
+                            android:id="@+id/rating_bar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="12dp"
+                            android:isIndicator="true"
+                            android:numStars="5"
+                            android:progressDrawable="@drawable/custom_ratingbar"
+                            android:rating="0"
+                            android:stepSize="0.1" />
+
+
+                        <TextView
+                            android:id="@+id/rating_tv"
+                            style="@style/Headline6Bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="end"
+                            android:text="0.0 / 5" />
+                    </LinearLayout>
+
+                    <com.teamforce.thanksapp.presentation.theme.ThemableSecondaryButton
+                        android:id="@+id/create_review_btn"
+                        style="@style/DefaultButtonSecondary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:text="@string/reviews_create_review" />
+
+                    <com.teamforce.thanksapp.presentation.theme.ThemableTextViewMainBrandColor
+                        android:id="@+id/view_my_review_tv"
+                        style="@style/StandardText3Medium.Black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        tools:text="@string/reviews_check_review"
+                        android:textColor="@color/general_brand" />
+
+                    <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrastSecondary
+                        android:id="@+id/need_buy_product"
+                        style="@style/SmallText2Inter.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:text="@string/reviews_check_need_buy_product"
+                        android:textColor="@color/general_contrast_secondary" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/reviews_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:paddingTop="10dp"
+                        android:visibility="gone"
+                        tools:listitem="@layout/item_review" />
+
+                </LinearLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/state_info_tv"
+        style="@style/StandardText4Medium.Black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/reviews_empty_list"
+        android:visibility="visible"/>
+
+
+</com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout>

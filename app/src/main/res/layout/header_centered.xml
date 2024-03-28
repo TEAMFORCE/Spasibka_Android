@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.google.android.material.appbar.MaterialToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    style="@style/Theme.ThanksApp.PopupOverlay"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@drawable/background_white_rounded_top"
+    app:navigationIcon="@drawable/arrow_left"
+    app:titleTextAppearance="@style/StandardText4Inter.Black"
+    app:title="@string/feed_label"
+    app:titleCentered="true"
+    app:titleTextColor="@color/black">
+
+    <ImageView
+        android:id="@+id/filter_iv"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="end"
+        android:visibility="gone"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/sort_icon"/>
+
+</com.google.android.material.appbar.MaterialToolbar>
+
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:rippleColor="@color/general_background_light"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/backgroundSnackBar"
+    app:cardCornerRadius="8dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="14dp">
+    <ImageView
+        android:id="@+id/image_snackBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/wifi_off"
+        android:layout_marginEnd="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAppearance="@style/StandardText3.White"
+        android:text="@string/networkError"/>
+</LinearLayout>
+</com.google.android.material.card.MaterialCardView>

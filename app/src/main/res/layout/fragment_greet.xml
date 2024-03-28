@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.fragment.auth.GreetFragment">
+
+
+    <ImageView
+        android:id="@+id/greet_logo_iv"
+        android:layout_width="166dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="33dp"
+        android:src="@drawable/ic_logo_text_black" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_wallet" />
+
+    <TextView
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/login_title"
+        android:textAlignment="center"
+        android:textAppearance="@style/Headline6Bold" />
+
+
+    <com.teamforce.thanksapp.presentation.theme.ThemableDefaultButton
+        android:id="@+id/button"
+        style="@style/DefaultButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="25dp"
+        android:paddingVertical="17dp"
+        android:text="@string/enter"
+        android:textAllCaps="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/margin_16dp"
+        android:orientation="horizontal">
+
+        <com.teamforce.thanksapp.presentation.theme.ThemableCheckBox
+            android:id="@+id/check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"/>
+
+
+        <TextView
+            android:id="@+id/privacy_policy_and_user_agreement_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:layout_marginVertical="7dp"
+            android:elegantTextHeight="true"
+            android:textAppearance="@style/VerySmallText1.Black"
+            android:textColor="@color/general_brand"
+            tools:text="Согласен с Политикой конфиденциальности и условиями Пользовательского соглашения" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

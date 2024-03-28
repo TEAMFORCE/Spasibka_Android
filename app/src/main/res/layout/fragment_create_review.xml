@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.fragment.benefitCafeScreen.reviews.CreateReviewFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:scrollbars="none"
+        android:overScrollMode="always"
+        android:transitionName="transitionToCreateChallenge">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:backgroundTint="@color/general_background"
+            android:orientation="vertical"
+            android:paddingTop="12dp">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/screen_title_tv"
+                    style="@style/StandardText4Medium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/create_review_title_create" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearTextFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp">
+
+                <com.teamforce.thanksapp.presentation.customViews.RatingBarSvg
+                    android:id="@+id/rating_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:progressDrawable="@drawable/custom_ratingbar"
+                    android:rating="0"
+                    android:stepSize="1"
+                    android:numStars="5"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/rating_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    style="@style/SmallText2Inter.Black"
+                    tools:text="Хороший товар"/>
+
+                <com.teamforce.thanksapp.presentation.theme.ThemableTextInputLayoutOutlined
+                    android:id="@+id/descriptionTextField"
+                    style="@style/OutlinedRoundedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="16dp"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:boxStrokeColor="@color/general_color_grey"
+                    app:boxStrokeWidth="0.5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/description_et"
+                        style="@style/TextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top|start"
+                        android:hint="@string/description"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:minLines="6"
+                        android:maxLength="1000"
+                        android:scrollbars="vertical" />
+
+                </com.teamforce.thanksapp.presentation.theme.ThemableTextInputLayoutOutlined>
+
+
+
+
+                <com.teamforce.thanksapp.presentation.customViews.photoSelectionView.PhotoSelectionView
+                    android:id="@+id/photo_selection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"/>
+
+
+                <com.teamforce.thanksapp.presentation.theme.ThemableDefaultButton
+                    android:id="@+id/create_btn"
+                    style="@style/DefaultButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="17dp"
+                    android:text="@string/create_review_title_create" />
+
+                <com.teamforce.thanksapp.presentation.theme.ThemableNotFilledButton
+                    android:id="@+id/close_btn"
+                    style="@style/NotFilledButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="0dp"
+                    android:paddingVertical="17dp"
+                    android:stateListAnimator="@null"
+                    android:text="@string/create_review_refuse"
+                    app:strokeWidth="0dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.teamforce.thanksapp.presentation.theme.ThemableDefaultButton
+        android:id="@+id/create_btn_sticky"
+        style="@style/DefaultButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="16dp"
+        android:paddingVertical="17dp"
+        android:text="@string/create"
+        android:visibility="gone" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

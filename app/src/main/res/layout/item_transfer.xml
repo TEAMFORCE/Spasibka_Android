@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:strokeColor="@color/superLightGray"
+    app:strokeWidth="1dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:id="@+id/standard_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="12dp"
+        android:animateLayoutChanges="true"
+        android:clickable="false"
+        android:focusable="false"
+        android:visibility="visible"
+        android:orientation="horizontal">
+
+        <com.teamforce.thanksapp.presentation.customViews.AvatarView.AvatarView
+            android:id="@+id/avatar_av"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            app:avatarViewInitialsBackgroundColor="@color/general_brand"/>
+
+        <com.teamforce.thanksapp.presentation.theme.ThemableShapeableImageView
+            android:id="@+id/icon_siv"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            tools:background="@color/general_brand_secondary"
+            app:contentPadding="6dp"
+            tools:src="@drawable/ic_challenge_badge"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"/>
+
+        <TextView
+            android:id="@+id/tgNameUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:textAppearance="@style/Body2"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/transfer_icon_iv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/header"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:maxLines="3"
+                    tools:text="Покупка бенефита"
+                    android:textAppearance="@style/StandardText3Inter.Black" />
+
+                <TextView
+                    android:id="@+id/date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="07.11.2023"
+                    style="@style/SmallText2.Gray" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_gravity="start"
+                android:maxLines="3"
+                tools:text="Вы отправили 1 спасибку Андрею Иванченко, он очень рад"
+                android:textAppearance="@style/SmallText2Medium.Black" />
+        </LinearLayout>
+
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/status_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/minor_success"
+            app:cardCornerRadius="24dp"
+            app:layout_constraintStart_toEndOf="@+id/transfer_icon_iv"
+            app:layout_constraintTop_toBottomOf="@+id/message">
+
+            <TextView
+                android:id="@+id/status_transfer_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/minor_success"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="2dp"
+                android:textAppearance="@style/VerySmallText1.White" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:id="@+id/valueTransfer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/refuse_transaction_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:layout_marginTop="-3dp"
+            android:layout_marginStart="6dp"
+            android:src="@drawable/ic__cross_red"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

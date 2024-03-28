@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_status_bar"
+    tools:context=".presentation.fragment.benefitCafeScreen.reviews.ReviewDetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_white_rounded_top"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_offset" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="@dimen/margin_16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/superLightGray">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+                    <com.teamforce.thanksapp.presentation.customViews.AvatarView.AvatarView
+                        android:id="@+id/user_avatar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:useGradient="true"
+                        app:avatarViewBorderWidth="0dp"
+                        tools:background="@color/black"
+                        app:avatarViewInitialsBackgroundGradientColorStart="@color/general_brand"
+                        app:avatarViewInitialsBackgroundGradientColorEnd="@color/general_brand_secondary"
+                        app:avatarViewInitialsTextColor="@color/white"
+                        app:avatarViewInitialsTextSize="16sp"
+                        app:avatarViewInitialsTextSizeRatio="0.33"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:avatarViewInitialsTextStyle="bold"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="12dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/user_name_label_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/StandardText4Inter.Black"
+                            android:maxLines="2"
+                            tools:text="Дмитрий Малков"/>
+
+                        <com.teamforce.thanksapp.presentation.customViews.RatingBarSvg
+                            android:id="@+id/rating_bar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="true"
+                            android:progressDrawable="@drawable/custom_ratingbar"
+                            android:rating="4"
+                            android:stepSize="1"
+                            android:numStars="5"
+                            android:layout_gravity="start" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/date_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dateTime"
+                        android:textAppearance="@style/SmallText2Inter.Black"
+                        android:textColor="@color/general_contrast_secondary" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="52dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/review_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/SmallText2.Black"
+                        tools:text="Качество футболки хорошее,но размер не подошёл, слишком большая, перезаказала на размер меньше."/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/image_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        android:paddingVertical="24dp"
+                        android:paddingHorizontal="@dimen/margin_16dp"
+                        android:clipToPadding="false"
+                        tools:listitem="@layout/item_general_image"
+                        android:orientation="horizontal"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <com.teamforce.thanksapp.presentation.theme.ThemableTextViewMinorInfo
+                        android:id="@+id/edit_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        style="@style/StandardText3Medium.Black"
+                        android:textColor="@color/minor_info"
+                        android:layout_marginEnd="12dp"
+                        android:text="@string/review_detail_edit"/>
+
+                    <com.teamforce.thanksapp.presentation.theme.ThemableTextViewMinorErrorColor
+                        android:id="@+id/delete_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        style="@style/StandardText3Medium.Black"
+                        android:textColor="@color/minor_error"
+                        android:text="@string/review_detail_delete"/>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout>

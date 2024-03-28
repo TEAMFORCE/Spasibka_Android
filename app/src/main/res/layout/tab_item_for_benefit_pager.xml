@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/card_background_benefit_category"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:cardCornerRadius="100dp"
+        android:layout_gravity="center"
+        android:background="@color/minor_info_secondary"
+        android:tint="@color/general_brand"
+        app:contentPadding="20dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_benefit_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:lines="2"
+        android:textAppearance="@style/SmallText2.Black"/>
+
+</LinearLayout>

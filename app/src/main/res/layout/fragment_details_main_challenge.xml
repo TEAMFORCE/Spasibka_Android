@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/all_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.fragment.challenges.DetailsMainChallengeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:visibility="visible">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/image_slider_vp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
+
+            <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                android:id="@+id/dots_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="40dp"
+                android:visibility="gone"
+                app:dotsColor="@color/general_brand_secondary"
+                app:dotsCornerRadius="8dp"
+                app:dotsSize="8dp"
+                app:dotsSpacing="4dp"
+                app:dotsWidthFactor="2.5"
+                app:progressMode="true"
+                app:selectedDotColor="@color/general_brand" />
+
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginTop="30dp"
+                android:background="@color/transparent"
+                android:elevation="0dp"
+                android:theme="@style/ToolBarStyle"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="enterAlways"
+                app:navigationIcon="@drawable/arrow_left"
+                app:navigationIconTint="@color/general_background">
+
+                <ImageView
+                    android:id="@+id/iv_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="@dimen/margin_16dp"
+                    android:src="@drawable/ic_share_outline"
+                    android:visibility="gone"
+                    app:tint="@color/general_background" />
+
+                <ImageView
+                    android:id="@+id/iv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="@dimen/margin_16dp"
+                    android:src="@drawable/ic_edit"
+                    android:visibility="gone"
+                    app:tint="@color/general_background" />
+
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <com.teamforce.thanksapp.presentation.customViews.reactionLayout.ReactionLayout
+                android:id="@+id/reaction_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="96dp"
+                android:paddingHorizontal="@dimen/margin_16dp"
+                tools:visibility="invisible" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_white_rounded_top"
+        android:orientation="vertical"
+        app:behavior_overlapTop="25dp"
+        tools:layout_behavior=""
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:visibility="gone"
+            android:animationCache="true"
+            app:shimmer_clip_to_children="true"
+            app:shimmer_repeat_mode="restart"
+            app:shimmer_shape="linear">
+
+            <include layout="@layout/placeholder_challenge_data"/>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="false"
+            android:fillViewport="true"
+            android:overScrollMode="always"
+            android:scrollbars="vertical"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:context=".presentation.fragment.challenges.fragmentsViewPager2.DetailsInnerChallengeFragment">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                    android:id="@+id/name_challenge"
+                    style="@style/Headline6Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:autoSizeMaxTextSize="20dp"
+                    android:autoSizeMinTextSize="16sp"
+                    android:autoSizeTextType="uniform"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    tools:text="Новогодний адвент-челлендж Дед Мороз поздравляет  всех с праздником" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                        android:id="@+id/subtitle_tv"
+                        style="@style/SmallText2.Black"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/detail_challenge_subtitle"
+                        tools:text="Челлендж в цепочке заданий \n Аттетстация продукта" />
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@color/superLightGray"
+                        app:strokeWidth="1dp">
+
+                        <TextView
+                            android:id="@+id/challenge_type_tv"
+                            style="@style/VerySmallText1Medium.Gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="8dp"
+                            android:layout_marginVertical="6dp"
+                            tools:text="Голосование" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:minHeight="131dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/prizeFund_cardView"
+                        android:layout_width="0dp"
+                        android:layout_height="104dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@color/superLightGray"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <com.teamforce.thanksapp.presentation.theme.ThemableImageVIewIcon
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:src="@drawable/ic_logo"
+                                    android:tint="@color/general_brand" />
+
+                                <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                                    android:id="@+id/prizeFund_text"
+                                    style="@style/VerySmallText1.Gray"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:breakStrategy="balanced"
+                                    android:text="@string/prizeFund" />
+                            </LinearLayout>
+
+
+                            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                                android:id="@+id/prizeFund_value"
+                                style="@style/SmallText2.Black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:autoSizeMaxTextSize="12dp"
+                                android:autoSizeMinTextSize="10sp"
+                                android:autoSizeTextType="uniform"
+                                android:maxLines="1"
+                                tools:text="12 спасибок" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/dateEnd_cardView"
+                        android:layout_width="0dp"
+                        android:layout_height="104dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@color/superLightGray"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <com.teamforce.thanksapp.presentation.theme.ThemableImageVIewIcon
+                                    android:id="@+id/date_end_iv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="6dp"
+                                    android:src="@drawable/ic_clock" />
+
+                                <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                                    android:id="@+id/dateEnd_text"
+                                    style="@style/VerySmallText1.Gray"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:autoSizeMaxTextSize="10dp"
+                                    android:autoSizeMinTextSize="8sp"
+                                    android:autoSizeTextType="uniform"
+                                    android:maxLines="2"
+                                    android:text="@string/dateEnd" />
+
+                            </LinearLayout>
+
+                            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                                android:id="@+id/dateEnd_value"
+                                style="@style/SmallText2.Black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:autoSizeMaxTextSize="12dp"
+                                android:autoSizeMinTextSize="10sp"
+                                android:autoSizeTextType="uniform"
+                                android:maxLines="1"
+                                tools:text="12 ноября 2023" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/prizePool_cardView"
+                        android:layout_width="0dp"
+                        android:layout_height="104dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@color/superLightGray"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <com.teamforce.thanksapp.presentation.theme.ThemableImageVIewIcon
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="6dp"
+                                    android:src="@drawable/ic_gift" />
+
+                                <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                                    android:id="@+id/prizePool_text"
+                                    style="@style/VerySmallText1.Gray"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/PrizePool" />
+                            </LinearLayout>
+
+
+                            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                                android:id="@+id/prizePool_value"
+                                style="@style/SmallText2.Black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:autoSizeMaxTextSize="12dp"
+                                android:autoSizeMinTextSize="10sp"
+                                android:autoSizeTextType="uniform"
+                                android:maxLines="1"
+                                tools:text="14/100" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/date_start_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/superLightGray"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="horizontal">
+
+
+                        <com.teamforce.thanksapp.presentation.theme.ThemableImageVIewIcon
+                            android:id="@+id/date_start_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="6dp"
+                            android:src="@drawable/ic_clock" />
+
+                        <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                            android:id="@+id/date_start_text"
+                            style="@style/VerySmallText1.Gray"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="@string/dateStart" />
+
+
+                        <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrastSecondary
+                            android:id="@+id/date_start_value"
+                            style="@style/SmallText2.Black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            tools:text="12 ноября 2023" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/challenge_organizer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:visibility="visible"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/superLightGray"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:orientation="horizontal">
+
+                        <com.teamforce.thanksapp.presentation.customViews.AvatarView.AvatarView
+                            android:id="@+id/user_avatar"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="12dp"
+                            app:avatarViewInitialsBackgroundGradientColorEnd="@color/general_brand_secondary"
+                            app:avatarViewInitialsBackgroundGradientColorStart="@color/general_brand"
+                            app:avatarViewInitialsTextColor="@color/white"
+                            app:avatarViewInitialsTextSize="16sp"
+                            app:avatarViewInitialsTextSizeRatio="0.33"
+                            app:avatarViewInitialsTextStyle="bold"
+                            app:useGradient="true" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                                android:id="@+id/user_name_label_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ownerChallenge"
+                                android:textAppearance="@style/StandardText3Inter.Gray" />
+
+
+                            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewMainBrandColor
+                                android:id="@+id/user_tg_name"
+                                style="@style/StandardText3.Black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                tools:text="Дмитрий Малков" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                    android:id="@+id/descriptionChallenge"
+                    style="@style/SmallText2.Black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:autoLink=""
+                    tools:text="Давайте проведем часть времени в активном спортивногом состоянии. Предлагаю всем в течении недели пройти 100 км или пробежать. Кто сможет - получить форсики. Ждy" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:minHeight="104dp" />
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/action_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="@dimen/margin_16dp"
+        android:paddingBottom="40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/result_btn"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@color/minor_info_secondary"
+            android:src="@drawable/clipboard"
+            app:contentPadding="8dp"
+            app:cornerRadius="16dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize30Percent" />
+
+        <com.teamforce.thanksapp.presentation.theme.ThemableDefaultButton
+            android:id="@+id/send_report_btn"
+            style="@style/DefaultButton"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="10dp"
+            android:textSize="12sp"
+            android:layout_weight="3"
+            android:enabled="true"
+            android:letterSpacing="-0.031"
+            android:text="@string/sendReport" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

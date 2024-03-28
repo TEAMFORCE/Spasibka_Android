@@ -1,0 +1,918 @@
+<resources>
+    <!-- Vk SDK -->
+
+    <integer name="com_vk_sdk_AppId">51712859</integer>
+    <string name="vk_client_secret" translatable="false">sPT3B7GaT27R1zaB5uwN</string>
+    <string name="vk_account_manager_id" translatable="false">com.teamforce.thanksapp.account</string>
+    <!-- VK (OAuth) for external services: Use template vk<com_vk_sdk_AppId>://vk.com -->
+    <string name="vk_external_oauth_redirect_url" translatable="false">vk51712859://vk.com</string>
+
+    <!-- Commons -->
+
+    <string name="required_field">Обязательное поле</string>
+    <string name="empty_search_result">По вашему запросу\nникого не нашли</string>
+
+    <!-- Main Activity -->
+    <string name="main_activity_invite_to_org">Перейти в сообщество %1$s?</string>
+    <string name="main_activity_create_period">Период не был создан, перейти к созданию периода?</string>
+
+    <!-- Greeting Fragment -->
+    <string name="agree_with">Согласен с</string>
+    <string name="privacy_policy_greeting">Политикой конфиденциальности</string>
+    <string name="user_agreement_greeting">Пользовательского соглашения</string>
+    <string name="and_conditions">и условиями</string>
+
+    <!-- Вход и аутентификация -->
+    <string name="app_name">TeamForce360</string>
+    <string name="go_to_telegram">Go to Telegram</string>
+    <string name="input_login_message">Для входа введите имя пользователя</string>
+    <string name="telegram">Telegram</string>
+    <string name="enter">Войти</string>
+    <string name="go_to_telegram_message">Или войдите через телеграм-бот</string>
+    <string name="input_code">Введите код подтверждения</string>
+    <string name="code">Код подтверждения</string>
+    <string name="check">Проверить</string>
+    <string name="Toast_verifyCode_hintTg">Код отправлен в телеграм</string>
+    <string name="Toast_verifyCode_hintEmail">Код отправлен на указанную электронную почту</string>
+    <string name="helperTextAboutTg">Перейдите в диалог с ботом %s напишите команду /start, после чего повторите процедуру аутентификации</string>
+    <string name="helperTextAboutEmail">Проверьте папку "Спам" и правильность введенного адреса электронной почты %s</string>
+    <string name="chooseOrg">Выбрать сообщество</string>
+    <string name="helperTextStandard">Не пришел код?</string>
+    <string name="helperLink"><u>Повторить процедуру аутентификации</u></string>
+    <string name="auth_label">Введите логин</string>
+    <string name="get_code_button_label">Получить код</string>
+    <string name="confirmation_code_label">Введите код подтверждения</string>
+    <string name="incorrect_code">Неверный код</string>
+    <string name="auth">Авторизация</string>
+    <string name="login_title">Спасибка</string>
+    <string name="login_prompt_for_login_field">Введите адрес электронной почты, имя пользователя Telegram или Telegram ID</string>
+    <!-- Смена организации -->
+    <string name="continue_without_change_org">Назад</string>
+    <string name="changeOrg">Смена сообщества</string>
+
+    <!-- OnBoarding -->
+    <string name="onboarding_create_community">Создать сообщество</string>
+    <string name="onboarding_invite_members">Пригласить участников</string>
+    <string name="onboarding_join">Присоединиться</string>
+    <string name="onboarding_step_1_title">Сообщества</string>
+    <string name="onboarding_step_1_subtitle">Создавайте сообщество, приглашайте друзей и присоединяйтесь к другим!</string>
+    <string name="onboarding_step_ordering_1">Шаг 1/2</string>
+    <string name="onboarding_step_ordering_2">Шаг 2/2</string>
+    <string name="onboarding_step_2_title">Настройки периода</string>
+    <string name="onboarding_step_2_subtitle">Начните работу со стандартными настройками или заполните вручную</string>
+    <string name="onboarding_launch_the_period">Запустить период</string>
+    <string name="onboarding_date_start_period">Дата начала периода</string>
+    <string name="onboarding_date_end_period">Дата окончания периода</string>
+    <string name="onboarding_start_balance">Стартовый баланс</string>
+    <string name="onboarding_start_admin_balance">Стартовый баланс создателя</string>
+    <string name="onboarding_settings_auto">Настроить автоматически</string>
+    <string name="onboarding_settings_manually">Настроить вручную</string>
+    <string name="onboarding_congratulations">Поздравляем!</string>
+    <string name="onboarding_last_screen_subtitle">Вы завершили основные настройки сообщества</string>
+    <string name="onboarding_last_screen_go_to_main_screen">Перейти на главный экран</string>
+    <string name="onboarding_fill_data_about_community">Заполните данные о сообществе</string>
+    <string name="onboarding_join_to_community">Присоединитесь к сообществу</string>
+    <string name="onboarding_join_to_community_refresh">*Возможен перезапуск приложения, при переходе в новое сообщество</string>
+    <string name="onboarding_name_org">Название</string>
+    <string name="onboarding_cancel">Отменить</string>
+    <string name="onboarding_continue">Продолжить</string>
+    <string name="onboarding_fill_date_need">Обязательные поля не заполнены</string>
+    <string name="onboarding_close">Закрыть</string>
+    <string name="onboarding_invitation_key">Ссылка для приглашения</string>
+    <string name="onboarding_invitation_title">Пригласить участников в сообщество "%1$s?</string>
+    <string name="onboarding_invitation_error">Вы не являетесь администратором текущего сообщества</string>
+    <string name="onboarding_invitation_title_shimmer">Генерация ссылки-приглашения</string>
+    <string name="onboarding_launched_period_successfully">Период успешно запущен</string>
+
+
+    <!-- Profile Fragment -->
+    <string name="username_label">ФИО</string>
+    <string name="profile_location_label">Местоположение</string>
+    <string name="tg_label">Telegram ID</string>
+    <string name="greeting_label">Привет, %s!</string>
+    <string name="greeting_name">%s %s</string>
+    <string name="legal_label">Юр.Лицо</string>
+    <string name="department_label">Подразделение</string>
+    <string name="position_label">Должность</string>
+    <string name="hired_label">Дата начала работы</string>
+    <string name="role_label">Роль</string>
+    <string name="mobile_label">Мобильный номер</string>
+    <string name="day_of_birth">День рождения</string>
+    <string name="status">Статус</string>
+    <string name="email_label">Почта</string>
+    <string name="company_label">Компания</string>
+    <string name="rate_label">Индекс вовлечённости</string>
+    <string name="lastAuth">Последний вход %s в %s</string>
+    <string name="userFio">%s %s %s</string>
+    <string name="placeJob">Место работы</string>
+    <string name="rateForCurrentPeriod">Индекс вовлечённости за текущий период</string>
+    <string name="information">Информация</string>
+    <string name="wouldYouLikeToExit">Выйти из профиля?</string>
+    <string name="wouldYouLikeToChangeOrg">Сменить сообщество?</string>
+    <string name="accept">Да</string>
+    <string name="decline">Нет</string>
+    <string name="whatEditInProfile">Что именно вы хотите отредактировать?</string>
+    <string name="explainingAboutPermissions">Вы не дали нам достаточно разрешений.
+        Данные разрешения нам нужны для работы с медиа.
+        Вы можете разрешить их в настройках телефона.</string>
+    <string name="currentOrganisation">Текущее сообщество</string>
+    <string name="explainingAboutPermissionsRational">
+        Вы не дали нам достаточно разрешений для работы.
+        Данные разрешения нам нужны для работы с медиа.
+        Запросить разрешения повторно?</string>
+    <string name="wouldYouLikeToSaveImage"> Сохранить изображение?
+        </string>
+    <string name="avatar">Аватар</string>
+    <string name="settings">Настройки</string>
+    <string name="stringData">Личную информацию</string>
+    <string name="exit">Выйти</string>
+    <string name="close">Закрыть</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="location">Местоположение</string>
+    <string name="address">Адрес</string>
+    <string name="copied">Скопировано</string>
+    <string name="profile_postfix_year">г.</string>
+
+
+    <!-- Edit Profile Bottom Sheet Fragment -->
+    <string name="edit_profile_fill_in_the_profile_data">Ууупс, для корректной работы системы необходимо заполнить профиль пользователя</string>
+    <string name="edit_profile_go_to_settings">Перейти в настройки</string>
+    <string name="edit_profile_close">Закрыть</string>
+    <string name="edit_profile_hide_year_of_birth">Скрывать год рождения</string>
+    <string name="edit_profile_title">Редактирование профиля</string>
+    <string name="edit_profile_contacts">КОНТАКТЫ</string>
+    <string name="edit_profile_save">Сохранить</string>
+    <string name="edit_profile_surname">Фамилия</string>
+    <string name="edit_profile_surname_enter">Введите фамилию</string>
+    <string name="edit_profile_firstname">Имя</string>
+    <string name="edit_profile_firstname_enter">Введите имя</string>
+    <string name="edit_profile_middle_name">Отчество</string>
+    <string name="edit_profile_middle_name_enter">Введите отчество</string>
+    <string name="edit_profile_birthday">День рождения</string>
+    <string name="edit_profile_gender">Пол</string>
+    <string name="edit_profile_invalidNumber">Некорректный номер</string>
+    <string name="edit_profile_invalidEmail">Некорректная почта</string>
+    <string name="edit_profile_downloadingANewAvatar">Загрузка нового аватара</string>
+    <string name="edit_profile_fieldsMustBeFilledInCorrectly">Поля должны быть корректно заполнены</string>
+    <string name="edit_profile_office">В офисе</string>
+    <string name="edit_profile_vacation">Отпуск</string>
+    <string name="edit_profile_remote">Удалённо</string>
+    <string name="edit_profile_sickLeave">На больничном</string>
+    <string name="edit_profile_work">Работает</string>
+    <string name="edit_profile_format_work">Формат работы</string>
+    <string name="edit_profile_status">Статус</string>
+    <string name="edit_profile_male">Мужской</string>
+    <string name="edit_profile_female">Женский</string>
+    <!-- Settings Profile Fragment -->
+    <string name="aboutApp">О приложении</string>
+    <string name="help">Помощь</string>
+    <string name="versionOfApp">Версия приложения</string>
+    <string name="versionOfOS">Версия операционной системы</string>
+    <string name="modelPhone">Модель устройства</string>
+    <string name="domen">Домен</string>
+    <string name="region">Регион</string>
+    <string name="privacyPolicy">Политика конфиденциальности</string>
+    <string name="userAgreement">Пользовательское соглашение</string>
+    <string name="general">Общие</string>
+    <string name="language">Язык</string>
+    <string name="russian">Русский</string>
+    <string name="english">Английский</string>
+    <string name="likeTheSystem">Как в системе</string>
+    <string name="current">Текущий</string>
+    <string name="settings_organizations">Сообщества</string>
+    <string name="settings_create_organization">Создать сообщество</string>
+    <string name="settings_go_to_organization">Перейти в сообщество \"%1$s\"?</string>
+    <string name="settings_go_to">Перейти</string>
+    <string name="settings_negative">Отменить</string>
+    <!-- Someones Profile Fragment -->
+    <string name="someone_profile_call_dialog_title">Позвонить</string>
+    <string name="someone_profile_call_dialog_subtitle">Хотите позвонить по номеру %1$s?</string>
+    <string name="someone_profile_call_dialog_positive_btn">Позвонить</string>
+    <string name="someone_profile_dialog_negative_btn">Отменить</string>
+
+    <string name="someone_profile_email_dialog_title">Написать сообщение</string>
+    <string name="someone_profile_email_dialog_subtitle">Хотите отправить сообщение по адресу %1$s?</string>
+    <string name="someone_profile_email_dialog_positive_btn">Написать</string>
+    <string name="someone_profile_email_dialog_negative_btn">Отменить</string>
+
+
+    <!-- Create Organization Fragment -->
+    <string name="create_organization_title">Создание сообщества</string>
+    <string name="create_organization_btn_text">Создать</string>
+    <string name="create_organization_select_dates">Выбор дат периода</string>
+
+    <!-- New Transaction Fragment -->
+    <string name="new_transaction_result_title">Спасибо!</string>
+    <string name="new_transaction_result_subtitle"> Ваш перевод в обработке</string>
+    <string name="new_transaction_result_state">Выполняется</string>
+    <string name="new_transaction_result_date">Дата</string>
+    <string name="new_transaction_result_time">Время</string>
+    <string name="new_transaction_result_whom">Кому</string>
+    <string name="new_transaction_result_quantity">Количество</string>
+
+    <!-- Main Screen Fragment -->
+    <string name="main_fragment_birthday">С днем рождения!</string>
+    <string name="main_fragment_new_transaction">"Вам новая \nблагодарность"</string>
+    <string name="main_fragment_new_winner">"Новый победитель \nчелленджа</string>
+    <string name="main_fragment_new_challenge">"Создан новый \nчеллендж"</string>
+    <string name="main_fragment_recommends_title">Рекомендуем</string>
+    <string name="main_fragment_recommends_new" translatable="false">New</string>
+
+
+    <!-- Баланс фрагмент -->
+    <string name="spaceWithContent"> %s</string>
+    <string name="registration_button_label">Регистрация</string>
+    <string name="application_label">Цифровое спасибо</string>
+    <string name="enter_button_label">Вход</string>
+    <string name="user_name_label">Имя пользователя</string>
+    <string name="period">Выберите период</string>
+    <string name="my_count">Мой счет</string>
+    <string name="distributed">Распределено %s</string>
+    <string name="least_distribute">Осталось раздать</string>
+    <string name="cancelled">Аннулировано %s</string>
+    <string name="frozen_label">В ожидании %s</string>
+    <string name="will_burn_after">До конца периода %s </string>
+    <string name="will_burn_today">Сгорят сегодня в 18:00</string>
+    <string name="joke">Мы ценим ваше любопытство и в будущих обновлениях обязательно сюда что-нибудь добавим &#128522;</string>
+    <string name="balance_all">Все</string>
+    <string name="balance_history">История переводов</string>
+    <string name="balance_transfer">Перевести</string>
+    <string name="balance_new">Новый</string>
+    <!-- Транзакция фрагмент -->
+    <string name="send">Отправить</string>
+    <string name="addPhoto">Добавить фото</string>
+    <string name="addSticker">Добавить стикер</string>
+    <string name="reason_transaction">Описание перевода</string>
+    <string name="unsuccessfulSendCoins">Кол-во спасибок, причина благодарности/тег ценности - обязательные поля</string>
+    <string name="isAnon">Анонимно</string>
+    <string name="addValues">Добавить ценность</string>
+    <string name="choiceValues">Выберите ценность</string>
+    <string name="choiceReceiver">Выберите получателя</string>
+    <string name="applyValues">Применить</string>
+    <string name="values">Ценности</string>
+    <string name="addedSomeValues">Добавлено %s ценности.Добавить еще?</string>
+    <string name="addedOneValue">Добавлена %s ценность.Добавить еще?</string>
+    <string name="available">Счет распределения \u0020</string>
+    <string name="personal_account">Личный счет \u0020</string>
+    <string name="empty">\"\"</string>
+    <string name="historyOfOperations">История операций</string>
+    <string name="repeateTransaction">Повторить перевод</string>
+    <string name="isPublic">Показать всем</string>
+
+    <!-- item_user -->
+    <string name="name">Имя</string>
+    <string name="tgName">\@%s</string>
+    <!-- item_feed -->
+    <string name="dateTime">%s в %s</string>
+    <string name="item_feed_liked">Понравилось %d</string>
+    <string name="item_feed_comments">Комментариев %d</string>
+    <string name="item_feed_gratitude">Благодарность</string>
+    <string name="item_feed_victory">Победа</string>
+    <string name="item_feed_challenge">Челлендж</string>
+    <string name="item_feed_purchase">Покупка</string>
+    <string name="item_feed_tag">#%s</string>
+
+
+    <!--История транзакций -->
+    <string name="received_from">Благодарность от %s</string>
+    <string name="G">Ожидает истечения периода отмены</string>
+    <string name="sended_to">Благодарность для %s</string>
+    <string name="approved">Согласовано</string>
+    <string name="on_approval">На согласовании</string>
+    <string name="annulled">Аннулировано</string>
+    <string name="refused">Отклонен</string>
+    <string name="occured">Выполнен</string>
+    <string name="allHistory">Вся история</string>
+    <string name="received">\u0020\u0020\u0020   Получено  \u0020\u0020\u0020</string>
+    <string name="sended">Отправлено</string>
+    <string name="cancelTransaction">Отменить благодарность?</string>
+    <string name="successfulCancel">Спасибки вернутся на ваш счет :)</string>
+    <string name="setTag">#%s</string>
+    <string name="forWinningInChallenge">за победу в челлендже</string>
+    <string name="inFundOfChallenge">в фонд челленджа</string>
+    <string name="fromFundOfChallenge">из фонда челленджа</string>
+    <string name="toSystem">системе</string>
+    <string name="history_refund">Возврат</string>
+    <string name="history_from_benefit">из маркетплейса</string>
+    <string name="history_group_by_user">Сгруппировать по пользователю</string>
+    <string name="history_list_header_gratitude">Благодарность</string>
+    <string name="history_list_header_system_refill">Системное пополнение</string>
+    <string name="history_list_header_system_debit">Системное списание</string>
+    <string name="history_list_header_refund_benefit">Возврат бенефита</string>
+    <string name="history_list_header_refund_prize_fund">Возврат призового фонда</string>
+    <string name="history_list_header_win_challenge">Победа в челлендже</string>
+    <string name="history_list_header_creating_challenge">Создание челленджа</string>
+    <string name="history_list_header_purchase_benefit">Покупка бенефита</string>
+    <string name="history_list_filter_from">Дата начала события</string>
+    <string name="history_list_filter_to">Дата завершения события</string>
+
+    <!--Группировка -->
+    <string name="group_received_title">Получено</string>
+    <string name="group_sent_title">Отправлено</string>
+
+    <!-- Additional Info Bottom Sheet Dialog Fragment -->
+    <string name="message">Сообщение</string>
+    <string name="photo">Фотография</string>
+    <string name="sticker">Стикер</string>
+    <string name="statusTransfer">Статус благодарности</string>
+    <string name="typeTransfer">Тип благодарности</string>
+    <string name="reasonOfRefusing">Причина отказа</string>
+    <string name="youSended">Вы отправили</string>
+    <string name="youGot">Вы получили</string>
+    <string name="youWantedToSend">Вы хотели отправить</string>
+    <string name="weRefusedYourOperation">Мы отклонили вашу операцию</string>
+    <string name="operationWasRefused">Операция была отменена</string>
+    <string name="iRefusedMyOperation">Вы отклонили свою операцию</string>
+    <string name="comingTransfer">Входящая  благодарность</string>
+    <string name="incomingTransfer">Исходящая  благодарность</string>
+    <string name="amountThanks">%s спасибок</string>
+    <string name="youGetReturnedThanks">Возврат</string>
+    <!-- Templates fragment -->
+    <string name="templates_search">Поиск по шаблонам</string>
+    <string name="templates_my">Мои</string>
+    <string name="templates_ours">Наши</string>
+    <string name="templates_common">Общие</string>
+    <string name="templates_title">Шаблоны</string>
+    <!-- Create Templates fragment -->
+    <string name="templates_new">Новый шаблон</string>
+    <string name="templates_youNeedToFillInfo">Заполните данные о шаблоне</string>
+    <string name="templates_show_only_me">Виден только мне</string>
+    <string name="templates_show_only_my_org">Виден только моему сообществу</string>
+    <string name="templates_showEveryone">Виден всем</string>
+    <string name="template_was_created">Шаблон успешно создан</string>
+    <string name="template_was_updated">Шаблон успешно отредактирован</string>
+    <string name="template_visibility">Видимость</string>
+    <string name="template_functionality">Функциональность</string>
+    <string name="template_save_changes">Сохранить изменения</string>
+    <string name="template_edit">Редактирование шаблона</string>
+    <string name="template_change_template_data">Измените данные шаблона</string>
+    <string name="template_save">Сохранить</string>
+    <string name="template_refuse">Отменить</string>
+    <string name="template_categories">Категории</string>
+
+    <!-- Челлендж фрагмент -->
+    <string name="createChallenge">Создать</string>
+    <string name="templates">Шаблоны</string>
+    <string name="inputNameChallenge">Название</string>
+    <string name="refuse">Отменить</string>
+    <string name="then">Продолжить</string>
+    <string name="description">Описание</string>
+    <string name="dateCloseEvent">Дата завершения события</string>
+    <string name="dateStartEvent">Дата начала события</string>
+    <string name="pointAtPrizeFund">Укажите призовой фонд</string>
+    <string name="pointAtPrizePool">Укажите количество призовых мест</string>
+    <string name="backgroundChallenge">Обложка челленджа</string>
+    <string name="delayedLaunch">Отложенный запуск</string>
+    <string name="change_account">Изменить счёт списания</string>
+    <!-- Список челленджей -->
+    <string name="allChallenge">Все</string>
+    <string name="activeChallenge">Активные</string>
+    <string name="delayedChallenges">Предстоящие</string>
+    <string name="challengeChains">Цепочки заданий</string>
+    <string name="lastUpdateChallenge">Обновлен: %s</string>
+    <string name="active">Активен</string>
+    <string name="completed">Завершён</string>
+    <string name="list_challenges_fragment_deferred">Отложен</string>
+    <string name="today">Сегодня</string>
+    <string name="tomorrow">Завтра</string>
+    <string name="winnersCount">Победителей</string>
+    <string name="prizeFundThanks">Призовой фонд</string>
+    <string name="challenge_list_award">Награда</string>
+    <string name="create_challenge_dialog">Создать челлендж</string>
+    <string name="create_template_dialog">Создать шаблон</string>
+    <!-- Список цепочек -->
+    <string name="challenge_chains_comments">Комментариев</string>
+    <string name="challenge_chains_tasks">Заданий</string>
+    <string name="challenge_chains_contenders">Участников</string>
+
+    <!-- Цепочка фрагмент детали -->
+    <string name="challenge_chain_subtitle">Цепочка заданий</string>
+    <string name="challenge_chain_steps">Шаги цепочки</string>
+    <string name="challenge_chain_steps_2">Шаги</string>
+    <string name="challenge_chain_step">Шаг</string>
+    <string name="challenge_chain_reward">Награда</string>
+    <string name="challenge_chain_status_tasks">Статус \nзаданий</string>
+    <string name="challenge_chain_date_end">Дата \nокончания</string>
+    <string name="challenge_chain_finished">выполнено</string>
+    <string name="challenge_chain_participants">Участники</string>
+    <string name="challenge_chain_name_prefix"><![CDATA[Цепочки заданий <b>%s</b>]]></string>
+
+
+    <!-- Создать Челлендж фрагмент -->
+    <string name="allFieldsAreRequired">Не все поля заполнены</string>
+    <string name="challengeWasCreated">Челлендж успешно создан</string>
+    <string name="smthWentWrong">Что-то пошло не так</string>
+    <string name="requiredField">Поле не заполнено</string>
+    <string name="creatorOfChallenge">от %s %s</string>
+    <string name="forbiddenSetAPastDate">Запрещено указывать прошедшие даты</string>
+    <string name="missStartDate">Дата начала челленджа должна быть раньше даты завершения</string>
+    <string name="missEndDate">Дата завершения челленджа должна быть позже даты начала</string>
+    <string name="baseInfo">Основная информация</string>
+    <string name="youNeedToFillInfoOfChallenge">Заполните данные о челлендже</string>
+    <string name="additionalSettings">Дополнительные настройки</string>
+    <string name="successfullySavedSettingsForChallenge">Настройки успешно сохранены</string>
+    <string name="unexpectedError">Упс, нет данных о челлендже</string>
+    <string name="create">Создать</string>
+    <string name="create_challenge_start_date_picker_title">Выбери дату начала</string>
+    <string name="create_challenge_end_date_picker_title">Выбери дату завершения</string>
+    <string name="create_challenge_dialog_title">Вернуться к черновику?</string>
+    <string name="create_challenge_dialog_subtitle">Вы уже начали создавать челлендж</string>
+    <string name="create_challenge_dialog_positive_btn">Да, вернуться</string>
+    <string name="create_challenge_dialog_negative_btn">Начать заново</string>
+    <!-- Обновить Челлендж фрагмент -->
+    <string name="update_challenge_update">Обновить</string>
+    <string name="update_challenge_cancel">Отменить</string>
+    <string name="update_challenge_error_not_found_id">Отсутствует id объекта</string>
+    <string name="update_challenge_success_text">Челлендж успешно отредактирован</string>
+    <string name="update_challenge_title">Редактирование челленджа</string>
+    <string name="update_challenge_subtitle">Измените данные о челлендже</string>
+    <string name="update_challenge_delete">Удалить челлендж</string>
+    <!-- Настройки Челлендж фрагмента -->
+    <string name="youCanSetRestrictions">Установите ограничения, если они необходимы</string>
+    <string name="challengeWithVoting">Челлендж с голосованием</string>
+    <string name="sendingSeveralReports">Отправка нескольких отчетов</string>
+    <string name="showContenders">Показ претендентов</string>
+    <string name="chooseAccount">Выбрать счет</string>
+    <string name="personalAccount">Личный счет</string>
+
+    <!-- Челлендж фрагмент детали -->
+    <string name="detail_challenge_image_transition" translatable="false">image challenge transition %d</string>
+    <string name="detail_challenge_title_transition" translatable="false">title challenge transition %d</string>
+    <string name="details">Детали</string>
+    <string name="detail_challenge_subtitle">Челлендж</string>
+    <string name="detail_challenge_subtitle_with_chain"><![CDATA[Челлендж в цепочке заданий <br> <b>%s</b>]]></string>
+    <string name="detail_challenge_type_default">Победителей выбирает организатор</string>
+    <string name="detail_challenge_type_voting">Голосование</string>
+    <string name="detail_challenge_not_found">К сожалению челлендж был удален</string>
+    <string name="detail_challenge_return_back">Вернуться</string>
+
+    <string name="participants">Участники</string>
+    <string name="contenders">Претенденты</string>
+    <string name="myResult">Мой результат</string>
+    <string name="dependencies">Зависимости</string>
+    <string name="winners">Победители</string>
+    <string name="fund">%s спасибок</string>
+    <string name="occupiedPrizePool">%s / %s</string>
+    <string name="PrizePool">Призовых мест</string>
+    <string name="dateEnd">Дата завершения</string>
+    <string name="dateStart">Дата начала</string>
+    <string name="prizeFund">Призовой фонд</string>
+    <string name="draft">Черновик</string>
+    <string name="gettingReportsActive">Производится прием отчетов</string>
+    <string name="gettingReportsFinished">Прием отчетов завершен</string>
+    <string name="youAreOwnerOfChallenge">Вы организатор челленджа</string>
+    <string name="youCanSentReport">Можно отправить отчёт</string>
+    <string name="reportWasSent">Отчёт отправлен</string>
+    <string name="reportWasApplied">Отчёт подтверждён</string>
+    <string name="reportWasRefused">Отчёт отклонён</string>
+    <string name="reportWasReward">Получено вознаграждение</string>
+    <string name="undefined">Не определено</string>
+    <string name="ownerChallenge">Организатор</string>
+    <string name="yourAward">Ваша награда</string>
+    <string name="notPointAt">Не указано</string>
+    <string name="detail_challenge_delete_title">Удалить челлендж?</string>
+    <string name="detail_challenge_delete_subtitle">Восстановить будет невозможно</string>
+    <string name="detail_challenge_delete_yes">Да, удалить</string>
+    <string name="detail_challenge_delete_no">Нет, закрыть</string>
+
+    <!-- Results Challenge Fragment -->
+    <string name="results_challenge_title">Результаты</string>
+    <string name="results_challenge_subtitle"><![CDATA[К челленджу <b>%s</b>]]></string>
+    <string name="results_challenge_winners">Победители</string>
+    <string name="results_challenge_my_result">Мой результат</string>
+    <string name="results_challenge_contenders">Кандидаты</string>
+    <string name="results_challenge_edit">Редактировать</string>
+    <string name="results_challenge_publish">Опубликовать</string>
+    <string name="results_challenge_draft">Черновик</string>
+
+
+    <!-- Создание отчета фрагмент -->
+    <string name="spaceSevenTimes">\u0020\u0020\u0020\u0020\u0020\u0020\u0020</string>
+    <string name="result">Результат</string>
+    <string name="closeInHeader">Закрыть</string>
+    <string name="sendReport">Отправить результат</string>
+    <string name="saveWithoutSending">Сохранить без отправки</string>
+    <string name="notToPublicResult">Не публиковать результат</string>
+    <string name="successCreateReport">Отчет успешно создан</string>
+    <string name="mustBePhotoOrDescription">Должно быть фото или описание</string>
+    <!-- Претендент фрагмент -->
+    <string name="refuseInContender">Отклонить</string>
+    <string name="applyInContender">Подтвердить</string>
+    <string name="applyCheckReport">Отчет был подтвержден</string>
+    <string name="deniedCheckReport">Отчет был отклонен</string>
+    <string name="closeMyChoice">Отменить</string>
+    <string name="describeReason">Укажите причину</string>
+    <string name="rejectReport">Отклонить заявку</string>
+    <string name="reasonOfRejectionIsNecessary">Причина отклонения обязательна</string>
+    <string name="noApplicantsYet">Претендентов пока нет</string>
+
+    <!--Мой результат -->
+    <string name="thanksWasGot">+%s</string>
+    <string name="updatedDateTime">Обновлено %s в %s</string>
+    <string name="noYourResultYet">Ваших результатов пока нет</string>
+
+    <!--Детали отчета челленджа -->
+    <string name="reportHolder">Отправитель</string>
+    <string name="userSurnameAndName">%s %s</string>
+    <string name="get">получил</string>
+    <string name="textReport">Текст отчета</string>
+    <string name="labelDetailsChallengeReportFragment">Детали отчета</string>
+
+    <!--Info App Fragment-->
+    <string name="licenseEnd">Лицензия выдана до: %1$s</string>
+
+
+    <!--Utils -->
+    <string name="OK">Ок</string>
+    <string name="networkError">Отсутствует соединение с Интернетом</string>
+    <!--Лента событий -->
+    <string name="someoneToSomeone">\@%s получил %s спасибок от \@%s</string>
+    <string name="getFrom">получил от</string>
+    <string name="youFromSomeone">Вы получили %s спасибок от \@%s</string>
+    <string name="youGetFrom"> получили от </string>
+    <string name="youToSomeone">\@%s получил %s спасибок от вас</string>
+    <string name="allEvent">Все</string>
+    <string name="mineEvent">Мои</string>
+    <string name="publicEvent">Публичные</string>
+    <string name="events_filter_apply">Применить</string>
+    <string name="events_filter_reset">Сбросить</string>
+    <string name="events_filter_category">Категории</string>
+    <string name="events_filter_title">Фильтр</string>
+    <string name="events_filter_custom">Все</string>
+    <string name="events_filter_winners">Победители</string>
+    <string name="events_filter_transactions">Переводы</string>
+    <string name="events_filter_purchases">Покупки</string>
+    <string name="events_filter_challenges">Челленджи</string>
+    <string name="events_celebrate">Поздравить</string>
+
+    <!-- Additional Info Feed Fragment -->
+    <string name="you">Вы</string>
+    <string name="fromYou">Вас</string>
+    <string name="comment">Комментарий</string>
+    <string name="comments">Комментарии</string>
+    <string name="reactions">Оценки</string>
+    <string name="delete">Удалить</string>
+    <string name="edit">Редактировать</string>
+    <string name="fioSender">%s %s</string>
+    <string name="errorMaxLengthMessage">Допустимо максимум 50 символов</string>
+    <string name="forWhat">За что</string>
+    <string name="photoInFeedDetail">Вложения</string>
+    <string name="stickerInDetail">Стикер</string>
+    <string name="additional_feed_item_amount_like">Понравилось %s</string>
+
+    <!-- Utils -->
+    <string name="yesterday">Вчера</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="nothing"> </string>
+    <string name="gallery">Галерея</string>
+    <string name="camera">Камера</string>
+    <string name="whatApproachToGetImage">Получить изображение из камеры или галереи?</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="detailOfTransaction">Благодарность</string>
+    <string name="someonesProfile">Профиль пользователя</string>
+    <string name="profile">Профиль</string>
+    <string name="history_label">История</string>
+    <string name="settings_label">Настройки</string>
+    <string name="challenge_label">Челленджи</string>
+    <string name="balance_label">Баланс</string>
+    <string name="feed_label">Новости</string>
+    <string name="benefit_detail_label">Бенефит</string>
+    <string name="new_transaction_label">Новая благодарность</string>
+    <string name="transaction_result_label">Отправлено</string>
+    <string name="benefit_cafe_label">Бенефиты</string>
+    <string name="members_label">Участники</string>
+    <string name="awards_label">Награды</string>
+    <string name="main_label">Главная</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="gallery_title">Gallery title</string>
+    <string name="grant_permission">Grant Permission</string>
+    <!--    Notifications-->
+    <string name="notifications_label">Уведомления</string>
+    <string name="notifications_subtitle">У вас %s</string>
+    <string name="received_part">Вы получили</string>
+    <string name="thanks_from_part">спасибок от</string>
+    <string name="new_reaction_to">Новая реакция к</string>
+    <string name="to_transaction">переводу</string>
+    <string name="to_challenge">челленджу</string>
+    <string name="to_your_report">вашему отчету</string>
+    <string name="new_comment_to">Новый комментарий к</string>
+    <string name="transaction">перевод</string>
+    <string name="challenge">челлендж</string>
+    <string name="your_report">ваш отзыв</string>
+    <string name="new_challenge">Новый челлендж</string>
+    <string name="notification_Challenge">Челлендж</string>
+    <string name="notification_challenge_ends">завершается завтра</string>
+    <string name="notification_from">от</string>
+    <string name="notification_in">в</string>
+    <string name="new_order">Новый заказ на</string>
+    <string name="new_report_to_challenge">Новый отчет к челленджу</string>
+    <string name="you_win_challenge">Вы победили в челлендже</string>
+    <string name="anonymous">anonymous</string>
+    <string name="notifications_questionnaire_closed_now">Все участники прошли опрос \"%1$s\"</string>
+    <string name="notifications_questionnaire_closing_to_admin">Завтра в %1$s закрывается доступ к прохождению опроса \"%2$s\"</string>
+    <string name="notifications_questionnaire_closing_to_participant">Завтра в %1$s завершается опрос \"%2$s\". Успей поучаствовать!</string>
+    <string name="notifications_questionnaire_created">Создан новый опрос \"%1$s\"</string>
+    <string name="notifications_questionnaire_create_title">Новый опрос</string>
+    <string name="notifications_questionnaire_expired_soon_title">Завершение опроса</string>
+    <string name="notifications_challenge_title">Челлендж</string>
+    <string name="notifications_challenge_ending_title">Челлендж завершается</string>
+    <string name="notifications_challenge_from">от</string>
+    <string name="notifications_new_order_title">Новый заказ</string>
+    <string name="notifications_winner_title">Победитель челленджа</string>
+    <string name="notifications_report_title">Отчёт к челленджу</string>
+    <string name="notifications_new_challenge_title">Новый челлендж</string>
+    <string name="notifications_new_reaction_title">Реакция</string>
+    <string name="notifications_new_comment_title">Комментарий</string>
+    <string name="notifications_gratitude_title">Благодарность</string>
+
+    <!--feed-->
+    <string name="challenge_winner">победил в челлендже</string>
+    <string name="challenge_created">Создан челлендж</string>
+    <string name="user_received_thanks">%1$s получил %2$d спасибок от %3$s</string>
+    <string name="you_received_thanks">Вы получили %1$d спасибок от %2$s</string>
+    <string name="user_received_thanks_from_you">%1$s получил %2$d спасибок от вас</string>
+    <string name="got">получил(а)</string>
+    <string name="from">от</string>
+    <string name="gotFrom">получил от</string>
+    <string name="whoCreatedChallenge">пользователем</string>
+    <string name="toDate">до %1$s</string>
+    <string name="thanks">Спасибки</string>
+    <string name="transfers">Переводы</string>
+    <string name="events">События</string>
+    <string name="challenges">Челленджи</string>
+    <string name="createdChallenge">Создан челлендж</string>
+    <string name="youBoughtProduct">Вы приобрели товар</string>
+    <string name="someoneBoughtProduct">приобрел(-а) товар</string>
+    <string name="in">в</string>
+
+    <!--CommentsFragment-->
+    <string name="comments_fragment_empty_text_msg">Станьте первым, кто оставит \n комментарий!</string>
+    <string name="comments_fragment_title">Комментарии</string>
+    <string name="comments_fragment_subtitle_challenge"><![CDATA[К челленджу <b>%s</b>]]></string>
+    <string name="comments_fragment_subtitle_challenge_report"><![CDATA[К отчету челленджа <b>%s</b>]]></string>
+    <string name="comments_fragment_subtitle_transaction"><![CDATA[К переводу <b>%s</b>]]></string>
+    <string name="comments_fragment_subtitle_offer"><![CDATA[К бенефиту <b>%s</b>]]></string>
+
+
+    <!--ReactionsFragment-->
+    <string name="reactions_fragment_title">Понравилось</string>
+
+
+    <!--PickerLang-->
+    <string name="picker_lang_not_supported">не поддерживается</string>
+
+
+    <!-- Месяцы-->
+    <string name="january">Январь</string>
+    <string name="february">Февраль</string>
+    <string name="march">Март</string>
+    <string name="april">Апрель</string>
+    <string name="may">Май</string>
+    <string name="june">Июнь</string>
+    <string name="july">Июль</string>
+    <string name="august">Август</string>
+    <string name="september">Сентябрь</string>
+    <string name="october">Октябрь</string>
+    <string name="november">Ноябрь</string>
+    <string name="december">Декабрь</string>
+
+    <string name="januaryDate">Января</string>
+    <string name="februaryDate">Февраля</string>
+    <string name="marchDate">Марта</string>
+    <string name="aprilDate">Апреля</string>
+    <string name="mayDate">Мая</string>
+    <string name="juneDate">Июня</string>
+    <string name="julyDate">Июля</string>
+    <string name="augustDate">Августа</string>
+    <string name="septemberDate">Сентября</string>
+    <string name="octoberDate">Октября</string>
+    <string name="novemberDate">Ноября</string>
+    <string name="decemberDate">Декабря</string>
+
+    <string-array name="months_array">
+        <item>Январь</item>
+        <item>Февраль</item>
+        <item>Март</item>
+        <item>Апрель</item>
+        <item>Май</item>
+        <item>Июнь</item>
+        <item>Июль</item>
+        <item>Август</item>
+        <item>Сентябрь</item>
+        <item>Октябрь</item>
+        <item>Ноябрь</item>
+        <item>Декабрь</item>
+    </string-array>
+
+    <!--Reviews Fragment-->
+    <string name="reviews_title">Отзывы</string>
+    <string name="reviews_empty_list">Нет отзывов</string>
+    <string name="reviews_create_review">Написать отзыв</string>
+    <string name="reviews_has_review">Вы оценили этот товар.</string>
+    <string name="reviews_check_review">Посмотреть отзыв</string>
+    <string name="reviews_check_need_buy_product">*Чтобы оставить отзыв на товар, нужно купить его</string>
+    <string name="reviews_check_cant_like_your_review">Нельзя поставить лайк своему отзыву</string>
+
+    <!--Create Review Fragment-->
+    <string name="create_review_title_create">Создать отзыв</string>
+    <string name="create_review_title_edit">Редактировать отзыв</string>
+    <string name="create_review_refuse">Отменить</string>
+    <string name="create_review_terrible">Ужасный товар</string>
+    <string name="create_review_bad">Плохой товар</string>
+    <string name="create_review_normal">Нормальный товар</string>
+    <string name="create_review_good">Хороший товар</string>
+    <string name="create_review_great">Отличный товар</string>
+    <string name="create_review_undefined_error">Произошла неизвестная ошибка. Попробуйте позже.</string>
+    <string name="create_review_successful_created">Ваш отзыв отправлен</string>
+    <string name="create_review_successful_edited">Ваш отзыв был отредактирован</string>
+
+    <!--Review Detail Fragment-->
+    <string name="review_detail_edit">Редактировать</string>
+    <string name="review_detail_delete">Удалить</string>
+    <string name="review_detail_title">Ваш отзыв</string>
+    <string name="review_detail_dialog_title">Удаление отзыва</string>
+    <string name="review_detail_dialog_subtitle">Вы действительно хотите удалить отзыв? Отменить данное действие будет невозможно.</string>
+    <string name="review_detail_dialog_negative">Закрыть</string>
+    <string name="review_detail_successful_deleted">Ваш отзыв был удален</string>
+
+
+    <!--Benefit Fragment-->
+    <string name="search">Поиск</string>
+    <string name="noMarket">Пока нет доступных маркетов</string>
+
+    <!--Shopping Cart Fragment-->
+    <string name="shoppingCart">Корзина</string>
+    <string name="getBenefits">Оплатить</string>
+    <string name="totalCost">Итого</string>
+    <string name="historyOffersFAB">\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020Заказы</string>
+    <string name="historyOffers">Заказы</string>
+    <string name="allowUpTo">Действителен до %1$s</string>
+    <string name="orderSuccessful">Заказ успешно оформлен</string>
+    <string name="goToMainPage">На главную</string>
+    <string name="shopping_cart_no_item_selected">Ни один товар не выбран</string>
+
+
+    <!--Detail Benefit Fragment-->
+    <string name="price">Стоимость</string>
+    <string name="lastAmount">Остаток</string>
+    <string name="amountOfMarkedUsers">Выбрано пользователями</string>
+    <string name="choose">Выбрать</string>
+    <string name="amount">%1$d шт.</string>
+    <string name="choosingNow">Выбирают сейчас %1$s</string>
+    <string name="inCart">В корзине</string>
+    <string name="benefit_detail_bought">Куплено</string>
+    <string name="benefit_detail_rest">Остаток</string>
+    <string name="benefit_detail_add_to_cart">Добавить в коризну</string>
+    <!-- Filters Benefit Bottom Sheet Dialog Fragment-->
+    <string name="filter">Фильтр</string>
+    <string name="filterPrice">Цена</string>
+    <string name="category">Категории</string>
+    <string name="lowAllowTo">Истекает срок</string>
+    <string name="reset">Сбросить</string>
+    <string name="fromPrice">От</string>
+    <string name="toPrice">До</string>
+    <string name="statusFilter">Статус</string>
+    <!--History List Orders Fragment-->
+    <string name="dateCreatedOffer">#%1$d Оформлен в %2$s</string>
+    <string name="inCartStatus">В корзине</string>
+    <string name="considering">На рассмотрении</string>
+    <string name="accepted">Принято, ожидается выполнение</string>
+    <string name="acceptedByCustomer">Подтверждён покупателем</string>
+    <string name="purchased">Оплачено</string>
+    <string name="readyForDelivery">Готово к выдаче</string>
+    <string name="sentOrDelivered">Отправлен или выдан</string>
+    <string name="ready">Выполнен</string>
+    <string name="declined">Отклонен</string>
+    <string name="cancelledStatus">Отменён</string>
+    <!-- Filters History List Orders Bottom Sheet Dialog Fragment-->
+    <string name="allOfHistoryOrders">Все</string>
+    <string name="orderedStatus">Заказан</string>
+    <string name="receivedStatus">Получен</string>
+
+    <!-- Filters Employees Fragment-->
+    <string name="fired">Уволенные на текущую дату</string>
+    <string name="inOffice">Работающие в офисе</string>
+    <string name="onHoliday">В отпуске</string>
+    <string name="emoloyee_sears_member">Найти участника</string>
+
+    <!-- Awards Fragment-->
+    <string name="awards_all">Все</string>
+    <string name="awards_other">Другое</string>
+    <string name="awards_my">Мои награды</string>
+    <string name="awards_transaction">Перевод баллов</string>
+    <string name="awards_challenges">Челленджи</string>
+    <string name="awards_unique">Уникальные</string>
+    <string name="awards_receive">Получить</string>
+    <string name="awards_received">Получено</string>
+    <string name="awards_received_date">Дата получения</string>
+    <string name="awards_set_as_status">Установить в статус</string>
+    <string name="awards_in_status">Установлено в статус</string>
+    <string name="awards_unique_descr">Уникальные награды</string>
+    <string name="awards_challenge_descr">Награды за челленджи</string>
+    <string name="awards_transaction_descr">Награды за переводы</string>
+
+    <!--MainFlowFragment-->
+    <string name="main_flow_close_dialog_text">Вы уверены, что хотите закрыть приложение?</string>
+    <string name="main_flow_close_dialog_yes">Да</string>
+    <string name="main_flow_close_dialog_no">Нет</string>
+
+    <!--Header Greeting-->
+    <string name="header_greeting_label">Привет,</string>
+
+
+    <!--Ошибки-->
+    <string name="cantLoadingPage">Не удалось загрузить страницу</string>
+    <string name="errorConnection">Ошибка соединения</string>
+    <string name="shoppingCartEmpty">Похоже корзина пуста</string>
+    <string name="emptyList">Список пуст</string>
+
+    <!--Разрешения-->
+    <string name="dontHaveEnoughPermissions">Нет разрешений. Перейдите в настройки</string>
+    <string name="good">Хорошо</string>
+
+    <string name="more">Eще</string>
+
+    <string name="marketplace">Маркетплейс</string>
+    <string name="analytics">Аналитика</string>
+
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="category_edit_subtitle">Выберите одну или несколько категорий</string>
+    <string name="category_edit_button">Управление категориями</string>
+    <string name="category_edit_add_button">Добавить</string>
+    <string name="remove_category">Удалить категорию</string>
+    <string name="category_btn_title">Категории</string>
+    <string name="category_name_title">Название категории</string>
+    <string name="empty_category_message">У вас пока нет категорий</string>
+    <string name="feedback">Обратная связь</string>
+    <string name="teamforce_360_tg" translatable="false">teamforce_360</string>
+    <string name="teamforce_mailto" translatable="false">benefits@teamforce.ru</string>
+    <string name="feedback_header">По вопросам и предложениям обращайтесь</string>
+    <string name="feedback_label">Обратная связь</string>
+
+    <plurals name="plurals_days">
+        <item quantity="zero">%1$d дней</item>
+        <item quantity="one">%1$d день</item>
+        <item quantity="two">%1$d дня</item>
+        <item quantity="few">%1$d дня</item>
+        <item quantity="many">%1$d дней</item>
+        <item quantity="other">%1$d дeнь</item>
+    </plurals>
+
+    <plurals name="plurals_thanks">
+        <item quantity="zero">%1$d спасибок</item>
+        <item quantity="one">%1$d спасибку</item>
+        <item quantity="two">%1$d спасибки</item>
+        <item quantity="few">%1$d спасибки</item>
+        <item quantity="many">%1$d спасибок</item>
+        <item quantity="other">%1$d спасибок</item>
+    </plurals>
+
+    {"RU":{"form1":"спасибка","form2":"спасибке","form3":"спасибку","form4":"спасибок","form5":"спасибки"}}}
+
+    <plurals name="plurals_users">
+        <item quantity="zero">%1$d пользователей</item>
+        <item quantity="one">%1$d пользователь</item>
+        <item quantity="two">%1$d пользователя</item>
+        <item quantity="few">%1$d пользователя</item>
+        <item quantity="many">%1$d пользователей</item>
+        <item quantity="other">%1$d пользователей</item>
+    </plurals>
+
+    <plurals name="plurals_thanks_for_challenge">
+        <item quantity="zero">%1$s спасибок</item>
+        <item quantity="one">%1$s спасибка</item>
+        <item quantity="two">%1$s спасибки</item>
+        <item quantity="few">%1$s спасибки</item>
+        <item quantity="many">%1$s спасибок</item>
+        <item quantity="other">%1$s спасибок</item>
+    </plurals>
+
+    <plurals name="plurals_new_notifications">
+        <item quantity="zero">%1$d новых уведомлений</item>
+        <item quantity="one">%1$d новое уведомление</item>
+        <item quantity="two">%1$d новых уведомления</item>
+        <item quantity="few">%1$d новых уведомления</item>
+        <item quantity="many">%1$d новых уведомлений</item>
+        <item quantity="other">%1$d новых уведомлений</item>
+    </plurals>
+
+    <!-- binding.tvChoosingNow.text = requireContext().getString(R.string.choosingNow,
+ resources.getQuantityString(R.plurals.plurals_users,
+  offer?.selectedByUsers ?: 0,
+   offer?.selectedByUsers))
+-->
+    <!-- Common List State -->
+    <string name="common_list_state_empty">Здесь пока ничего нет</string>
+
+
+</resources>

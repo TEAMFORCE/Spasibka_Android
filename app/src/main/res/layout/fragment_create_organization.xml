@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_status_bar"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/main_content_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_white_rounded_top"
+        android:transitionName="list_of_org_btn_second"
+        android:orientation="vertical"
+        android:paddingBottom="34dp"
+        android:paddingHorizontal="@dimen/margin_16dp"
+        tools:context=".presentation.fragment.profileScreen.settings.CreateOrganizationFragment">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewMainBrandColor
+                style="@style/StandardText4.Gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/close"
+                android:visibility="invisible" />
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                style="@style/StandardText4Medium.Black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/create_organization_title"
+                android:layout_marginHorizontal="4dp"
+                android:textAlignment="center" />
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewMainBrandColor
+                android:id="@+id/close_tv"
+                style="@style/StandardText4.Gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:text="@string/close"
+                android:textColor="@color/general_brand" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="always">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_name"
+                    style="@style/EditProfileTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:clipChildren="true"
+                    android:enabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/onboarding_name_org"
+                        android:lines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_start_period"
+                    style="@style/EditProfileTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:enabled="false"
+                    app:endIconDrawable="@drawable/ic_calendar"
+                    app:endIconMode="custom"
+                    app:endIconTint="@color/general_contrast">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/start_period_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:lines="1"
+                        android:hint="@string/onboarding_date_start_period"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_end_period"
+                    style="@style/EditProfileTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:enabled="false"
+                    app:endIconDrawable="@drawable/ic_calendar"
+                    app:endIconMode="custom"
+                    app:endIconTint="@color/general_contrast">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/end_period_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:lines="1"
+                        android:hint="@string/onboarding_date_end_period" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_start_balance"
+                    style="@style/EditProfileTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:clipChildren="true"
+                    android:enabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/start_balance_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:hint="@string/onboarding_start_balance" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_start_balance_admin"
+                    style="@style/EditProfileTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:clipChildren="true"
+                    android:enabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/start_balance_admin_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:hint="@string/onboarding_start_admin_balance"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+        <com.teamforce.thanksapp.presentation.theme.ThemableDefaultButton
+            android:id="@+id/create_org_btn"
+            style="@style/DefaultButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="17dp"
+            android:text="@string/create_organization_btn_text"/>
+
+    </LinearLayout>
+</com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout>

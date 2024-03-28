@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_status_bar"
+    android:orientation="vertical"
+    tools:context=".presentation.fragment.profileScreen.EditProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_centered" />
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/general_background"
+                android:orientation="vertical">
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/user_avatar"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    android:contentDescription="@string/app_name"
+                    android:foreground="@drawable/foreground_for_edit_avatar"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="20dp"
+                    android:src="@drawable/ic_anon_avatar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/linear_contacts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/general_background"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <com.vk.auth.ui.fastloginbutton.VkFastLoginButton
+                            android:id="@+id/auth_vk_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:vk_first_line_field="action"
+                            app:vk_second_line_field="phone"
+                            android:layout_marginBottom="20dp"
+                            android:visibility="visible"
+                            tools:visibility="gone"
+                            app:vk_style="blue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/edit_profile_firstname"
+                            style="@style/StandardText3Inter.Gray"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/text_input_firstname"
+                            style="@style/OutlinedRoundedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/first_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/TextInputEditText"
+                                android:layout_marginBottom="20dp"
+                                android:hint="@string/edit_profile_firstname_enter"
+                                android:inputType="text"
+                                android:lines="1" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/edit_profile_surname"
+                            style="@style/StandardText3Inter.Gray"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/text_input_surname"
+                            style="@style/OutlinedRoundedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/surname_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/TextInputEditText"
+                                android:layout_marginBottom="20dp"
+                                android:hint="@string/edit_profile_surname_enter"
+                                android:inputType="text"
+                                android:lines="1" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/edit_profile_middle_name"
+                            style="@style/StandardText3Inter.Gray"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/text_input_middleName"
+                            style="@style/OutlinedRoundedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/middle_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/TextInputEditText"
+                                android:hint="@string/edit_profile_middle_name_enter"
+                                android:inputType="text"
+                                android:layout_marginBottom="20dp"
+                                android:lines="1" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/edit_profile_gender"
+                            style="@style/StandardText3Inter.Gray"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/text_input_gender"
+                            style="@style/OutlinedRoundedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/gender_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/TextInputEditText"
+                                android:focusable="false"
+                                android:hint="@string/edit_profile_gender"
+                                android:inputType="none"
+                                android:layout_marginBottom="20dp"
+                                android:lines="1" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/edit_profile_birthday"
+                            style="@style/StandardText3Inter.Gray"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/text_input_birthday"
+                            style="@style/OutlinedRoundedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:focusable="false">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/birthday_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:hint="@string/edit_profile_birthday"
+                                android:inputType="none"
+                                android:lines="1" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="horizontal">
+
+                            <com.teamforce.thanksapp.presentation.theme.ThemableCheckBox
+                                android:id="@+id/hide_year_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                style="@style/StandardText3.Black"
+                                android:text="@string/edit_profile_hide_year_of_birth" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/email_label"
+                            style="@style/StandardText3Inter.Gray"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/text_input_email"
+                            style="@style/OutlinedRoundedBox"
+                            android:layout_marginBottom="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/email_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/email_label"
+                                style="@style/TextInputEditText"
+                                android:inputType="textEmailAddress"
+                                android:lines="1" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/mobile_label"
+                            style="@style/StandardText3Inter.Gray"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/text_input_phone"
+                            style="@style/OutlinedRoundedBox"
+                            android:layout_width="match_parent"
+                            android:layout_marginBottom="20dp"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/phone_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/TextInputEditText"
+                                android:hint="@string/mobile_label"
+                                android:inputType="phone"
+                                android:lines="1" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </LinearLayout>
+
+
+
+                <com.teamforce.thanksapp.presentation.theme.ThemableDefaultButton
+                    android:id="@+id/btn_save_changes"
+                    style="@style/DefaultButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:paddingVertical="17dp"
+                    android:text="@string/edit_profile_save" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout>
+
+

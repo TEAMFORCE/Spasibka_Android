@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/superLightGray"
+    android:layout_marginBottom="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+            <com.teamforce.thanksapp.presentation.customViews.AvatarView.AvatarView
+                android:id="@+id/user_avatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:useGradient="true"
+                app:avatarViewBorderWidth="0dp"
+                tools:background="@color/black"
+                app:avatarViewInitialsBackgroundGradientColorStart="@color/general_brand"
+                app:avatarViewInitialsBackgroundGradientColorEnd="@color/general_brand_secondary"
+                app:avatarViewInitialsTextColor="@color/white"
+                app:avatarViewInitialsTextSize="16sp"
+                app:avatarViewInitialsTextSizeRatio="0.33"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:avatarViewInitialsTextStyle="bold"/>
+
+            <TextView
+                android:id="@+id/user_name_label_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:textAppearance="@style/StandardText4Inter.Black"
+                tools:text="Дмитрий Малков"/>
+
+            <TextView
+                android:id="@+id/date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dateTime"
+                android:layout_marginEnd="5dp"
+                android:textAppearance="@style/SmallText2Inter.Black"
+                android:textColor="@color/general_contrast_secondary" />
+
+            <ImageView
+                android:id="@+id/iv_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_more_horizontal"
+                android:rotation="90"/>
+        </LinearLayout>
+
+        <com.teamforce.thanksapp.presentation.customViews.RatingBarSvg
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:layout_marginBottom="6dp"
+            android:progressDrawable="@drawable/custom_ratingbar"
+            android:rating="4"
+            android:stepSize="1"
+            android:numStars="5"
+            android:layout_marginStart="52dp"
+            android:layout_gravity="start" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/review_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/SmallText2.Black"
+                tools:text="Качество футболки хорошее,но размер не подошёл, слишком большая, перезаказала на размер меньше."/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/image_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:paddingVertical="24dp"
+                android:paddingHorizontal="@dimen/margin_16dp"
+                android:clipToPadding="false"
+                tools:listitem="@layout/item_general_image"
+                android:orientation="horizontal"/>
+
+
+
+            <com.teamforce.thanksapp.presentation.customViews.reactionLayout.ReactionLayoutForListItem
+                android:id="@+id/reaction_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:hideCommentsButton="true"
+                android:layout_gravity="end" />
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

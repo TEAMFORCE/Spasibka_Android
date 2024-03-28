@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".presentation.fragment.profileScreen.ChooseStatusDialogFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:clipToPadding="false">
+        <com.teamforce.thanksapp.presentation.theme.ThemableProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:visibility="gone"
+            android:theme="?android:attr/progressBarStyle"
+            android:layout_gravity="center"
+            />
+        <RadioGroup
+            android:id="@+id/radio_group_format_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_profile_format_work"
+                style="@style/StandardText3Medium.Black"
+                android:layout_marginStart="@dimen/margin_16dp"/>
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableRadioButton
+                android:id="@+id/radio_office"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_profile_office" />
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableRadioButton
+                android:id="@+id/radio_remote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_profile_remote" />
+        </RadioGroup>
+
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_profile_status"
+                style="@style/StandardText3Medium.Black"
+                android:layout_marginStart="@dimen/margin_16dp"/>
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableRadioButton
+                android:id="@+id/radio_vacation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_profile_vacation" />
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableRadioButton
+                android:id="@+id/radio_sick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_profile_sickLeave" />
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableRadioButton
+                android:id="@+id/radio_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_profile_work" />
+        </RadioGroup>
+
+        <com.teamforce.thanksapp.presentation.theme.ThemableTextViewMainBrandColor
+            android:id="@+id/apply_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textAppearance="@style/StandardText4.White"
+            android:textColor="@color/general_brand"
+            android:text="@string/applyValues"/>
+
+
+    </LinearLayout>
+</RelativeLayout>
+

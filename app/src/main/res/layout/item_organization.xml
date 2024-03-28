@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_cv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="18dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/org_photo_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_app_logo"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewMainBrandColor
+                android:id="@+id/current_org_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:visibility="gone"
+                android:textAppearance="@style/SmallText2.Black"
+                android:textColor="@color/general_brand"
+                android:text="@string/currentOrganisation" />
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                android:id="@+id/org_name_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/roboto_medium"
+                android:textAppearance="@style/StandardText3Medium.Black"
+                tools:text="TeamForce" />
+        </LinearLayout>
+
+        <com.teamforce.thanksapp.presentation.theme.ThemableImageVIewIcon
+            android:id="@+id/action_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/copy_svg"
+            app:tint="@color/general_brand"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

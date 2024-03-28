@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainCard"
+    android:layout_width="165dp"
+    android:layout_height="wrap_content"
+    android:transitionName="item_challenge"
+    android:animateLayoutChanges="true"
+    app:cardBackgroundColor="@color/general_background"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="@dimen/margin_8dp">
+
+    <LinearLayout
+        android:id="@+id/main_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/top_frame"
+            android:layout_width="match_parent"
+            android:layout_height="118dp"
+
+            android:background="@drawable/background_white_rounded_top"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/imageBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_successful_person"
+                android:visibility="visible"/>
+
+
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:background="@color/general_background"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/challenge_title"
+                    style="@style/StandardText3Medium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:singleLine="true"
+                    tools:text="Правильное питание " />
+
+                <TextView
+                    android:id="@+id/challenge_creator"
+                    style="@style/StandardText3.Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    tools:text="от Малкова Дмитрия" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reward_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/SmallText2Medium.Black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:layout_weight="1"
+                    android:text="@string/challenge_chain_reward"/>
+
+                <TextView
+                    android:id="@+id/reward_amount_tv"
+                    style="@style/StandardText4Medium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:maxLines="1"
+                    tools:text="12" />
+                <com.teamforce.thanksapp.presentation.theme.ThemableImageVIewIcon
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_logo"
+                    android:tint="@color/general_brand"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="9dp">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/status_active_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:cardBackgroundColor="@color/minor_success"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:id="@+id/status_task_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8dp"
+                android:layout_marginVertical="4dp"
+                android:text="@string/active"
+                android:textAppearance="@style/VerySmallText1.White" />
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

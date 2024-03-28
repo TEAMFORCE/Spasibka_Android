@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.teamforce.thanksapp.presentation.theme.ThemableCoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_status_bar">
+
+    <com.teamforce.thanksapp.presentation.theme.ThemableAppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/background_for_status_bar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/arrow_left"
+                app:navigationIconTint="@color/general_background" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax" />
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <FrameLayout
+            android:id="@+id/sticky_linear_background"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:background="@drawable/background_white_rounded_top"
+            android:clipToPadding="false"
+            app:layout_collapseMode="pin">
+
+
+        </FrameLayout>
+
+    </com.teamforce.thanksapp.presentation.theme.ThemableAppBarLayout>
+
+    <com.teamforce.thanksapp.presentation.customViews.AvatarView.AvatarView
+        android:id="@+id/user_avatar"
+        android:layout_width="132dp"
+        android:layout_height="132dp"
+        android:layout_gravity="center_horizontal"
+        android:elevation="20dp"
+        android:translationY="66dp"
+        app:avatarViewBorderColor="@color/general_background"
+        app:avatarViewIndicatorBorderColor="@color/minor_success_secondary"
+        app:avatarViewIndicatorColor="@color/minor_success_secondary"
+        app:avatarViewIndicatorEnabled="true"
+        app:avatarViewIndicatorPosition="bottomRight"
+        app:avatarViewInitialsBackgroundGradientColorEnd="@color/general_brand_secondary"
+        app:avatarViewInitialsBackgroundGradientColorStart="@color/general_brand"
+        app:avatarViewInitialsTextColor="@color/white"
+        app:avatarViewInitialsTextSize="16sp"
+        app:avatarViewInitialsTextSizeRatio="0.33"
+        app:avatarViewInitialsTextStyle="bold"
+        app:layout_collapseMode="pin"
+        app:useGradient="true"
+        tools:src="@drawable/red_circle" />
+
+    <View
+        android:id="@+id/anchor_for_linear"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_anchor="@id/user_avatar"
+        app:layout_anchorGravity="bottom|center" />
+
+    <LinearLayout
+        android:id="@+id/sticky_linear_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:orientation="vertical"
+        app:layout_anchor="@id/anchor_for_linear"
+        app:layout_anchorGravity="bottom|center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lead_name_tv"
+                style="@style/StandardText4Medium.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAlignment="center"
+                tools:text="Дмитрий Малков" />
+
+            <ImageView
+                android:id="@+id/award_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                tools:background="@drawable/ic_app_logo" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/location_tv"
+            style="@style/StandardText3Inter.Gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:text="Иннополис, Россия" />
+    </LinearLayout>
+
+
+    <com.teamforce.thanksapp.presentation.theme.ThemableSwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/general_background"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingTop="50dp"
+            android:paddingBottom="100dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/all_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/general_background"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/first_info_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_16dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/general_background"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/superLightGray"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
+
+                        <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrastSecondary
+                            android:id="@+id/surname_label_tv"
+                            style="@style/SmallText2.Gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="@string/edit_profile_surname" />
+
+                        <TextView
+                            android:id="@+id/surname_value_tv"
+                            style="@style/SmallText2Medium.Black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:maxLines="1"
+                            tools:text="Малков" />
+
+                        <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrastSecondary
+                            android:id="@+id/firstname_label_tv"
+                            style="@style/SmallText2.Gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="@string/edit_profile_firstname" />
+
+                        <TextView
+                            android:id="@+id/firstName_value_tv"
+                            style="@style/SmallText2Medium.Black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:maxLines="1"
+                            tools:text="Дмитрий" />
+
+                        <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrastSecondary
+                            android:id="@+id/middleName_label_tv"
+                            style="@style/SmallText2.Gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="@string/edit_profile_middle_name" />
+
+                        <TextView
+                            android:id="@+id/middleName_value_tv"
+                            style="@style/SmallText2Medium.Black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            tools:text="Евгеньевич" />
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/second_info_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_16dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/general_background"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/superLightGray"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/email_linear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrastSecondary
+                                android:id="@+id/email_label_tv"
+                                style="@style/SmallText2.Gray"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="@string/email_label" />
+
+                            <TextView
+                                android:id="@+id/email_value_tv"
+                                style="@style/SmallText2Medium.Black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:maxLines="2"
+                                tools:text="mde.developer@gmail" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/mobile_linear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrastSecondary
+                                android:id="@+id/mobile_label_tv"
+                                style="@style/SmallText2.Gray"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:text="@string/mobile_label" />
+
+                            <TextView
+                                android:id="@+id/mobile_value_tv"
+                                style="@style/SmallText2Medium.Black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                tools:text="+79514462853" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/birthday_label_tv"
+                            style="@style/SmallText2.Gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="@string/edit_profile_birthday" />
+
+                        <TextView
+                            android:id="@+id/birthday_value_tv"
+                            style="@style/SmallText2Medium.Black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="27.11.2001" />
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/placeJob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/general_background"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/superLightGray"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/position_company"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrastSecondary
+                                android:id="@+id/company_label_tv"
+                                style="@style/SmallText2.Gray"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:text="@string/company_label"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/company_value_tv"
+                                style="@style/SmallText2Medium.Black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/department_company"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/department_label_tv"
+                                style="@style/SmallText2.Gray"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:text="@string/department_label"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/department_value_tv"
+                                style="@style/SmallText2Medium.Black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/position_linear"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrastSecondary
+                                android:id="@+id/position_label_tv"
+                                style="@style/SmallText2.Gray"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:text="@string/position_label"
+                                android:textColor="@color/general_secondary"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/position_value_tv"
+                                style="@style/SmallText2Medium.Black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/role_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginBottom="20dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/general_background"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/superLightGray"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
+
+                        <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrastSecondary
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="@string/role_label"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/role_value_tv"
+                            style="@style/SmallText2Medium.Black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp" />
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/location_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardBackgroundColor="@color/general_background"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/superLightGray"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/profile_location_label"
+                            android:layout_marginBottom="12dp"
+                            style="@style/StandardText3Medium.Black"/>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp">
+                            <com.google.android.gms.maps.MapView
+                                android:id="@+id/map"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp" />
+                        </com.google.android.material.card.MaterialCardView>
+
+
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:text="@string/lastAuth"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </com.teamforce.thanksapp.presentation.theme.ThemableSwipeRefreshLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:animationCache="true"
+        android:elevation="60dp"
+        android:visibility="visible"
+        app:shimmer_clip_to_children="true"
+        app:shimmer_repeat_mode="restart"
+        app:shimmer_shape="linear">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/general_background"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/user_avatar_shim"
+                android:layout_width="132dp"
+                android:layout_height="132dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:background="@color/shimmerColor"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                app:useGradient="true" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/greeting_user_tv_shim"
+                style="@style/Headline3"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="@color/shimmerColor"
+                app:cardCornerRadius="14dp" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/status_bar_shim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="45dp"
+                android:backgroundTint="@color/shimmerColor"
+                app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Body1.White"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        style="@style/Body1.White"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/stats_card_shim"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="22dp"
+                app:cardBackgroundColor="@color/shimmerColor"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="10dp">
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/shimmerColor"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/StandardText4Bold.Black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            style="@style/Subtitle1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/shimmerColor"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/StandardText4Bold.Black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        style="@style/SmallText2.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        style="@style/Subtitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        style="@style/SmallText2.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        style="@style/Subtitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        style="@style/SmallText2.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        style="@style/Subtitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp" />
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+    <include
+        android:id="@+id/error"
+        layout="@layout/error_internet_connection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/MyCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:cardElevation="30dp">
+
+        <com.teamforce.thanksapp.presentation.theme.ThemableDefaultButton
+            android:id="@+id/thanks_btn"
+            style="@style/DefaultButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginHorizontal="16dp"
+            android:paddingVertical="17dp"
+            android:text="@string/send" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</com.teamforce.thanksapp.presentation.theme.ThemableCoordinatorLayout>
+
+

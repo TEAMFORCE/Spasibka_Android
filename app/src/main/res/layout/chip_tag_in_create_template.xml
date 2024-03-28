@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.chip.Chip xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:textSize="12sp"
+    app:chipBackgroundColor="@color/general_brand_secondary"
+    android:textColor="@color/general_brand"
+    android:textAppearance="@style/StandardText3Medium.Black"
+    tools:text="Отдых"
+    app:chipMinTouchTargetSize="40dp"
+    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize30Percent">
+
+</com.google.android.material.chip.Chip>

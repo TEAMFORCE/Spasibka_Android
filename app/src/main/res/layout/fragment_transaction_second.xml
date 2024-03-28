@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.teamforce.thanksapp.presentation.theme.ThemableCoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_status_bar"
+    android:fitsSystemWindows="false"
+    tools:context=".presentation.fragment.newTransactionScreen.TransactionFragmentSecond">
+
+    <LinearLayout
+        android:id="@+id/main_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_white_rounded_top"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_centered" />
+
+        <ScrollView
+            android:id="@+id/send_coin_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/send_coin_linear"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <include
+                    android:id="@+id/error"
+                    layout="@layout/error_internet_connection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
+                    android:animationCache="true"
+                    android:visibility="visible"
+                    app:shimmer_clip_to_children="true"
+                    app:shimmer_repeat_mode="restart"
+                    app:shimmer_shape="linear">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="25dp"
+                        app:cardBackgroundColor="@color/general_background_black_gray"
+                        app:cardCornerRadius="16dp">
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/shimmer_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="16dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="@dimen/margin_8dp"
+                    app:cardBackgroundColor="@color/general_brand_secondary"
+                    app:cardCornerRadius="12dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:gravity="end">
+
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="74dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="20dp"
+                            android:scaleType="matrix"
+                            android:src="@drawable/draw_for_my_count_card"
+                            app:tint="@color/general_background">
+
+                        </ImageView>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="13dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="25dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/my_count_label_tv"
+                                style="@style/SmallText2.Black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:text="@string/available" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/my_count_value_tv"
+                                    style="@style/Headline4Bold"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:autoSizeMaxTextSize="34dp"
+                                    android:maxLength="4"
+                                    tools:text="303" />
+
+                                <TextView
+                                    android:id="@+id/my_count_currency_tv"
+                                    style="@style/SmallText2.Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="7dp"
+                                    android:maxLines="1"
+                                    android:autoSizeTextType="uniform"
+                                    android:autoSizeMinTextSize="8sp"
+                                    tools:text="Спасибок" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/my_second_count_label_tv"
+                                style="@style/SmallText2.Black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/personalAccount" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/my_second_count_value_tv"
+                                    style="@style/Headline4Bold"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLength="4"
+                                    tools:text="30303" />
+
+                                <TextView
+                                    android:id="@+id/my_second_count_currency_tv"
+                                    style="@style/SmallText2.Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:autoSizeTextType="uniform"
+                                    android:autoSizeMinTextSize="8sp"
+                                    android:layout_marginStart="7dp"
+                                    tools:text="Спасибок" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.teamforce.thanksapp.presentation.customViews.userCard.UserCardView
+                    android:id="@+id/receiver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="0dp"
+                    android:transitionName="transfer_receiver"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/count_value_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:hint="0"
+                        android:minWidth="40dp"
+                        android:gravity="center"
+                        android:backgroundTint="@color/transparent"
+                        android:textAppearance="@style/Headline3Bold"
+                        android:drawableEnd="@drawable/ic_logo"
+                        android:drawablePadding="6dp"
+                        style="@style/TextInputEditText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:lines="1" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/minor_info_secondary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/count_value_et"
+                        app:layout_constraintStart_toStartOf="@+id/count_value_et" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupThanks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipOne"
+                        style="@style/MyChipsOrange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:checked="true"
+                        android:layoutDirection="rtl"
+                        android:text="1" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipFive"
+                        style="@style/MyChipsOrange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+
+                        android:layoutDirection="rtl"
+                        android:text="5" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipTen"
+                        style="@style/MyChipsOrange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:layoutDirection="rtl"
+                        android:text="10" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipTwentyFive"
+                        style="@style/MyChipsOrange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:layoutDirection="rtl"
+                        android:text="25" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/tagsChipGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginBottom="20dp"
+                    android:paddingHorizontal="16dp"
+                    android:visibility="gone"
+                    app:chipSpacingVertical="0dp">
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/reason_value"
+                    style="@style/OutlinedRoundedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:minHeight="152dp"
+                    android:outlineProvider="none"
+                    app:cardCornerRadius="@dimen/round_corner_xlarge"
+                    app:strokeColor="@color/color20"
+                    app:strokeWidth="@dimen/stroke_size">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/message_value_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="@style/TextInputEditText"
+                        android:gravity="top"
+                        android:background="@null"
+                        android:minHeight="152dp"
+                        android:hint="@string/reason_transaction"
+                        android:textAppearance="@style/StandardText3.Black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/show_attached_img_card"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginEnd="16dp"
+                        android:visibility="gone"
+                        app:cardCornerRadius="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/image"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_launcher_background" />
+
+                            <ImageButton
+                                android:id="@+id/detach_img_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="55dp"
+                                android:layout_marginBottom="50dp"
+                                android:backgroundTint="@color/transparent"
+                                android:src="@drawable/ic_cross_white" />
+                        </RelativeLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/show_attached_img_card_2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:visibility="gone"
+                        app:cardCornerRadius="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/image_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_launcher_background" />
+
+                            <ImageButton
+                                android:id="@+id/detach_img_btn_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="55dp"
+                                android:layout_marginBottom="50dp"
+                                android:backgroundTint="@color/transparent"
+                                android:src="@drawable/ic_cross_white" />
+                        </RelativeLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/margin_16dp"
+                    android:paddingVertical="@dimen/margin_16dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/image_with_cross" />
+
+
+                <com.teamforce.thanksapp.presentation.theme.ThemableOutlinedButton
+                    android:id="@+id/attach_image_btn"
+                    style="@style/NotFilledButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:paddingVertical="17dp"
+                    android:text="@string/addPhoto"
+                    app:icon="@drawable/ic_attach"
+                    app:iconGravity="textStart" />
+
+                <com.teamforce.thanksapp.presentation.theme.ThemableDefaultButton
+                    android:id="@+id/attach_sticker_btn"
+                    style="@style/DefaultButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:paddingVertical="17dp"
+                    android:text="@string/addSticker"
+                    app:icon="@drawable/ic_emotion"
+                    app:iconGravity="textStart" />
+
+                <LinearLayout
+                    android:id="@+id/is_anon_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp">
+
+                    <TextView
+                        style="@style/StandardText3Inter.Black"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="@string/isAnon" />
+
+                    <com.teamforce.thanksapp.presentation.theme.ThemableSwitchMaterial
+                        android:id="@+id/isAnon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:checked="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/is_public_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp">
+
+                    <TextView
+                        style="@style/StandardText3Inter.Black"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="@string/isPublic" />
+
+                    <com.teamforce.thanksapp.presentation.theme.ThemableSwitchMaterial
+                        android:id="@+id/isPublic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:checked="false" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="64dp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+
+    <com.teamforce.thanksapp.presentation.theme.ThemableDefaultButton
+        android:id="@+id/send_coin_btn_sticky"
+        style="@style/DefaultButton"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="16dp"
+        android:backgroundTint="@color/general_brand"
+        android:paddingVertical="17dp"
+        android:text="@string/send"
+        android:visibility="visible"
+        app:cornerRadius="12dp" />
+
+
+</com.teamforce.thanksapp.presentation.theme.ThemableCoordinatorLayout>

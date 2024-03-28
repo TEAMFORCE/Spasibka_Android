@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="40dp">
+
+        <com.teamforce.thanksapp.presentation.customViews.AvatarView.AvatarView
+            android:id="@+id/user_avatar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:useGradient="true"
+            app:avatarViewInitialsBackgroundGradientColorStart="@color/general_brand"
+            app:avatarViewInitialsBackgroundGradientColorEnd="@color/general_brand_secondary"
+            app:avatarViewInitialsTextColor="@color/white"
+            app:avatarViewInitialsTextSize="16sp"
+            app:avatarViewInitialsTextSizeRatio="0.33"
+            android:layout_marginTop="27dp"
+            android:layout_marginBottom="12dp"
+            app:avatarViewInitialsTextStyle="bold"/>
+
+        <TextView
+            android:id="@+id/date_transaction_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/SmallText2.Gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/description_transaction_you_do"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginHorizontal="16dp"
+                android:textAppearance="@style/StandardText3Medium.Black" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/description_transaction_who"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                android:textAppearance="@style/StandardText3Medium.Black"-->
+<!--                android:textColor="@color/general_brand" />-->
+        </LinearLayout>
+
+<!--        <TextView-->
+<!--            android:id="@+id/description_transaction_amount_text"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="25dp"-->
+<!--            android:textAppearance="@style/StandardText3Medium.Black"-->
+<!--            android:textColor="@color/general_contrast" />-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/valueTransfer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:textAppearance="@style/Headline1.Green"
+               />
+
+            <ImageView
+                android:id="@+id/currency_transaction"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/ic_currency"
+                app:tint="@color/minor_success" />
+
+            <TextView
+                android:id="@+id/we_or_you_refused"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="@string/weRefusedYourOperation"
+                android:textColor="@color/minor_error"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/separate_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="22dp"
+            android:background="@color/color24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginBottom="15dp"
+            android:layout_marginHorizontal="16dp"
+            android:textAppearance="@style/VerySmallText1.Gray"
+            android:text="@string/information" />
+
+
+        <TextView
+            android:id="@+id/reason_transaction_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="7dp"
+            android:letterSpacing="0.05"
+            android:visibility="gone"
+            android:text="@string/message"
+            style="@style/StandardText4Bold.Black" />
+
+        <TextView
+            android:id="@+id/reason_transaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="26dp"
+            android:textAppearance="@style/StandardText3.Black" />
+
+        <TextView
+            android:id="@+id/label_status_transaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginBottom="7dp"
+            android:letterSpacing="0.05"
+            android:layout_marginHorizontal="16dp"
+            android:text="@string/statusTransfer"
+            style="@style/StandardText4Bold.Black" />
+
+        <TextView
+            android:id="@+id/status_transaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="16dp"
+            android:textAppearance="@style/StandardText3.Black"  />
+
+        <TextView
+            android:id="@+id/photo_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="7dp"
+            android:letterSpacing="0.05"
+            android:layout_marginHorizontal="16dp"
+            android:text="@string/photo"
+            style="@style/StandardText4Bold.Black"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:paddingVertical="24dp"
+            android:paddingHorizontal="@dimen/margin_16dp"
+            android:clipToPadding="false"
+            tools:listitem="@layout/item_general_image"
+            android:orientation="horizontal"/>
+
+        <TextView
+            android:id="@+id/sticker_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="7dp"
+            android:letterSpacing="0.05"
+            android:layout_marginHorizontal="16dp"
+            android:text="@string/sticker"
+            style="@style/StandardText4Bold.Black"
+            android:visibility="gone" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_sticker"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginHorizontal="16dp"
+            app:cardCornerRadius="12dp"
+            android:visibility="gone"
+            android:layout_marginBottom="21dp"
+            android:layout_gravity="start">
+            <ImageView
+                android:id="@+id/sender_sticker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+
+
+
+
+
+

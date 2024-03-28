@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/general_background"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/superLightGray"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:orientation="horizontal">
+
+        <com.teamforce.thanksapp.presentation.customViews.AvatarView.AvatarView
+            android:id="@+id/user_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:avatarViewBorderColor="@color/general_background"
+            app:avatarViewInitialsBackgroundGradientColorEnd="@color/general_brand_secondary"
+            app:avatarViewInitialsBackgroundGradientColorStart="@color/general_brand"
+            app:avatarViewInitialsTextColor="@color/white"
+            app:avatarViewInitialsTextSize="16sp"
+            app:avatarViewInitialsTextSizeRatio="0.33"
+            app:avatarViewInitialsTextStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            app:useGradient="true" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/fio_sender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textAppearance="@style/StandardText3Inter.Black"
+                    tools:text="Малков Дмитрий" />
+
+                <TextView
+                    android:id="@+id/date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dateTime"
+                    android:textAppearance="@style/SmallText2Inter.Black"
+                    android:textColor="@color/general_contrast_secondary" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/SmallText2.Black"
+                android:visibility="visible"
+                tools:text="Что то например такое jxtyn lkbygdfvd jekngjekrg jeg erg kjerg erg kerg jkerg jebg" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/gif_card"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:visibility="gone"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:id="@+id/gif_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_launcher_background" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.teamforce.thanksapp.presentation.customViews.reactionLayout.ReactionLayoutForListItem
+                android:id="@+id/reaction_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:hideCommentsButton="true"
+                android:layout_gravity="end" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

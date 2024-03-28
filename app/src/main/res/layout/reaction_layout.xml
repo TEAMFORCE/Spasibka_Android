@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:id="@+id/linear"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <eightbitlab.com.blurview.BlurView
+        android:id="@+id/like_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_reaction_background"
+        app:blurOverlayColor="@color/blurColorAlpha25">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/like_iv"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:tint="@color/general_background"
+                android:src="@drawable/ic_like" />
+
+            <TextView
+                android:id="@+id/likes_amount_tv"
+                style="@style/VerySmallText1Medium.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="8dp"
+                tools:text="134" />
+
+        </LinearLayout>
+
+    </eightbitlab.com.blurview.BlurView>
+
+
+    <eightbitlab.com.blurview.BlurView
+        android:id="@+id/comment_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_reaction_background"
+        app:blurOverlayColor="@color/blurColorAlpha25">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_comment"
+                app:tint="@color/general_background" />
+
+            <TextView
+                android:id="@+id/comments_amount_tv"
+                style="@style/VerySmallText1Medium.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="8dp"
+                tools:text="134" />
+
+        </LinearLayout>
+
+    </eightbitlab.com.blurview.BlurView>
+
+
+</LinearLayout>
+

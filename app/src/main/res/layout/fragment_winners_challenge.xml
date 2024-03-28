@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.fragment.challenges.fragmentsViewPager2.WinnersChallengeFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/winners_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:layout_marginTop="16dp"
+        tools:listitem="@layout/item_winner"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/noWinners"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="20dp"
+        android:visibility="gone"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            style="@style/Body1.Bold"
+            android:text="Пока победителей нет"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_input_comment"
+        style="@style/MyCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="visible"
+        android:translationY="210dp"
+        app:cardElevation="30dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldMessage"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="@dimen/margin_x"
+            android:layout_marginBottom="18dp"
+            android:gravity="top|start"
+            android:hint="@string/comment"
+            android:lines="6"
+            android:maxLines="10"
+            android:minLines="1"
+            android:scrollbars="vertical"
+            android:textColorHint="@color/general_secondary"
+            app:boxBackgroundColor="@color/color5"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            app:boxStrokeColor="@color/general_color_grey"
+            app:boxStrokeWidth="1dp"
+            app:endIconDrawable="@drawable/ic_emotion"
+            app:endIconTint="@color/general_brand">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/message_value_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|start"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLines="10"
+                android:minLines="1"
+                android:scrollbars="vertical"
+                android:scrollHorizontally="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>
