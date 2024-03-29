@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/list"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="10dp"
+    android:orientation="horizontal"
+    android:paddingVertical="16dp"
+    android:clipToPadding="false"
+    android:clipChildren="false"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    app:layout_constraintEnd_toStartOf="@id/attach_image_btn"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    tools:listitem="@layout/image_with_cross" />
+
+
+    <com.teamforce.thanksapp.presentation.theme.ThemableMaterialCardStrokeColor
+        android:id="@+id/attach_image_btn"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:cardCornerRadius="12dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/general_brand"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.teamforce.thanksapp.presentation.theme.ThemableImageViewMainBrandColor
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_attach"
+            android:layout_gravity="center"/>
+
+    </com.teamforce.thanksapp.presentation.theme.ThemableMaterialCardStrokeColor>
+</androidx.constraintlayout.widget.ConstraintLayout>

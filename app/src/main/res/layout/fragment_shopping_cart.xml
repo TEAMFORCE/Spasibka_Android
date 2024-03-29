@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/all_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/background_for_status_bar"
+    tools:context=".presentation.fragment.benefitCafeScreen.shoppingCart.ShoppingCartFragment">
+
+
+    <LinearLayout
+        android:id="@+id/all_linear_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_white_rounded_top"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_centered" />
+
+        <LinearLayout
+            android:id="@+id/success_order_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="112dp"
+                android:textAlignment="center"
+                android:textAppearance="@style/Headline6Bold"
+                android:text="@string/orderSuccessful"/>
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableImageVIewIcon
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/success_order_picture"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nothing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="50dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/error_internet"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/StandardText4.Black"
+                android:layout_marginBottom="22dp"
+                android:text="@string/shoppingCartEmpty"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/list_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:background="@drawable/background_white_rounded_top"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/error"
+                android:visibility="gone"
+                layout="@layout/error_internet_connection"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"/>
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/benefits_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="70dp"
+                    tools:listitem="@layout/item_shopping_cart"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <com.teamforce.thanksapp.presentation.theme.ThemableDefaultButton
+        android:id="@+id/buy_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_gravity="bottom"
+        android:text="@string/getBenefits"
+        android:stateListAnimator="@null"
+        style="@style/DefaultButton"
+        android:textAllCaps="true"
+        android:paddingVertical="17dp" />
+
+    <com.teamforce.thanksapp.presentation.theme.ThemableDefaultButton
+        android:id="@+id/btn_go_to_main_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginBottom="20dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_gravity="bottom"
+        android:text="@string/goToMainPage"
+        android:stateListAnimator="@null"
+        style="@style/DefaultButton"
+        android:textAllCaps="true"
+        android:paddingVertical="17dp" />
+
+
+
+</com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout>

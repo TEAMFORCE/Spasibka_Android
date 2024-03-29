@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_input_comment"
+    style="@style/MyCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    app:cardElevation="30dp"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldMessage"
+        style="@style/OutlinedRoundedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="@dimen/margin_x"
+        android:layout_marginBottom="18dp"
+        app:endIconDrawable="@drawable/ic_comment_24"
+        app:endIconMode="custom"
+        android:hint="@string/comment"
+        android:maxLines="10">
+
+        <com.teamforce.thanksapp.presentation.customViews.customEditText.GifSupportEditText
+            android:id="@+id/message_value_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextInputEditText"
+            android:hint="@string/comment"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="10"
+            android:minLines="1"
+            android:scrollbars="vertical"
+            android:scrollHorizontally="false"
+            android:textCursorDrawable="@null" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+</com.google.android.material.card.MaterialCardView>
+
+

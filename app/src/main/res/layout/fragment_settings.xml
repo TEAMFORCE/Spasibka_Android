@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_status_bar"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_white_rounded_top"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_centered" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_white_rounded_top"
+            android:orientation="vertical"
+            android:animateLayoutChanges="true"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="20dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/current_org_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginBottom="24dp"
+                        android:transitionName="list_of_org_card"
+                        app:cardBackgroundColor="@color/general_brand_secondary"
+                        app:cardCornerRadius="12dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_margin="18dp">
+
+                            <ImageView
+                                android:id="@+id/org_photo_iv"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_app_logo"
+                                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.teamforce.thanksapp.presentation.theme.ThemableTextViewMainBrandColor
+                                    android:id="@+id/current_org_label_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="12dp"
+                                    android:visibility="visible"
+                                    android:textAppearance="@style/SmallText2.Black"
+                                    android:textColor="@color/general_brand"
+                                    android:text="@string/currentOrganisation" />
+
+                                <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                                    android:id="@+id/org_name_label_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="12dp"
+                                    android:gravity="center_vertical"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:textAppearance="@style/StandardText3Medium.Black"
+                                    tools:text="TeamForce Something X5 Group Plus R2D2 Top company in the world " />
+                            </LinearLayout>
+
+                            <com.teamforce.thanksapp.presentation.theme.ThemableImageVIewIcon
+                                android:id="@+id/action_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_settings"
+                                app:tint="@color/general_brand"
+                                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:id="@+id/invite_linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginBottom="18dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            app:tint="@color/general_contrast"
+                            android:src="@drawable/ic_share" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="@string/onboarding_invite_members"
+                            android:textAppearance="@style/StandardText4.Black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="18dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/lang_linear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:src="@drawable/ic_lang" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="@string/language"
+                                android:textAppearance="@style/StandardText4.Black" />
+
+                            <TextView
+                                android:id="@+id/indicate_lang_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="14dp"
+                                android:textAppearance="@style/StandardText4.Black"
+                                android:textColor="@color/general_secondary"
+                                tools:text="@string/russian" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="1dp"
+                                android:src="@drawable/arrow_little_right" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/privacy_policy_linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="18dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/ic_shield" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="@string/privacyPolicy"
+                            android:textAppearance="@style/StandardText4.Black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/user_agreement_linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="18dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/ic_users" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="@string/userAgreement"
+                            android:textAppearance="@style/StandardText4.Black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/feedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="18dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/ic_phone" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="@string/feedback"
+                            android:textAppearance="@style/StandardText4.Black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/info_linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/info_circle" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="@string/aboutApp"
+                            android:textAppearance="@style/StandardText4.Black" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/arrow_little_right" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <com.teamforce.thanksapp.presentation.theme.ThemableDefaultButton
+                        android:id="@+id/exit_btn"
+                        style="@style/DefaultButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_16dp"
+                        android:paddingVertical="17dp"
+                        android:transitionName="list_of_org_btn"
+                        android:text="@string/exit"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+
+
+
+
+        </FrameLayout>
+    </LinearLayout>
+
+
+
+</com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout>
+
+
+

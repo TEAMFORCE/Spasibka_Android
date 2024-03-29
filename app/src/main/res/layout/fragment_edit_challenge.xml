@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:scrollbars="none"
+        android:transitionName="transitionToCreateChallenge">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:backgroundTint="@color/general_background"
+            android:orientation="vertical"
+            android:paddingTop="24dp"
+            tools:context=".presentation.fragment.challenges.createChallenge.CreateChallengeFragment">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/StandardText4Medium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/update_challenge_title" />
+
+                <TextView
+                    style="@style/SmallText2.Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/update_challenge_subtitle" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearTextFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:clipChildren="false"
+                android:paddingHorizontal="16dp">
+
+                <com.teamforce.thanksapp.presentation.theme.ThemableTextInputLayoutOutlined
+                    android:id="@+id/titleTextField"
+                    style="@style/OutlinedRoundedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:boxStrokeColor="@color/general_color_grey"
+                    app:boxStrokeWidth="0.5dp"
+                    app:startIconTint="@color/general_brand">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/title_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextInputEditText"
+                        android:hint="@string/inputNameChallenge"
+                        android:inputType="text|textMultiLine" />
+
+                </com.teamforce.thanksapp.presentation.theme.ThemableTextInputLayoutOutlined>
+
+                <com.teamforce.thanksapp.presentation.theme.ThemableTextInputLayoutOutlined
+                    android:id="@+id/descriptionTextField"
+                    style="@style/OutlinedRoundedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:boxStrokeColor="@color/general_color_grey"
+                    app:boxStrokeWidth="0.5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/description_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextInputEditText"
+                        android:gravity="top|start"
+                        android:hint="@string/description"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:minLines="6"
+                        android:scrollbars="vertical" />
+
+                </com.teamforce.thanksapp.presentation.theme.ThemableTextInputLayoutOutlined>
+
+                <com.teamforce.thanksapp.presentation.customViews.photoSelectionView.PhotoSelectionView
+                    android:id="@+id/photo_selection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:id="@+id/linear_additional_fields"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:layout_marginTop="12dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/start_date_text_field"
+                        style="@style/OutlinedRoundedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:focusable="false"
+                        android:visibility="gone"
+                        app:boxCornerRadiusBottomEnd="15dp"
+                        app:boxCornerRadiusBottomStart="15dp"
+                        app:boxCornerRadiusTopEnd="15dp"
+                        app:boxCornerRadiusTopStart="15dp"
+                        app:boxStrokeColor="@color/general_color_grey"
+                        app:boxStrokeWidth="0.5dp"
+                        app:endIconDrawable="@drawable/ic_calendar"
+                        app:endIconMode="custom"
+                        app:endIconTint="@color/general_contrast">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/start_date_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/TextInputEditText"
+                            android:focusable="false"
+                            android:hint="@string/dateStartEvent"
+                            android:inputType="none"
+                            android:lines="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/end_date_text_field"
+                        style="@style/OutlinedRoundedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:focusable="false"
+                        android:visibility="visible"
+                        app:boxCornerRadiusBottomEnd="15dp"
+                        app:boxCornerRadiusBottomStart="15dp"
+                        app:boxCornerRadiusTopEnd="15dp"
+                        app:boxCornerRadiusTopStart="15dp"
+                        app:boxStrokeColor="@color/general_color_grey"
+                        app:boxStrokeWidth="0.5dp"
+                        app:endIconDrawable="@drawable/ic_calendar"
+                        app:endIconMode="custom"
+                        app:endIconTint="@color/general_contrast">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/end_date_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/TextInputEditText"
+                            android:focusable="false"
+                            android:hint="@string/dateCloseEvent"
+                            android:inputType="none"
+                            android:lines="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.teamforce.thanksapp.presentation.theme.ThemableTextInputLayoutOutlined
+                        android:id="@+id/prizeFundTextField"
+                        style="@style/OutlinedRoundedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:boxCornerRadiusBottomEnd="15dp"
+                        app:boxCornerRadiusBottomStart="15dp"
+                        app:boxCornerRadiusTopEnd="15dp"
+                        app:boxCornerRadiusTopStart="15dp"
+                        app:boxStrokeColor="@color/general_color_grey"
+                        app:boxStrokeWidth="0.5dp"
+                        app:endIconDrawable="@drawable/ic_logo_24x24"
+                        app:endIconMode="custom"
+                        app:endIconTint="@color/black">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/prizeFund_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/TextInputEditText"
+                            android:hint="@string/pointAtPrizeFund"
+                            android:inputType="number"
+                            android:lines="1" />
+
+                    </com.teamforce.thanksapp.presentation.theme.ThemableTextInputLayoutOutlined>
+
+
+                    <com.teamforce.thanksapp.presentation.theme.ThemableTextInputLayoutOutlined
+                        android:id="@+id/prizePoolTextField"
+                        style="@style/OutlinedRoundedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:boxCornerRadiusBottomEnd="15dp"
+                        app:boxCornerRadiusBottomStart="15dp"
+                        app:boxCornerRadiusTopEnd="15dp"
+                        app:boxCornerRadiusTopStart="15dp"
+                        app:boxStrokeColor="@color/general_color_grey"
+                        app:boxStrokeWidth="0.5dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/prizePool_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/TextInputEditText"
+                            android:hint="@string/pointAtPrizePool"
+                            android:inputType="number"
+                            android:lines="1" />
+
+                    </com.teamforce.thanksapp.presentation.theme.ThemableTextInputLayoutOutlined>
+
+                    <LinearLayout
+                        android:id="@+id/choose_account_linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal">
+
+                        <com.teamforce.thanksapp.presentation.theme.ThemableCheckBox
+                            android:id="@+id/checkbox_choose_account"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/change_account"
+                            android:textAppearance="@style/StandardText4.Black" />
+                    </LinearLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/account_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:visibility="gone"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_marginVertical="18dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="@string/chooseAccount"
+                                android:textAppearance="@style/StandardText4.Black" />
+
+                            <TextView
+                                android:id="@+id/tv_account_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="12dp"
+                                tools:text="@string/personalAccount" />
+
+                            <TextView
+                                android:id="@+id/tv_account_balance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxWidth="100dp"
+                                android:maxLines="1"
+                                android:textColor="@color/minor_success"
+                                tools:text="23" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmerLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:animationCache="true"
+                        app:shimmer_repeat_mode="restart"
+                        app:shimmer_shape="radial">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            app:cardBackgroundColor="#B3B3B3"
+                            app:cardCornerRadius="12dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginHorizontal="16dp"
+                                android:layout_marginVertical="18dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:textAppearance="@style/StandardText4.Black" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="12dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxWidth="100dp"
+                                    android:maxLines="1"
+                                    android:textColor="@color/minor_success"
+                                    tools:text="23" />
+
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/show_attached_img_card"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:visibility="gone"
+                        app:cardCornerRadius="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/image"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_launcher_background" />
+
+                            <ImageButton
+                                android:id="@+id/detach_img_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="55dp"
+                                android:layout_marginBottom="50dp"
+                                android:backgroundTint="@color/transparent"
+                                android:src="@drawable/ic_cross_white" />
+                        </RelativeLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+<!--                    <com.teamforce.thanksapp.presentation.theme.ThemableOutlinedButton-->
+<!--                        android:id="@+id/attach_image_btn"-->
+<!--                        style="@style/NotFilledButton"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginBottom="8dp"-->
+<!--                        android:paddingVertical="17dp"-->
+<!--                        android:text="@string/backgroundChallenge"-->
+<!--                        app:icon="@drawable/ic_attach"-->
+<!--                        app:iconGravity="textStart" />-->
+
+                    <com.teamforce.thanksapp.presentation.theme.ThemableTextViewMainBrandColor
+                        android:id="@+id/tv_additional_settings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/additionalSettings"
+                        android:textAppearance="@style/StandardText4.White"
+                        android:textColor="@color/general_brand" />
+
+                </LinearLayout>
+
+                <com.teamforce.thanksapp.presentation.theme.ThemableTextViewMinorErrorColor
+                    android:id="@+id/tv_delete_challenge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/update_challenge_delete"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:textColor="@color/minor_error"
+                    android:layout_marginVertical="17dp"
+                    style="@style/StandardText4.Black"/>
+
+
+                <com.teamforce.thanksapp.presentation.theme.ThemableDefaultButton
+                    android:id="@+id/update_btn"
+                    style="@style/DefaultButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="17dp"
+                    android:text="@string/update_challenge_update" />
+
+                <com.teamforce.thanksapp.presentation.theme.ThemableNotFilledButton
+                    android:id="@+id/close_btn"
+                    style="@style/NotFilledButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="0dp"
+                    android:paddingVertical="17dp"
+                    android:stateListAnimator="@null"
+                    android:text="@string/update_challenge_cancel"
+                    app:strokeWidth="0dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.teamforce.thanksapp.presentation.theme.ThemableDefaultButton
+        android:id="@+id/create_btn_sticky"
+        style="@style/DefaultButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="16dp"
+        android:paddingVertical="17dp"
+        android:text="@string/create"
+        android:visibility="gone" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

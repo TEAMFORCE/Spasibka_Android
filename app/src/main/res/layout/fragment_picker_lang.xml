@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".presentation.fragment.profileScreen.settings.PickerLangFragment">
+
+    <com.teamforce.thanksapp.presentation.theme.ThemableMaterialToolbar
+        android:id="@+id/toolbarTransaction"
+        style="@style/Theme.ThanksApp.PopupOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/general_brand"
+        android:elevation="0dp"
+        app:layout_collapseMode="pin"
+        app:layout_scrollFlags="enterAlways"
+        android:paddingHorizontal="16dp"
+        app:title="@string/language"
+        app:titleTextAppearance="@style/Headline6.White"
+        app:titleTextColor="@color/white" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/system_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="16dp"
+        app:cardElevation="12dp"
+        app:cardCornerRadius="12dp">
+
+        <LinearLayout
+            android:id="@+id/lang_sys_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:text="@string/likeTheSystem"
+                android:textAppearance="@style/StandardText3.Black"/>
+
+            <TextView
+                android:id="@+id/indicate_lang_sys_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/current"
+                android:visibility="gone"
+                android:layout_marginEnd="14dp"
+                android:textColor="@color/general_secondary"
+                android:textAppearance="@style/StandardText3.Black"/>
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/ic_android"
+                app:tint="@color/minor_success" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/russian_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="16dp"
+        app:cardElevation="12dp"
+        app:cardCornerRadius="12dp">
+
+        <LinearLayout
+            android:id="@+id/lang_rus_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:text="@string/russian"
+                android:textAppearance="@style/StandardText3.Black"/>
+
+            <TextView
+                android:id="@+id/indicate_lang_rus_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/current"
+                android:layout_marginEnd="14dp"
+                android:visibility="gone"
+                android:textColor="@color/general_secondary"
+                android:textAppearance="@style/StandardText3.Black"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/russian_flag"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/british_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="16dp"
+        app:cardElevation="12dp"
+        app:cardCornerRadius="12dp">
+
+        <LinearLayout
+            android:id="@+id/lang_british_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:text="@string/english"
+                android:textAppearance="@style/StandardText3.Black"/>
+
+            <TextView
+                android:id="@+id/indicate_lang_british_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/current"
+                android:visibility="gone"
+                android:layout_marginEnd="14dp"
+                android:textColor="@color/general_secondary"
+                android:textAppearance="@style/StandardText3.Black"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/uk_flag"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>

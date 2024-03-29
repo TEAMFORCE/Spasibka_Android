@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/mainScreenFragment">
+
+    <fragment
+        android:id="@+id/someonesProfileFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.profileScreen.SomeonesProfileFragment"
+        android:label="@string/someonesProfile">
+
+    </fragment>
+    <navigation
+        android:id="@+id/profileGraph"
+        android:label="@string/profile"
+        app:startDestination="@id/profileFragment">
+        <fragment
+            android:id="@+id/profileFragment"
+            android:name="com.teamforce.thanksapp.presentation.fragment.profileScreen.ProfileFragment"
+            android:label="@string/profile"
+            tools:layout="@layout/fragment_profile">
+            <action
+                android:id="@+id/action_profileFragment_to_chooseStatusDialogFragment"
+                app:destination="@id/chooseStatusDialogFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/editProfileFragment"
+            android:name="com.teamforce.thanksapp.presentation.fragment.profileScreen.EditProfileFragment"
+            android:label="@string/edit_profile_title"
+            tools:layout="@layout/fragment_edit_profile_bottom_sheet">
+        </fragment>
+        <dialog
+            android:id="@+id/chooseStatusDialogFragment"
+            android:name="com.teamforce.thanksapp.presentation.fragment.profileScreen.ChooseStatusDialogFragment"
+            android:label="fragment_choose_status_dialog"
+            tools:layout="@layout/fragment_choose_status_dialog" >
+            <action
+                android:id="@+id/action_chooseStatusDialogFragment2_to_profileFragment"
+                app:destination="@id/profileFragment"
+                app:launchSingleTop="false"
+                app:popUpTo="@id/profileGraph" />
+        </dialog>
+        <action
+            android:id="@+id/action_global_changeOrganizationFragment"
+            app:destination="@id/changeOrganizationFragment" />
+        <dialog
+            android:id="@+id/chooseGenderDialogFragment"
+            android:name="com.teamforce.thanksapp.presentation.fragment.profileScreen.ChooseGenderDialogFragment"
+            android:label="fragment_choose_gender_dialog"
+            tools:layout="@layout/fragment_choose_gender_dialog" />
+        <action android:id="@+id/action_global_editProfileFragment" app:destination="@id/editProfileFragment"/>
+        <action android:id="@+id/action_global_chooseGenderDialogFragment" app:destination="@id/chooseGenderDialogFragment"/>
+    </navigation>
+    <fragment
+        android:id="@+id/additionalInfoFeedItemFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.feedScreen.AdditionalInfoFeedItemFragment"
+        android:label="@string/detailOfTransaction"/><action android:id="@+id/action_global_additionalInfoFeedItemFragment" app:destination="@id/additionalInfoFeedItemFragment"/>
+    <fragment
+        android:id="@+id/eventsFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.eventScreen.EventsFragment"
+        android:label="@string/events"
+        tools:layout="@layout/fragment_events">
+        <action
+            android:id="@+id/action_eventsFragment_to_additionalInfoFeedItemFragment"
+            app:destination="@id/additionalInfoFeedItemFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_eventsFragment_to_eventsFilterFragment"
+            app:destination="@id/eventsFilterFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/eventsFilterFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.eventScreen.EventsFilterFragment"
+        android:label="fragment_events_filter"
+        tools:layout="@layout/fragment_events_filter" />
+
+    <navigation android:id="@+id/transaction_graph"
+        app:startDestination="@id/transactionFragment">
+        <fragment
+            android:id="@+id/transactionFragment"
+            android:name="com.teamforce.thanksapp.presentation.fragment.newTransactionScreen.TransactionFragment"
+            android:label="@string/new_transaction_label"
+            tools:layout="@layout/fragment_transaction">
+            <action
+                android:id="@+id/action_transactionFragment_to_transactionFragmentSecond"
+                app:destination="@id/transactionFragmentSecond" />
+        </fragment>
+        <fragment
+            android:id="@+id/transactionResultFragment"
+            android:name="com.teamforce.thanksapp.presentation.fragment.newTransactionScreen.TransactionResultFragment"
+            android:label="@string/transaction_result_label"
+            tools:layout="@layout/fragment_transaction_result">
+        </fragment>
+        <fragment
+            android:id="@+id/transactionFragmentSecond"
+            android:name="com.teamforce.thanksapp.presentation.fragment.newTransactionScreen.TransactionFragmentSecond"
+            android:label="@string/new_transaction_label"
+            tools:layout="@layout/fragment_transaction_second">
+            <action
+                android:id="@+id/action_transactionFragmentSecond_to_transactionResultFragment"
+                app:destination="@id/transactionResultFragment" />
+            <action
+                android:id="@+id/action_transactionFragmentSecond_to_stickerPickerFragment"
+                app:destination="@id/stickerPickerFragment" />
+        </fragment>
+        <dialog
+            android:id="@+id/stickerPickerFragment"
+            android:name="com.teamforce.thanksapp.presentation.fragment.stickersScreen.StickerPickerFragment"
+            android:label="fragment_sticker_picker"
+            tools:layout="@layout/fragment_sticker_picker" />
+        <dialog
+            android:id="@+id/transactionResultDialog"
+            android:name="com.teamforce.thanksapp.presentation.fragment.newTransactionScreen.TransactionResultDialog"
+            android:label="fragment_transaction_result_dialog"
+            tools:layout="@layout/fragment_transaction_result_dialog" /><action android:id="@+id/action_global_transactionResultDialog" app:destination="@id/transactionResultDialog"/>
+    </navigation>
+    <navigation android:id="@+id/history_graph"
+        app:startDestination="@id/historyFragment">
+        <fragment
+            android:id="@+id/historyFragment"
+            android:name="com.teamforce.thanksapp.presentation.fragment.historyScreen.HistoryFragment"
+            android:label="@string/history_label"
+            tools:layout="@layout/fragment_history">
+            <action
+                android:id="@+id/action_historyFragment_to_additionalInfoTransactionBottomSheetFragment2"
+                app:destination="@id/additionalInfoTransactionBottomSheetFragment2" />
+            <action
+                android:id="@+id/action_historyFragment_to_filterHistoryTransactionsBottomSheetFragment"
+                app:destination="@id/filterHistoryTransactionsBottomSheetFragment" />
+        </fragment>
+        <dialog
+            android:id="@+id/additionalInfoTransactionBottomSheetFragment2"
+            android:name="com.teamforce.thanksapp.presentation.fragment.historyScreen.AdditionalInfoTransactionBottomSheetFragment"
+            android:label="AdditionalInfoTransactionBottomSheetFragment">
+            <action
+                android:id="@+id/action_additionalInfoTransactionBottomSheetFragment2_to_historyFragment"
+                app:destination="@id/historyFragment" />
+
+        </dialog>
+        <dialog
+            android:id="@+id/filterHistoryTransactionsBottomSheetFragment"
+            android:name="com.teamforce.thanksapp.presentation.fragment.historyScreen.FilterHistoryTransactionsBottomSheetFragment"
+            android:label="FilterHistoryTransactionsBottomSheetFragment" />
+    </navigation>
+    <navigation android:id="@+id/balance_graph"
+        app:startDestination="@id/balanceFragment">
+        <fragment
+            android:id="@+id/balanceFragment"
+            android:name="com.teamforce.thanksapp.presentation.fragment.balanceScreen.BalanceFragment"
+            android:label="@string/balance_label"
+            tools:layout="@layout/fragment_balance">
+        </fragment>
+    </navigation>
+
+    <fragment
+        android:id="@+id/challengesFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.challenges.ChallengesFragment"
+        android:label="@string/challenge_label"
+        tools:layout="@layout/fragment_challenges">
+        <action
+                android:id="@+id/action_challengesFragment_to_detailsMainChallengeFragment"
+                app:destination="@id/detailsMainChallengeFragment" />
+
+    </fragment>
+    <dialog
+        android:id="@+id/categoryFilterFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.challenges.category.ChallengeFilterCategoryFragment"
+        android:label="fragment_categories_filter"
+        tools:layout="@layout/fragment_challenge_category_filter" />
+    <dialog
+        android:id="@+id/categoryEditFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.challenges.category.ChallengeCategoryEditFragment"
+        android:label="fragment_categories_edit"
+        tools:layout="@layout/fragment_challenge_category_edit" >
+        <action
+            android:id="@+id/action_categoryEditFragment_to_categoryAddFragment"
+            app:destination="@id/categoryAddFragment"
+            app:popUpTo="@id/categoryEditFragment"
+            app:popUpToInclusive="true" />
+    </dialog>
+    <dialog
+        android:id="@+id/categoryAddFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.challenges.category.ChallengeCategoryAddFragment"
+        android:label="fragment_categories_add"
+        tools:layout="@layout/fragment_challenge_category_add" >
+        <action
+            android:id="@+id/action_categoryAddFragment_to_categoryEditFragment"
+            app:destination="@id/categoryEditFragment"
+            app:popUpTo="@id/categoryAddFragment"
+            app:popUpToInclusive="true" />
+    </dialog>
+    <dialog
+        android:id="@+id/categoriesAllFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.challenges.category.ChallengeCategoriesAllFragment"
+        android:label="fragment_categories_all"
+        tools:layout="@layout/fragment_challenge_categories_all">
+        <action
+            android:id="@+id/action_categoriesAllFragment_to_categoryEditFragment"
+            app:destination="@id/categoryEditFragment"
+            app:popUpTo="@id/categoriesAllFragment"
+            app:popUpToInclusive="true" />
+    </dialog>
+    <fragment
+            android:id="@+id/detailsMainChallengeFragment"
+            android:name="com.teamforce.thanksapp.presentation.fragment.challenges.DetailsMainChallengeFragment"
+            android:label="@string/challenge_label"
+            tools:layout="@layout/fragment_details_main_challenge">
+            <action
+                android:id="@+id/action_detailsMainChallengeFragment_to_challengesFragment"
+                app:destination="@id/challengesFragment" />
+        <action
+            android:id="@+id/action_detailsMainChallengeFragment_to_editChallengeFragment"
+            app:destination="@id/editChallengeFragment" />
+    </fragment>
+        <fragment
+            android:id="@+id/createReportFragment"
+            android:name="com.teamforce.thanksapp.presentation.fragment.challenges.fragmentsViewPager2.CreateReportFragment"
+            android:label="CreateReportFragment" /><action android:id="@+id/action_global_createReportFragment" app:destination="@id/createReportFragment"/>
+
+        <action android:id="@+id/action_global_detailsMainChallengeFragment"
+            app:destination="@id/detailsMainChallengeFragment"/>
+
+    <action android:id="@+id/action_global_someonesProfileFragment"
+        app:destination="@id/someonesProfileFragment"/>
+    <action android:id="@+id/action_global_challenge_graph"
+        app:destination="@id/challengesFragment"/>
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.notifications.NotificationsFragment"
+        android:label="NotificationsFragment" >
+        <action
+            android:id="@+id/action_notificationsFragment_to_additionalInfoFeedItemFragment2"
+            app:destination="@id/additionalInfoFeedItemFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/additionalInfoFeedItemFragment2"
+        android:name="com.teamforce.thanksapp.presentation.fragment.feedScreen.AdditionalInfoFeedItemFragment"
+        android:label="@string/detailOfTransaction" />
+        <fragment
+            android:id="@+id/createChallengeFragment"
+            android:name="com.teamforce.thanksapp.presentation.fragment.challenges.createChallenge.CreateChallengeFragment"
+            android:label="@string/challenge_label"
+            tools:layout="@layout/fragment_create_challenge"/>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.profileScreen.SettingsFragment"
+        android:label="@string/settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_privacyPolicyFragment"
+            app:destination="@id/privacyPolicyFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_infoAppFragment"
+            app:destination="@id/infoAppFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_pickerLangFragment"
+            app:destination="@id/pickerLangFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_feedback"
+            app:destination="@id/feedbackFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_listOfOrganizationsFragment"
+            app:destination="@id/listOfOrganizationsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.profileScreen.PrivacyPolicyFragment"
+        android:label="fragment_privacy_policy"
+        tools:layout="@layout/fragment_privacy_policy" />
+    <fragment
+        android:id="@+id/infoAppFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.profileScreen.settings.InfoAppFragment"
+        android:label="fragment_info_app"
+        tools:layout="@layout/fragment_info_app" />
+    <fragment
+        android:id="@+id/feedbackFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.newTransactionScreen.FeedbackFragment"
+        android:label="@string/feedback_label"
+        tools:layout="@layout/fragment_feedback" />
+    <action android:id="@+id/action_global_settingsFragment2" app:destination="@id/settingsFragment" />
+    <fragment
+        android:id="@+id/changeOrganizationFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.auth.ChangeOrganizationFragment"
+        android:label="fragment_change_organization"
+        tools:layout="@layout/fragment_change_organization" >
+        <action
+            android:id="@+id/action_changeOrganizationFragment_to_profileGraph"
+            app:destination="@id/profileGraph" />
+    </fragment>
+
+        <fragment
+            android:id="@+id/benefitFragment"
+            android:name="com.teamforce.thanksapp.presentation.fragment.benefitCafeScreen.BenefitFragment"
+            android:label="@string/benefit_cafe_label"
+            tools:layout="@layout/fragment_benefit">
+            <action
+                android:id="@+id/action_benefitFragment_to_benefitDetailMainFragment"
+                app:destination="@id/benefitDetailMainFragment" />
+            <action
+                android:id="@+id/action_benefitFragment_to_filtersBottomSheetDialogFragment"
+                app:destination="@id/filtersBottomSheetDialogFragment" />
+            <action
+                android:id="@+id/action_benefitFragment_to_shoppingCartFragment"
+                app:destination="@id/shoppingCartFragment" />
+            <action
+                android:id="@+id/action_benefitFragment_to_historyOfOrdersFragment"
+                app:destination="@id/historyOfOrdersFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/benefitDetailMainFragment"
+            android:name="com.teamforce.thanksapp.presentation.fragment.benefitCafeScreen.benefitDetail.BenefitDetailMainFragment"
+            android:label="@string/benefit_detail_label"
+            tools:layout="@layout/fragment_benefit_detail">
+            <action
+                android:id="@+id/action_benefitDetailMainFragment_to_shoppingCartFragment"
+                app:destination="@id/shoppingCartFragment" />
+        </fragment>
+        <dialog
+            android:id="@+id/filtersBottomSheetDialogFragment"
+            android:name="com.teamforce.thanksapp.presentation.fragment.benefitCafeScreen.FiltersBottomSheetDialogFragment"
+            android:label="fragment_filters_bottom_sheet_dialog"
+            tools:layout="@layout/fragment_filters_bottom_sheet_dialog" />
+        <fragment
+            android:id="@+id/shoppingCartFragment"
+            android:name="com.teamforce.thanksapp.presentation.fragment.benefitCafeScreen.shoppingCart.ShoppingCartFragment"
+            android:label="@string/shoppingCart"
+            tools:layout="@layout/fragment_shopping_cart" >
+            <action
+                android:id="@+id/action_shoppingCartFragment_to_benefitFragment"
+                app:destination="@id/benefitFragment" />
+            <action
+                android:id="@+id/action_shoppingCartFragment_to_historyOfOrdersFragment"
+                app:destination="@id/historyOfOrdersFragment" />
+            <action
+                android:id="@+id/action_shoppingCartFragment_to_benefitDetailMainFragment"
+                app:destination="@id/benefitDetailMainFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/historyOfOrdersFragment"
+            android:name="com.teamforce.thanksapp.presentation.fragment.benefitCafeScreen.historyOfOrders.HistoryOfOrdersFragment"
+            android:label="@string/historyOffers"
+            tools:layout="@layout/fragment_history_of_orders" >
+            <action
+                android:id="@+id/action_historyOfOrdersFragment_to_filtersHistoryOfOrders"
+                app:destination="@id/filtersHistoryOfOrders" />
+        </fragment>
+        <dialog
+            android:id="@+id/filtersHistoryOfOrders"
+            android:name="com.teamforce.thanksapp.presentation.fragment.benefitCafeScreen.historyOfOrders.FiltersHistoryOfOrders"
+            android:label="fragment_filters_history_of_orders"
+            tools:layout="@layout/fragment_filters_history_of_orders" />
+
+
+    <navigation android:id="@+id/employees_graph"
+        app:startDestination="@id/employeesFragment">
+        <fragment
+            android:id="@+id/employeesFragment"
+            android:name="com.teamforce.thanksapp.presentation.fragment.employeesScreen.EmployeesFragment"
+            android:label="fragment_employees"
+            tools:layout="@layout/fragment_employees" >
+            <action
+                android:id="@+id/action_employeesFragment_to_employeesFilterFragment"
+                app:destination="@id/employeesFilterFragment" />
+        </fragment>
+        <dialog
+            android:id="@+id/employeesFilterFragment"
+            android:name="com.teamforce.thanksapp.presentation.fragment.employeesScreen.EmployeesFilterFragment"
+            android:label="fragment_employees_filter"
+            tools:layout="@layout/fragment_employees_filter" />
+    </navigation>
+    <fragment
+        android:id="@+id/pickerLangFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.profileScreen.settings.PickerLangFragment"
+        android:label="fragment_picker_lang"
+        tools:layout="@layout/fragment_picker_lang" />
+    <dialog
+        android:id="@+id/selectAccountsDialogFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.challenges.createChallenge.SelectAccountsDialogFragment"
+        android:label="fragment_select_accounts_dialog"
+        tools:layout="@layout/fragment_select_accounts_dialog" /><action android:id="@+id/action_global_benefitDetailMainFragment" app:destination="@id/benefitDetailMainFragment"/><action android:id="@+id/action_global_changeOrganizationFragment2" app:destination="@id/changeOrganizationFragment"/>
+    <fragment
+        android:id="@+id/templatesFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.templates.TemplatesFragment"
+        android:label="fragment_templates"
+        tools:layout="@layout/fragment_templates" />
+    <fragment
+        android:id="@+id/createTemplateFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.templates.createTemplate.CreateTemplateFragment"
+        android:label="fragment_create_template"
+        tools:layout="@layout/fragment_create_template" >
+        <action
+            android:id="@+id/action_createTemplateFragment_to_settingsTemplateFragment"
+            app:destination="@id/settingsTemplateFragment" />
+        <action
+            android:id="@+id/action_createTemplateFragment_to_categoriesAllFragment"
+            app:destination="@id/categoriesAllFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsTemplateFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.templates.createTemplate.SettingsTemplateFragment"
+        android:label="fragment_settings_template"
+        tools:layout="@layout/fragment_settings_template" />
+    <dialog
+        android:id="@+id/inviteMembersBottomSheetDialogFragment2"
+        android:name="com.teamforce.thanksapp.presentation.fragment.auth.onBoarding.bottomSheetDialogFragment.InviteMembersBottomSheetDialogFragment"
+        android:label="fragment_invite_members_bottom_sheet_dialog"
+        tools:layout="@layout/fragment_invite_members_bottom_sheet_dialog" /><action android:id="@+id/action_global_inviteMembersBottomSheetDialogFragment2" app:destination="@id/inviteMembersBottomSheetDialogFragment2"/>
+    <fragment
+        android:id="@+id/settingsPeriodFragment2"
+        android:name="com.teamforce.thanksapp.presentation.fragment.auth.onBoarding.SettingsPeriodFragment"
+        android:label="SettingsPeriodFragment" >
+        <action
+            android:id="@+id/action_settingsPeriodFragment2_to_feed_graph"
+            app:destination="@id/eventsFragment" />
+    </fragment><action android:id="@+id/action_global_settingsPeriodFragment2" app:destination="@id/settingsPeriodFragment2"/>
+    <action android:id="@+id/action_global_eventsFragment" app:destination="@id/eventsFragment" />
+    <fragment
+        android:id="@+id/listOfOrganizationsFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.profileScreen.settings.ListOfOrganizationsFragment"
+        android:label="fragment_list_of_organizations"
+        tools:layout="@layout/fragment_list_of_organizations" >
+        <action
+            android:id="@+id/action_listOfOrganizationsFragment_to_changeOrganizationFragment"
+            app:destination="@id/changeOrganizationFragment" />
+        <action
+            android:id="@+id/action_listOfOrganizationsFragment_to_createOrganizationFragment"
+            app:destination="@id/createOrganizationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createOrganizationFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.profileScreen.settings.CreateOrganizationFragment"
+        android:label="fragment_create_organization"
+        tools:layout="@layout/fragment_create_organization" />
+    <action android:id="@+id/action_global_balance_graph" app:destination="@id/balance_graph" />
+    <action android:id="@+id/action_global_profileGraph" app:destination="@id/profileGraph" />
+    <action android:id="@+id/action_global_notificationsFragment" app:destination="@id/notificationsFragment" />
+    <action android:id="@+id/action_global_history_graph" app:destination="@id/history_graph" />
+    <dialog
+        android:id="@+id/editChallengeFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.challenges.updateChallenge.EditChallengeFragment"
+        android:label="fragment_edit_challenge"
+        tools:layout="@layout/fragment_edit_challenge" />
+    <dialog
+        android:id="@+id/settingsChallengeFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.challenges.createChallenge.SettingsChallengeFragment"
+        android:label="fragment_settings_challenge"
+        tools:layout="@layout/fragment_settings_challenge" />
+    <action android:id="@+id/action_global_settingsChallengeFragment" app:destination="@id/settingsChallengeFragment" /><action android:id="@+id/action_global_selectAccountsDialogFragment" app:destination="@id/selectAccountsDialogFragment"/>
+    <fragment
+        android:id="@+id/detailsMainChallengeChainFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.challenges.challengeChains.DetailsMainChallengeChainFragment"
+        android:label="@string/challenge_chain_subtitle"
+        tools:layout="@layout/fragment_details_main_challenge_chain" /><action android:id="@+id/action_global_detailsMainChallengeChainFragment" app:destination="@id/detailsMainChallengeChainFragment"/>
+    <fragment
+        android:id="@+id/challengeContainerFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.challenges.challengeContainer.ChallengeContainerFragment"
+        android:label="@string/challenge_label"
+        tools:layout="@layout/fragment_challenge_container" />
+    <action android:id="@+id/action_global_createChallengeFragment" app:destination="@id/createChallengeFragment" />
+    <action android:id="@+id/action_global_createTemplateFragment" app:destination="@id/createTemplateFragment" /><action android:id="@+id/action_global_categoryFilterFragment" app:destination="@id/categoryFilterFragment"/>
+    <fragment
+        android:id="@+id/awardsContainerFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.awardsScreen.AwardsContainerFragment"
+        android:label="@string/awards_label"
+        tools:layout="@layout/fragment_awards_container" />
+    <dialog
+        android:id="@+id/requestRejectionDialogFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.challenges.RequestRejectionDialogFragment"
+        android:label="fragment_request_rejection_dialog"
+        tools:layout="@layout/fragment_request_rejection_dialog" /><action android:id="@+id/action_global_requestRejectionDialogFragment" app:destination="@id/requestRejectionDialogFragment"/>
+    <fragment
+        android:id="@+id/awardDetailFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.awardsScreen.AwardDetailFragment"
+        android:label="fragment_award_detail"
+        tools:layout="@layout/fragment_award_detail" /><action android:id="@+id/action_global_awardDetailFragment" app:destination="@id/awardDetailFragment"/>
+    <dialog
+        android:id="@+id/reactionsFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.reactions.ReactionsFragment"
+        android:label="fragment_reactions"
+        tools:layout="@layout/fragment_reactions" /><action android:id="@+id/action_global_reactionsFragment" app:destination="@id/reactionsFragment"/>
+    <dialog
+        android:id="@+id/commentsBottomSheetFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.reactions.CommentsBottomSheetFragment"
+        android:label="fragment_comments_bottom_sheet"
+        tools:layout="@layout/fragment_comments_bottom_sheet" />
+    <action android:id="@+id/action_global_commentsBottomSheetFragment" app:destination="@id/commentsBottomSheetFragment"/><action android:id="@+id/action_global_benefitFragment" app:destination="@id/benefitFragment"/>
+    <action android:id="@+id/action_global_templatesFragment" app:destination="@id/templatesFragment" />
+    <fragment
+        android:id="@+id/challengeChainsListFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.challenges.challengeChains.ChallengeChainsListFragment"
+        android:label="fragment_challenge_chains_list"
+        tools:layout="@layout/fragment_challenge_chains_list" /><action android:id="@+id/action_global_challengeChainsListFragment" app:destination="@id/challengeChainsListFragment"/><action android:id="@+id/action_global_challengesFragment" app:destination="@id/challengesFragment"/>
+    <fragment
+        android:id="@+id/winnersChallengeFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.challenges.fragmentsViewPager2.WinnersChallengeFragment"
+        android:label="fragment_winners_challenge"
+        tools:layout="@layout/fragment_winners_challenge" />
+    <action android:id="@+id/action_global_winnersChallengeFragment" app:destination="@id/winnersChallengeFragment" />
+    <fragment
+        android:id="@+id/contendersChallengeFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.challenges.fragmentsViewPager2.ContendersChallengeFragment"
+        android:label="fragment_contenders_challenge"
+        tools:layout="@layout/fragment_contenders_challenge" />
+    <action android:id="@+id/action_global_contendersChallengeFragment" app:destination="@id/contendersChallengeFragment" />
+    <fragment
+        android:id="@+id/myResultChallengeFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.challenges.fragmentsViewPager2.MyResultChallengeFragment"
+        android:label="fragment_my_result_challenge"
+        tools:layout="@layout/fragment_my_result_challenge" />
+    <action android:id="@+id/action_global_myResultChallengeFragment" app:destination="@id/myResultChallengeFragment" />
+    <fragment
+        android:id="@+id/challengeListFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.challenges.ChallengeListFragment"
+        android:label="fragment_challenge_list"
+        tools:layout="@layout/fragment_challenge_list" /><action android:id="@+id/action_global_challengeListFragment" app:destination="@id/challengeListFragment"/>
+    <fragment
+        android:id="@+id/resultsChallengeFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.challenges.ResultsChallengeFragment"
+        android:label="fragment_results_challenge"
+        tools:layout="@layout/fragment_results_challenge" /><action android:id="@+id/action_global_resultsChallengeFragment" app:destination="@id/resultsChallengeFragment"/>
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.mainScreen.MainScreenFragment"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" />
+    <action android:id="@+id/action_global_mainScreenFragment" app:destination="@id/mainScreenFragment" /><action android:id="@+id/action_global_employees_graph" app:destination="@id/employees_graph"/><action android:id="@+id/action_global_awardsContainerFragment" app:destination="@id/awardsContainerFragment"/>
+    <fragment
+        android:id="@+id/reviewsFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.benefitCafeScreen.reviews.ReviewsFragment"
+        android:label="fragment_reviews"
+        tools:layout="@layout/fragment_reviews" /><action android:id="@+id/action_global_reviewsFragment" app:destination="@id/reviewsFragment"/>
+    <fragment
+        android:id="@+id/createReviewFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.benefitCafeScreen.reviews.CreateReviewFragment"
+        android:label="fragment_create_review"
+        tools:layout="@layout/fragment_create_review" />
+    <action android:id="@+id/action_global_createReviewFragment" app:destination="@id/createReviewFragment" />
+    <fragment
+        android:id="@+id/reviewDetailFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.benefitCafeScreen.reviews.ReviewDetailFragment"
+        android:label="fragment_review_detail"
+        tools:layout="@layout/fragment_review_detail" /><action android:id="@+id/action_global_reviewDetailFragment" app:destination="@id/reviewDetailFragment"/><action android:id="@+id/action_global_transaction_graph" app:destination="@id/transaction_graph"/>
+    <action android:id="@+id/action_global_filterHistoryTransactionsBottomSheetFragment" app:destination="@id/history_graph" />
+    <fragment
+        android:id="@+id/questStepsListFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.challenges.challengeChains.QuestStepsListFragment"
+        android:label="fragment_quest_steps_list"
+        tools:layout="@layout/fragment_quest_steps_list" />
+    <action android:id="@+id/action_global_questStepsListFragment" app:destination="@id/questStepsListFragment" />
+    <fragment
+        android:id="@+id/participantsChainFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.challenges.challengeChains.ParticipantsChainFragment"
+        android:label="fragment_participants_chain"
+        tools:layout="@layout/fragment_participants_chain" /><action android:id="@+id/action_global_participantsChainFragment" app:destination="@id/participantsChainFragment"/>
+</navigation>

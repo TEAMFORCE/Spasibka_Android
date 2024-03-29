@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sign_graph"
+    app:startDestination="@id/greetFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <argument
+            android:name="ref"
+            app:argType="string"
+            android:defaultValue=""/>
+        <deepLink
+            android:id="@+id/deepLink"
+            app:action="android.intent.action.MY_ACTION"
+            app:uri="my://tf360.com?ref={ref}" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainFlowFragment"
+            app:destination="@id/mainFlowFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/sign_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_createCommunityFragment"
+            app:destination="@id/createCommunityFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFlowFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.MainFlowFragment"
+        android:label="fragment_main_flow"
+        tools:layout="@layout/fragment_main_flow" />
+    <fragment
+        android:id="@+id/greetFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.auth.GreetFragment"
+        android:label="fragment_greet"
+        tools:layout="@layout/fragment_greet" >
+        <action
+            android:id="@+id/action_greetFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_greetFragment_to_privacyPolicyFragment2"
+            app:destination="@id/privacyPolicyFragment2" />
+    </fragment>
+    <action android:id="@+id/action_global_greetFragment" app:destination="@id/greetFragment"/>
+    <fragment
+        android:id="@+id/privacyPolicyFragment2"
+        android:name="com.teamforce.thanksapp.presentation.fragment.profileScreen.PrivacyPolicyFragment"
+        android:label="fragment_privacy_policy"
+        tools:layout="@layout/fragment_privacy_policy" />
+    <fragment
+        android:id="@+id/createCommunityFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.auth.onBoarding.CreateCommunityFragment"
+        android:label="fragment_create_community"
+        tools:layout="@layout/fragment_create_community" >
+        <action
+            android:id="@+id/action_createCommunityFragment_to_settingsPeriodFragment"
+            app:destination="@id/settingsPeriodFragment" />
+        <action
+            android:id="@+id/action_createCommunityFragment_to_createCommunityBottomSheetDialogFragment"
+            app:destination="@id/createCommunityBottomSheetDialogFragment" />
+        <action
+            android:id="@+id/action_createCommunityFragment_to_joinToOrganizationBottomSheetDialogFragment"
+            app:destination="@id/joinToOrganizationBottomSheetDialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsPeriodFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.auth.onBoarding.SettingsPeriodFragment"
+        android:label="fragment_settings_period"
+        tools:layout="@layout/fragment_settings_period" >
+        <action
+            android:id="@+id/action_settingsPeriodFragment_to_lastOnBoardingScreenFragment"
+            app:destination="@id/lastOnBoardingScreenFragment"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/lastOnBoardingScreenFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.auth.onBoarding.LastOnBoardingScreenFragment"
+        android:label="fragment_last_on_boarding_screen"
+        tools:layout="@layout/fragment_last_on_boarding_screen" >
+        <action
+            android:id="@+id/action_lastOnBoardingScreenFragment_to_mainFlowFragment"
+            app:destination="@id/mainFlowFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/sign_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_lastOnBoardingScreenFragment_to_inviteMembersBottomSheetDialogFragment"
+            app:destination="@id/inviteMembersBottomSheetDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/createCommunityBottomSheetDialogFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.auth.onBoarding.bottomSheetDialogFragment.CreateCommunityBottomSheetDialogFragment"
+        android:label="fragment_create_community_bottom_sheet_dialog"
+        tools:layout="@layout/fragment_create_community_bottom_sheet_dialog" >
+        <action
+            android:id="@+id/action_createCommunityBottomSheetDialogFragment_to_settingsPeriodFragment"
+            app:destination="@id/settingsPeriodFragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/inviteMembersBottomSheetDialogFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.auth.onBoarding.bottomSheetDialogFragment.InviteMembersBottomSheetDialogFragment"
+        android:label="fragment_invite_members_bottom_sheet_dialog"
+        tools:layout="@layout/fragment_invite_members_bottom_sheet_dialog" />
+    <dialog
+        android:id="@+id/joinToOrganizationBottomSheetDialogFragment"
+        android:name="com.teamforce.thanksapp.presentation.fragment.auth.onBoarding.bottomSheetDialogFragment.JoinToOrganizationBottomSheetDialogFragment"
+        android:label="fragment_join_to_organization_bottom_sheet_dialog"
+        tools:layout="@layout/fragment_join_to_organization_bottom_sheet_dialog" >
+        <action
+            android:id="@+id/action_joinToOrganizationBottomSheetDialogFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </dialog>
+</navigation>

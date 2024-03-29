@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="359dp" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:src="@drawable/ic_arrow_left"
+            app:layout_constraintBottom_toBottomOf="@id/title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/title"
+            app:tint="@color/black" />
+
+        <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="12dp"
+            android:text="@string/filter"
+            android:textAppearance="@style/Headline6Medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/empty_list_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="12dp"
+            android:text="@string/empty_category_message"
+            android:textAppearance="@style/StandardText3.Gray"
+            app:layout_constraintBottom_toTopOf="@id/apply_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/category_recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toTopOf="@id/apply_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_category_filter" />
+
+
+        <com.teamforce.thanksapp.presentation.theme.ThemableDefaultButton
+            android:id="@+id/apply_btn"
+            style="@style/DefaultButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="0dp"
+            android:paddingVertical="17dp"
+            android:text="@string/applyValues"
+            app:layout_constraintBottom_toTopOf="@+id/reset_btn" />
+
+        <com.teamforce.thanksapp.presentation.theme.ThemableNotFilledButton
+            android:id="@+id/reset_btn"
+            style="@style/NotFilledButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="30dp"
+            android:elevation="0dp"
+            android:letterSpacing="0.06"
+            android:paddingVertical="17dp"
+            android:stateListAnimator="@null"
+            android:text="@string/reset"
+            android:textAppearance="@style/StandardText4.Black"
+            android:textColor="@color/general_contrast"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:strokeWidth="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

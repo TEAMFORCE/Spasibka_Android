@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_status_bar"
+    tools:context=".presentation.fragment.challenges.ChallengesFragment">
+    <LinearLayout
+        android:id="@+id/whole_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transitionName="challenge_list"
+        android:background="@drawable/background_white_rounded_top"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_offset" />
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableTabLayout
+                android:id="@+id/tabGroup"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@color/transparent"
+                android:overScrollMode="always"
+                app:singleSelection="true"
+                app:tabGravity="start"
+                app:tabIndicatorColor="@null"
+                app:tabMinWidth="55dp"
+                app:tabMode="scrollable"
+                app:tabPaddingEnd="4dp"
+                app:tabPaddingStart="4dp"
+                app:tabRippleColor="@null"
+                app:tabTextAppearance="@style/StandardText3Medium.Black">
+
+
+            </com.teamforce.thanksapp.presentation.theme.ThemableTabLayout>
+
+
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            />
+
+    </LinearLayout>
+</com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout>
+
+
+
+

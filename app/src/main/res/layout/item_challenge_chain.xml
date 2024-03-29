@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:transitionName="item_challenge"
+    android:animateLayoutChanges="true"
+    app:cardBackgroundColor="@color/general_background"
+    app:cardCornerRadius="20dp"
+    android:layout_marginBottom="20dp"
+    app:cardElevation="@dimen/margin_8dp">
+
+    <ImageView
+        android:id="@+id/imageBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/top_frame"
+            android:layout_width="match_parent"
+            android:layout_height="212dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/transparent"
+            app:cardElevation="0dp">
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/blur_linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="10dp"
+            android:backgroundTint="#BFFFFFFF"
+            android:backgroundTintMode="src_atop"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/challenge_title"
+                    style="@style/StandardText4Medium.Black"
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="6dp"
+                    android:maxLines="2"
+                    tools:text="Xnj nj " />
+
+                <TextView
+                    android:id="@+id/challenge_creator"
+                    style="@style/StandardText3.Black"
+                    android:layout_width="205dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="5dp"
+                    android:maxLines="1"
+                    tools:text="wrgerw" />
+
+                <TextView
+                    android:id="@+id/lastUpdate_challenge_value"
+                    style="@style/SmallText2Medium.Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="@string/lastUpdateChallenge"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/slider_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/slider"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:tickVisible="true"
+                    android:stepSize="1"
+                    android:saveEnabled="true"
+                    android:enabled="false"
+                    app:tickColor="@color/transparent"
+                    android:layout_marginEnd="-20dp"
+                    app:thumbRadius="16dp"
+                    android:layout_weight="5"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/prize_pool_and_winners_slider_value"
+                    style="@style/StandardText4Bold.Black"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    tools:text="2/3"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/status_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="9dp"
+        android:visibility="visible">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/status_active_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:cardBackgroundColor="@color/minor_success"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:id="@+id/state_challenge_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="6dp"
+                android:layout_marginHorizontal="10dp"
+                android:text="@string/active"
+                android:textAppearance="@style/SmallText2.White" />
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

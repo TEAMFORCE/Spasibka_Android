@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_white_rounded_top">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/background_white_rounded_top"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/margin_16dp"
+        android:paddingTop="23dp"
+        tools:context=".presentation.fragment.auth.onBoarding.SettingsPeriodFragment">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+        <TextView
+            style="@style/StandardText3Medium.Black"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            android:layout_weight="1"
+            android:text="@string/onboarding_step_ordering_2"
+            android:textAlignment="center" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="57dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="12dp">
+
+            <LinearLayout
+                android:id="@+id/image_slider_vp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/margin_16dp">
+
+                <TextView
+                    style="@style/StandardText4.Gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/onboarding_date_start_period" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_start_period"
+                    style="@style/EditProfileTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:enabled="false"
+                    app:endIconDrawable="@drawable/ic_calendar"
+                    app:endIconMode="custom"
+                    app:endIconTint="@color/general_contrast">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/start_period_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:lines="1"
+                        tools:text="17.03.2023" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    style="@style/StandardText4.Gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/onboarding_date_end_period" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_end_period"
+                    style="@style/EditProfileTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:clipChildren="true"
+                    android:enabled="false"
+                    app:endIconDrawable="@drawable/ic_calendar"
+                    app:endIconMode="custom"
+                    app:endIconTint="@color/general_contrast">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/end_period_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:lines="1"
+                        tools:text="17.06.2023" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    style="@style/StandardText4.Gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/onboarding_start_balance" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_start_balance"
+                    style="@style/EditProfileTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:clipChildren="true"
+                    android:enabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/start_balance_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:lines="1"
+                        tools:text="50" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    style="@style/StandardText4.Gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/onboarding_start_admin_balance" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_start_balance_admin"
+                    style="@style/EditProfileTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:clipChildren="true"
+                    android:enabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/start_balance_admin_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:lines="1"
+                        tools:text="50" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.teamforce.thanksapp.presentation.theme.ThemableDefaultButton
+                    android:id="@+id/start_period_btn"
+                    style="@style/DefaultButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="17dp"
+                    android:text="@string/onboarding_launch_the_period"
+                    android:textAllCaps="true" />
+
+                <com.teamforce.thanksapp.presentation.theme.ThemableSecondaryButton
+                    android:id="@+id/settings_period_btn"
+                    style="@style/DefaultButtonSecondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    tools:text="@string/onboarding_settings_manually" />
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="45dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Headline6Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/onboarding_step_2_title"
+                android:textAlignment="center" />
+
+            <TextView
+                style="@style/StandardText3Medium.Black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineHeight="25dp"
+                android:text="@string/onboarding_step_2_subtitle"
+                android:textAlignment="center"
+                android:textColor="@color/general_contrast_secondary" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+

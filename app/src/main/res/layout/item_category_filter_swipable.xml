@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_margin="3dp"
+    android:orientation="vertical">
+
+    <com.zerobranch.layout.SwipeLayout
+        android:id="@+id/swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:draggedItem="@id/drag_item"
+        app:leftDragViewPadding="10dp"
+        app:rightDragViewPadding="10dp"
+        app:isFreeDragAfterOpen="true"
+        app:rightItem="@id/right_item"
+        app:swipeDirection="left">
+
+        <LinearLayout
+            android:id="@+id/swipe_linear_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_for_constraint_item_challenger"
+            android:backgroundTint="@color/general_brand"
+            android:gravity="end|center_vertical"
+            android:padding="12dp"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <View
+            android:layout_gravity="end|center_vertical"
+            android:id="@+id/right_item"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:padding="12dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_remove" />
+
+        <LinearLayout
+            tools:visibility="invisible"
+            android:id="@+id/drag_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_for_constraint_item_challenger"
+            android:backgroundTint="@color/minor_info_secondary"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:letterSpacing="0.04"
+                android:maxLines="2"
+                android:textAppearance="@style/StandardText3Medium.Black"
+                tools:text="Курсы английского языка, 1 месяц" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="12dp"
+                android:src="@drawable/arrow_little_right" />
+
+        </LinearLayout>
+
+
+    </com.zerobranch.layout.SwipeLayout>
+</LinearLayout>

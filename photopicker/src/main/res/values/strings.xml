@@ -1,0 +1,20 @@
+<resources>
+    <string name="picker_app_name">Пикер</string>
+    <string name="picker_gallery">Галерея</string>
+    <string name="picker_camera">Камера</string>
+    <string name="picker_select">Выбрать</string>
+    <string name="picker_media_permissions_hint">Предоставьте доступ к мультимедийным файлам\nдля упрощенного доступа к галерее</string>
+    <string name="picker_empty_media">Ваша медиатека пуста</string>
+    <string name="picker_allow">Разрешить</string>
+    <string name="picker_select_photo">Выбор фотографии</string>
+    <string name="picker_no_camera">Нет установленных приложений для камеры</string>
+    <string name="attach">Прикрепить</string>
+    <plurals name="picker_selected_count">
+        <item quantity="one">%d изображение выбрано</item>
+        <item quantity="other">%d изображений выбрано</item>
+    </plurals>
+    <plurals name="picker_max_selection_reached">
+        <item quantity="one">Вы можете выбрать только %d изображение</item>
+        <item quantity="other">Вы можете выбрать только %d изображений</item>
+    </plurals>
+</resources>

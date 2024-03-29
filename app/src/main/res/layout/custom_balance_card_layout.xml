@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="290dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/margin_16dp"
+    android:paddingTop="29dp"
+    android:paddingBottom="39dp">
+
+<FrameLayout
+    android:id="@+id/my_count"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/margin_small"
+    android:layout_weight="1"
+    android:background="@drawable/background_for_my_count_card"
+    app:cardCornerRadius="18dp"
+    app:strokeWidth="@dimen/stroke_size">
+
+    <RelativeLayout
+        android:layout_width="146dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:gravity="end">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="fitEnd"
+            android:src="@drawable/draw_for_my_count_card"
+
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/general_background" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="14dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/my_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="45dp"
+            android:text="@string/my_count"
+            android:textAppearance="@style/SmallText2.Black" />
+
+        <TextView
+            android:id="@+id/count_value_tv"
+            style="@style/Headline7"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_weight="1"
+            android:autoSizeMaxTextSize="64sp"
+            android:autoSizeTextType="uniform"
+            android:maxLines="1"
+            tools:text="5654" />
+
+        <TextView
+            android:id="@+id/cancelled_label_tv"
+            style="@style/VerySmallText1Medium.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/cancelled" />
+
+
+    </LinearLayout>
+</FrameLayout>
+
+<FrameLayout
+    android:id="@+id/remains"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_small"
+    android:layout_weight="1"
+    android:background="@drawable/background_for_my_remains_card"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/my_count"
+    app:layout_constraintTop_toBottomOf="@+id/textField">
+
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:gravity="end">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_h"
+            android:contentDescription="@null"
+            android:scaleType="fitEnd"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/general_background_light" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/remains_distribute_label_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="45dp"
+            android:text="@string/least_distribute"
+            android:textAppearance="@style/SmallText2.White" />
+
+
+        <TextView
+            android:id="@+id/least_count"
+            style="@style/Headline7.White"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_weight="1"
+            android:autoSizeMaxTextSize="64sp"
+            android:autoSizeTextType="uniform"
+            android:maxLines="1"
+            tools:text="54" />
+
+        <TextView
+            android:id="@+id/approval_label_tv"
+            style="@style/VerySmallText1.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            tools:text="@string/frozen_label" />
+
+        <TextView
+            android:id="@+id/will_burn_tv_text"
+            style="@style/SmallText2Medium.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.1"
+            android:layout_gravity="end"
+            android:autoSizeMaxTextSize="14sp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/will_burn_after"
+            android:textColor="@color/general_background" />
+    </LinearLayout>
+</FrameLayout>
+</LinearLayout>

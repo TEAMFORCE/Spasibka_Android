@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:minHeight="450dp"
+    app:behavior_hideable="true"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp">
+
+        <com.teamforce.thanksapp.presentation.theme.ThemableImageVIewIcon
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:src="@drawable/ic_arrow_left"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/general_brand" />
+
+        <com.teamforce.thanksapp.presentation.theme.ThemableTextViewMainBrandColor
+            android:id="@+id/close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="12dp"
+            android:text="@string/closeInHeader"
+            android:textAlignment="textEnd"
+            android:textColor="@color/general_brand"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+            android:id="@+id/category_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="12dp"
+            android:text="@string/category_edit_button"
+            android:textAppearance="@style/Headline6Medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/close_btn" />
+
+        <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrastSecondary
+            android:id="@+id/subTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="12dp"
+            android:text="@string/category_edit_subtitle"
+            android:textAppearance="@style/Subtitle1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/category_title" />
+
+        <com.teamforce.thanksapp.presentation.theme.ThemableSpinnerSolidLayout
+            android:id="@+id/orgFilterContainer"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="5dp"
+            android:visibility="visible"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxStrokeColor="@color/general_color_grey"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subTitle"
+            tools:ignore="LabelFor">
+
+            <AutoCompleteTextView
+                android:id="@+id/orgFilterSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="none"
+                android:visibility="visible" />
+        </com.teamforce.thanksapp.presentation.theme.ThemableSpinnerSolidLayout>
+
+        <com.teamforce.thanksapp.presentation.theme.ThemableTextInputLayoutOutlined
+            android:id="@+id/titleTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="16dp"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            app:boxStrokeColor="@color/general_color_grey"
+            app:boxStrokeWidth="0.5dp"
+            app:layout_constraintBottom_toTopOf="@+id/save_btn"
+            app:layout_constraintTop_toBottomOf="@id/orgFilterContainer"
+            app:startIconTint="@color/general_brand">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/title_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/category_name_title"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:lines="1" />
+
+        </com.teamforce.thanksapp.presentation.theme.ThemableTextInputLayoutOutlined>
+
+
+        <com.teamforce.thanksapp.presentation.theme.ThemableDefaultButton
+            android:id="@+id/save_btn"
+            style="@style/DefaultButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:elevation="0dp"
+            android:paddingVertical="17dp"
+            android:text="@string/edit_profile_save"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

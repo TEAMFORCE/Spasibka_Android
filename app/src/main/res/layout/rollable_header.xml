@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.teamforce.thanksapp.presentation.theme.ThemableAppBarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appBarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="125dp"
+    android:elevation="0dp"
+    android:stateListAnimator="@null"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:id="@+id/collapsingToolbar"
+        app:collapsedTitleTextColor="@color/white"
+        app:expandedTitleMarginEnd="64dp"
+        app:expandedTitleMarginStart="@dimen/margin_16dp"
+        app:expandedTitleTextAppearance="@style/Headline3.White"
+        app:expandedTitleTextColor="@color/white"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        app:titleCollapseMode="fade"
+        app:contentScrim="@color/transparent"
+        app:collapsedTitleGravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="0dp"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            style="@style/Theme.ThanksApp.PopupOverlay"
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="enterAlways"
+            app:title="@string/feed_label"
+            app:titleTextColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginBottom="5dp"
+            android:elevation="0dp">
+
+            <ImageView
+                android:id="@+id/app_logo_image"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:src="@drawable/ic_logo" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/user_avatar"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                android:background="@color/general_background"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp" />
+
+            <FrameLayout
+                android:id="@+id/notify_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageButton
+                    android:id="@+id/notify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:backgroundTint="@color/transparent"
+                    android:clickable="false"
+                    android:visibility="visible"
+                    android:src="@drawable/ic_bell"
+                    app:tint="@color/general_background" />
+
+                <FrameLayout
+                    android:id="@+id/active_notify_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/notify_active"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/transparent"
+                        android:clickable="false"
+                        android:src="@drawable/ic_notification_45" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|end|top">
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/notify_badge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="6dp"
+                            android:background="@color/general_background"
+                            android:gravity="center"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                            tools:text="0" >
+                            <com.teamforce.thanksapp.presentation.customViews.TextView.ShortenNumberTextView
+                                android:id="@+id/notify_badge_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_marginHorizontal="3dp"
+                                android:textSize="7dp"
+                                android:text="2"
+                                android:textColor="@color/general_brand"/>
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </FrameLayout>
+                </FrameLayout>
+
+            </FrameLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+</com.teamforce.thanksapp.presentation.theme.ThemableAppBarLayout>

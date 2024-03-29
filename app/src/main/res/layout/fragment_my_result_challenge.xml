@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.fragment.challenges.fragmentsViewPager2.MyResultChallengeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/draft_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/draft_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginHorizontal="@dimen/margin_16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/superLightGray"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:id="@+id/linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/results_challenge_draft"
+                                android:layout_weight="1"
+                                android:maxLines="2"
+                                android:layout_gravity="center"
+                                android:textAppearance="@style/SmallText2Inter.Gray" />
+
+                            <TextView
+                                android:id="@+id/draft_date_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="23.10.2023"
+                                android:layout_gravity="center"
+                                style="@style/SmallText2Inter.Gray"
+                                />
+
+                        </LinearLayout>
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/draft_image_siv"
+                            android:layout_width="match_parent"
+                            android:layout_height="214dp"
+                            tools:src="@color/superLightGray"
+                            tools:visibility="visible"
+                            android:visibility="gone"
+                            android:layout_marginBottom="12dp"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8Percent"/>
+
+                        <TextView
+                            android:id="@+id/draft_text_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:text="Сделала вот такую фотографию! Кстати, напиток очень вкусный, рекомендую тоже попробовать!"
+                            android:textAppearance="@style/SmallText2.Black"
+                            android:layout_marginBottom="12dp"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/margin_16dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <com.teamforce.thanksapp.presentation.theme.ThemableThirdButton
+                        android:id="@+id/edit_draft_btn"
+                        style="@style/ThirdStyleButton.Square"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        app:rippleColor="@color/black"
+                        android:drawableLeft="@drawable/ic_edit"
+                        android:drawableTint="@color/general_contrast_secondary"
+                        android:layout_weight="1"
+                        android:text="@string/results_challenge_edit"/>
+
+                    <com.teamforce.thanksapp.presentation.theme.ThemableThirdButton
+                        android:id="@+id/public_draft_btn"
+                        style="@style/ThirdStyleButton.Square"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_flip_24"
+                        android:drawableTint="@color/general_contrast_secondary"
+                        android:layout_weight="1"
+                        android:text="@string/results_challenge_publish"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listOfResults"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="true"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_result_challenge" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/noData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardElevation="20dp"
+                android:visibility="gone"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="200dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    style="@style/Body1.Bold"
+                    android:text="@string/noYourResultYet"/>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</LinearLayout>

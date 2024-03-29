@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/margin_16dp"
+    android:paddingTop="30dp"
+    tools:context=".presentation.fragment.auth.onBoarding.bottomSheetDialogFragment.InviteMembersBottomSheetDialogFragment">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:animateLayoutChanges="true"
+        android:animationCache="true"
+        android:id="@+id/shimmer_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shimmer_repeat_mode="restart"
+        app:shimmer_clip_to_children="true"
+        app:shimmer_shape="linear">
+        <TextView
+            android:id="@+id/shimmer_layout_title_tv"
+            style="@style/Headline6Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/onboarding_invitation_title_shimmer"
+            android:textAlignment="center" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <TextView
+        android:id="@+id/title_tv"
+        style="@style/Headline6Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"
+        android:text="@string/onboarding_invitation_title"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/invite_key_label"
+        style="@style/StandardText4.Gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:text="@string/onboarding_invitation_key"
+        android:textAlignment="textStart" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/invite_key_text_input"
+        style="@style/EditProfileTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconMode="custom"
+        android:visibility="gone"
+        app:endIconDrawable="@drawable/copy_svg"
+        android:layout_marginBottom="@dimen/margin_16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/invite_key_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            tools:text="KJ34fS"
+            android:textStyle="bold"
+            android:lines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:animateLayoutChanges="true"
+        android:animationCache="true"
+        android:id="@+id/shimmer_layout_text_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shimmer_repeat_mode="restart"
+        app:shimmer_clip_to_children="true"
+        app:shimmer_shape="linear">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/shimmer_code"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardBackgroundColor="@color/shimmerColor"
+            app:cardCornerRadius="14dp" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+    <com.teamforce.thanksapp.presentation.theme.ThemableDefaultButton
+        android:id="@+id/continue_btn"
+        style="@style/DefaultButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:stateListAnimator="@null"
+        android:paddingVertical="17dp"
+        android:text="@string/onboarding_close"
+        android:textAllCaps="true" />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="38dp"/>
+
+
+</LinearLayout>

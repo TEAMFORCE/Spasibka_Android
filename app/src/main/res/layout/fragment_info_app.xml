@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_status_bar"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    tools:context=".presentation.fragment.profileScreen.settings.InfoAppFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/background_white_rounded_top"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_centered" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="52dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="16dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="34dp"
+                android:src="@drawable/ic_app_logo"/>
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrastSecondary
+                android:id="@+id/ver_app_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAppearance="@style/StandardText3.Gray"
+                android:text="@string/versionOfApp"/>
+            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                android:id="@+id/ver_app_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/StandardText3.Black"
+                android:layout_gravity="center"
+                android:layout_marginBottom="12dp"
+                android:text="1.2"/>
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrastSecondary
+                android:id="@+id/ver_os_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAppearance="@style/StandardText3.Gray"
+                android:text="@string/versionOfOS"/>
+            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                android:id="@+id/ver_os_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAppearance="@style/StandardText3.Black"
+                android:layout_marginBottom="12dp"
+                android:text="1.2"/>
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrastSecondary
+                android:id="@+id/model_phone_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAppearance="@style/StandardText3.Gray"
+                android:text="@string/modelPhone"/>
+            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                android:id="@+id/model_phone_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/StandardText3.Black"
+                android:layout_gravity="center"
+                android:layout_marginBottom="12dp"
+                android:text="1.2"/>
+
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrastSecondary
+                android:id="@+id/domen_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAppearance="@style/StandardText3.Gray"
+                android:text="@string/domen"/>
+            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                android:id="@+id/domen_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/StandardText3.Black"
+                android:layout_gravity="center"
+                android:layout_marginBottom="12dp"
+                android:text="nginx"/>
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrastSecondary
+                android:id="@+id/region_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAppearance="@style/StandardText3.Gray"
+                android:text="@string/region"/>
+            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                android:id="@+id/region_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/StandardText3.Black"
+                android:layout_gravity="center"
+                android:layout_marginBottom="12dp"
+                android:text="Россия"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/license_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="bottom"
+            android:textAppearance="@style/StandardText3.Gray"
+            android:layout_marginBottom="16dp"
+            tools:text="Лицензия выдана до: 24.01.2024"/>
+
+    </LinearLayout>
+</com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout>

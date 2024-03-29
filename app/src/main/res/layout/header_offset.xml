@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.MaterialToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:background="@drawable/background_white_rounded_top"
+    app:titleTextAppearance="@style/Headline6Medium"
+    app:subtitleTextColor="@color/black"
+    tools:subtitle="У Вас 3 новых уведомления"
+    app:subtitleTextAppearance="@style/SmallText2.Black"
+    app:title="@string/feed_label">
+
+    <LinearLayout
+        android:id="@+id/benefit_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="end"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/history_btn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/black"
+            android:background="@drawable/ic_garage"/>
+
+        <ImageView
+            android:id="@+id/basket_btn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/black"
+            android:background="@drawable/ic_basket"/>
+
+        <ImageView
+            android:id="@+id/filter_iv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/sort_icon"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/challenge_menu_btn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="end"
+        android:visibility="gone"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/black"
+        android:background="@drawable/dots_three_circle"/>
+
+    <ImageView
+        android:id="@+id/close_btn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="end"
+        android:visibility="gone"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/black"
+        android:background="@drawable/ic_cross_white"/>
+
+</com.google.android.material.appbar.MaterialToolbar>

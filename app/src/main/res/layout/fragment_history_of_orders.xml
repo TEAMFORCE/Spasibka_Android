@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_status_bar"
+    android:orientation="vertical"
+    tools:context=".presentation.fragment.benefitCafeScreen.historyOfOrders.HistoryOfOrdersFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_white_rounded_top"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_centered" />
+
+        <com.teamforce.thanksapp.presentation.theme.ThemableSwipeRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_history_of_offer" />
+
+        </com.teamforce.thanksapp.presentation.theme.ThemableSwipeRefreshLayout>
+
+
+
+    </LinearLayout>
+
+
+    <com.teamforce.thanksapp.presentation.theme.ThemableFloatingActionButton
+        android:id="@+id/fab_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="104dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_filter"
+        app:borderWidth="0dp"
+        app:rippleColor="@color/general_brand"
+        app:tint="@color/general_brand" />
+
+</com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout>

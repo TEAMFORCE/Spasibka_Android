@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_status_bar"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/main_content_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_white_rounded_top"
+        android:paddingBottom="34dp"
+        android:orientation="vertical"
+        android:transitionGroup="true"
+        tools:context=".presentation.fragment.profileScreen.settings.ListOfOrganizationsFragment">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/margin_16dp"
+            android:orientation="horizontal">
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewMainBrandColor
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/StandardText4.Gray"
+                android:visibility="invisible"
+                android:text="@string/close"/>
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                style="@style/StandardText4Medium.Black"
+                android:text="@string/settings_organizations"/>
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableTextViewMainBrandColor
+                android:id="@+id/close_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/StandardText4.Gray"
+                android:textColor="@color/general_brand"
+                android:text="@string/close"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/main_cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="4dp"
+            android:transitionName="list_of_org_card_second"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="18dp">
+
+                <ImageView
+                    android:id="@+id/org_photo_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_app_logo"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.teamforce.thanksapp.presentation.theme.ThemableTextViewMainBrandColor
+                        android:id="@+id/current_org_label_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:visibility="gone"
+                        android:textAppearance="@style/SmallText2.Black"
+                        android:textColor="@color/general_brand"
+                        android:text="@string/currentOrganisation" />
+
+                    <com.teamforce.thanksapp.presentation.theme.ThemableTextViewContrast
+                        android:id="@+id/org_name_label_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="12dp"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textAppearance="@style/StandardText3Medium.Black"
+                        tools:text="TeamForce" />
+                </LinearLayout>
+
+                <com.teamforce.thanksapp.presentation.theme.ThemableImageVIewIcon
+                    android:id="@+id/action_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/copy_svg"
+                    app:tint="@color/general_brand"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingTop="24dp"
+            android:overScrollMode="always"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:layout_weight="1"/>
+
+        <com.teamforce.thanksapp.presentation.theme.ThemableDefaultButton
+            android:id="@+id/create_org_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:transitionName="list_of_org_btn_second"
+            style="@style/DefaultButton"
+            android:paddingVertical="17dp"
+            android:layout_marginHorizontal="@dimen/margin_16dp"
+            android:text="@string/settings_create_organization"/>
+
+    </LinearLayout>
+
+</com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout>

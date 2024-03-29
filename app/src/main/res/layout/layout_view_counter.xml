@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="6dp"
+        app:cardBackgroundColor="@color/general_brand_secondary">
+
+        <TextView
+            android:id="@+id/minus_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_margin="8dp"
+            style="@style/SmallText2Medium.Orange"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/count_offer_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="6dp"
+        app:cardBackgroundColor="@color/minor_info_secondary">
+
+        <TextView
+            android:id="@+id/count_offer_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="10"
+            android:layout_margin="8dp"
+            style="@style/SmallText2Medium.Gray"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="6dp"
+        app:cardBackgroundColor="@color/general_brand_secondary">
+
+        <TextView
+            android:id="@+id/plus_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:layout_margin="8dp"
+            style="@style/SmallText2Medium.Orange"/>
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/user_item"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.teamforce.thanksapp.presentation.customViews.AvatarView.AvatarView
+        android:id="@+id/user_avatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="4dp"
+        android:layout_gravity="center"
+        tools:background="@color/general_brand"
+        app:avatarViewInitialsBackgroundGradientColorEnd="@color/general_brand_secondary"
+        app:avatarViewInitialsBackgroundGradientColorStart="@color/general_brand"
+        app:avatarViewInitialsTextColor="@color/white"
+        app:avatarViewInitialsTextSize="16sp"
+        app:avatarViewInitialsTextSizeRatio="0.33"
+        app:avatarViewInitialsTextStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:useGradient="true" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="66dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:text="Дмитрий М."
+        style="@style/VerySmallText1.Black"/>
+
+</LinearLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_status_bar"
+    app:layout_dodgeInsetEdges="bottom"
+    tools:context=".presentation.fragment.historyScreen.HistoryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_white_rounded_top"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_centered" />
+
+        <com.teamforce.thanksapp.presentation.theme.ThemableTabLayout
+            android:id="@+id/tabGroup"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            app:singleSelection="true"
+            app:tabMode="scrollable"
+            android:background="@color/transparent"
+            app:tabSelectedTextColor="@color/general_brand"
+            app:tabRippleColor="@null"
+            app:tabPaddingTop="8dp"
+            app:tabPaddingBottom="8dp"
+            app:tabPaddingStart="4dp"
+            app:tabPaddingEnd="4dp"
+            app:tabIndicatorColor="@color/transparent"
+            app:tabGravity="center"
+            android:layout_gravity="center"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            />
+
+        <LinearLayout
+            android:id="@+id/is_group_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingHorizontal="16dp">
+
+            <com.teamforce.thanksapp.presentation.theme.ThemableCheckBox
+                android:id="@+id/is_grouped"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:checked="false" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/history_group_by_user"
+                android:textColor="@color/general_contrast"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:nestedScrollingEnabled="false"
+            android:layout_height="match_parent"/>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="16dp"
+                android:clipToPadding="false"
+                tools:listitem="@layout/item_transfer" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+
+
+</com.teamforce.thanksapp.presentation.theme.ThemableFrameLayout>
+
+
+
+
+
+
+
+

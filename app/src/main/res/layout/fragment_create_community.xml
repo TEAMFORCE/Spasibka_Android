@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_white_rounded_top"
+    tools:context=".presentation.fragment.auth.onBoarding.CreateCommunityFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/margin_16dp"
+        android:paddingTop="23dp">
+
+        <TextView
+            style="@style/StandardText3Medium.Black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            android:text="@string/onboarding_step_ordering_1"
+            android:textAlignment="center" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="5"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="12dp">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/image_slider_vp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+            android:id="@+id/dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="55dp"
+            android:elevation="12dp"
+            app:dotsCornerRadius="8dp"
+            app:dotsSize="16dp"
+            app:dotsSpacing="8dp"
+            app:dotsWidthFactor="10"
+            app:progressMode="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Headline6Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/onboarding_step_1_title"
+                android:textAlignment="center" />
+
+            <TextView
+                style="@style/StandardText3Medium.Black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineHeight="25dp"
+                android:text="@string/onboarding_step_1_subtitle"
+                android:textAlignment="center"
+                android:textColor="@color/general_contrast_secondary" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

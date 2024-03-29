@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ThanksApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/general_contrast_secondary</item>
+        <item name="colorPrimaryDark">@color/general_brand</item>
+        <item name="colorAccent">@color/general_brand</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="colorControlActivated">@color/general_contrast</item>
+        <item name="colorOnSurface">@color/general_contrast_secondary</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.ThanksApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.ThanksApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
+
+    <style name="Theme.ThanksApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:textColor">@color/general_background</item>
+    </style>
+
+
+</resources>

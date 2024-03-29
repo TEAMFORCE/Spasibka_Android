@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="6dp"
+    android:paddingEnd="6dp"
+    android:paddingStart="6dp"
+    android:layout_width="162dp"
+    android:paddingBottom="8dp"
+    android:layout_height="185dp"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+
+    <FrameLayout
+        android:id="@+id/new_badge"
+        android:layout_width="27dp"
+        android:layout_height="14dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_rounded_corner_button"
+        android:elevation="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/VerySmallText1Medium.Gray"
+            android:textColor="@color/white"
+            android:textSize="8sp"
+            android:text="@string/main_fragment_recommends_new"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/mainCard"
+        android:layout_width="145dp"
+        android:layout_height="170dp"
+        android:background="@drawable/bg_shape_recommend_item"
+        android:animateLayoutChanges="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:elevation="2dp"
+        tools:ignore="MissingDefaultResource">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/top_frame"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/gradient_for_recommend_item"
+                app:cardElevation="0dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.TopCornerSize12Percent"
+                    android:visibility="visible" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/info_block"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/header_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/VerySmallText1.Gray"
+                    android:layout_marginBottom="4dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    tools:text="Бенефиты"/>
+
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/VerySmallText1.Black"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    tools:text="Компенсация перелета"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</RelativeLayout>
+

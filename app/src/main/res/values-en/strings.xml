@@ -1,0 +1,890 @@
+<resources>
+
+    <string name="required_field">Required field</string>
+    <string name="empty_search_result">No one was found\nfor your request</string>
+
+
+    <!-- Main Activity -->
+    <string name="main_activity_invite_to_org">Go to community %1$s?</string>
+    <string name="main_activity_create_period">Period has not been created, go to review period?</string>
+
+    <!-- Greeting Fragment -->
+    <string name="agree_with">Agree with</string>
+    <string name="privacy_policy_greeting">Privacy Policy</string>
+    <string name="user_agreement_greeting">User Agreement</string>
+    <string name="and_conditions">and conditions</string>
+
+    <!-- Вход и аутентификация -->
+    <string name="app_name">Spasibka</string>
+    <string name="go_to_telegram">Go to Telegram</string>
+    <string name="input_login_message">To log in, enter your username</string>
+    <string name="telegram">Telegram</string>
+    <string name="enter">Enter</string>
+    <string name="go_to_telegram_message">Or log in with the telegram bot</string>
+    <string name="input_code">Enter confirmation code</string>
+    <string name="code">Confirmation code</string>
+    <string name="check">Check</string>
+    <string name="Toast_verifyCode_hintTg">Code sent to telegram</string>
+    <string name="Toast_verifyCode_hintEmail">Code sent to the specified email</string>
+    <string name="helperTextAboutTg">Go to the dialogue with the bot %s, write the /start command, then repeat the authentication procedure</string>
+    <string name="helperTextAboutEmail">Please check your Spam folder and make sure the email address you entered is %s</string>
+    <string name="chooseOrg">Choose an community</string>
+    <string name="helperTextStandard">Didn\'t receive the code?</string>
+    <string name="helperLink"><u>Repeat the authentication procedure</u></string>
+    <string name="auth_label">Enter login</string>
+    <string name="get_code_button_label">Get code</string>
+    <string name="confirmation_code_label">Enter confirmation code</string>
+    <string name="incorrect_code">Incorrect code</string>
+    <string name="auth">Authentication</string>
+    <string name="login_title">Spasibka</string>
+    <string name="login_prompt_for_login_field">Enter your email address, Telegram username or Telegram ID</string>
+
+
+    <string name="continue_without_change_org">Back</string>
+    <string name="changeOrg">Change community</string>
+
+
+    <!-- OnBoarding -->
+    <string name="onboarding_create_community">Create community</string>
+    <string name="onboarding_invite_members">Invite members</string>
+    <string name="onboarding_join">Join</string>
+    <string name="onboarding_step_1_title">Communities</string>
+    <string name="onboarding_step_1_subtitle">Create a community, invite friends and join others!</string>
+    <string name="onboarding_step_ordering_1">Step 1/2</string>
+    <string name="onboarding_step_ordering_2">Step 2/2</string>
+    <string name="onboarding_step_2_title">Period settings</string>
+    <string name="onboarding_step_2_subtitle">Start with default settings or fill in manually</string>
+    <string name="onboarding_launch_the_period">Launch the period</string>
+    <string name="onboarding_date_start_period">Start date of the period</string>
+    <string name="onboarding_date_end_period">End date of the period</string>
+    <string name="onboarding_start_balance">Start balance</string>
+    <string name="onboarding_start_admin_balance">Start balance for admin</string>
+    <string name="onboarding_settings_auto">Set up automatically</string>
+    <string name="onboarding_settings_manually">Set up manually</string>
+    <string name="onboarding_congratulations">Сongratulations!</string>
+    <string name="onboarding_last_screen_subtitle">You have completed the basic community settings</string>
+    <string name="onboarding_last_screen_go_to_main_screen">Go to home screen</string>
+    <string name="onboarding_fill_data_about_community">Fill in the community details</string>
+    <string name="onboarding_join_to_community">Join the community</string>
+    <string name="onboarding_join_to_community_refresh">*It is possible to restart the application when moving to a new community</string>
+    <string name="onboarding_name_org">Name of the organization</string>
+    <string name="onboarding_cancel">Cancel</string>
+    <string name="onboarding_continue">Continue</string>
+    <string name="onboarding_fill_date_need">Required fields are not filled</string>
+    <string name="onboarding_close">Close</string>
+    <string name="onboarding_invitation_key">Invitation link</string>
+    <string name="onboarding_invitation_title">Invite members to community\"%1$s\"?</string>
+    <string name="onboarding_invitation_error">You are not an administrator of the current community</string>
+    <string name="onboarding_invitation_title_shimmer">Invite link generation</string>
+    <string name="onboarding_launched_period_successfully">Period started successfully</string>
+
+
+    <!-- Profile Fragment -->
+    <string name="username_label">Full Name</string>
+    <string name="profile_location_label">Location</string>
+    <string name="tg_label">Telegram ID</string>
+    <string name="greeting_label">Hello, %s!</string>
+    <string name="greeting_name">%s %s</string>
+    <string name="legal_label">Legal Entity</string>
+    <string name="department_label">Department</string>
+    <string name="position_label">Position</string>
+    <string name="hired_label">Hire Date</string>
+    <string name="role_label">Role</string>
+    <string name="mobile_label">Mobile Number</string>
+    <string name="day_of_birth">Birthday</string>
+    <string name="status">Status</string>
+    <string name="email_label">Corporate Email</string>
+    <string name="company_label">Company</string>
+    <string name="rate_label">Engagement Index</string>
+    <string name="lastAuth">Last login %s at %s</string>
+    <string name="userFio">%s %s %s</string>
+    <string name="placeJob">Place of Work</string>
+    <string name="rateForCurrentPeriod">Engagement Index for the Current Period</string>
+    <string name="information">Information</string>
+    <string name="wouldYouLikeToExit">Exit your Profile?</string>
+    <string name="wouldYouLikeToChangeOrg">Change community?</string>
+    <string name="accept">Yes</string>
+    <string name="decline">No</string>
+    <string name="whatEditInProfile">What do you want to edit?</string>
+    <string name="explainingAboutPermissions">You did not give us enough permissions.
+    These permissions are needed for us to work with media.
+    You can grant them in the settings of the phone.</string>
+    <string name="currentOrganisation">Current community</string>
+    <string name="explainingAboutPermissionsRational">
+    You did not gave us enough permissions to work.
+    These permissions are needed for us to work with media.
+    Request permissions again?</string>
+    <string name="wouldYouLikeToSaveImage">Save the image?
+    </string>
+    <string name="avatar">Avatar</string>
+    <string name="settings">Settings</string>
+    <string name="stringData">Personal Information</string>
+    <string name="exit">Exit</string>
+    <string name="close">Close</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="location">Location</string>
+    <string name="address">Address</string>
+    <string name="copied">Copied</string>
+    <string name="profile_postfix_year">y.</string>
+
+
+    <!-- Edit Profile Bottom Sheet Fragment -->
+    <string name="edit_profile_fill_in_the_profile_data">Whoops, for the correct operation of the system, you must fill out a user profile</string>
+    <string name="edit_profile_go_to_settings">Go to settings</string>
+    <string name="edit_profile_close">Close</string>
+    <string name="edit_profile_hide_year_of_birth">Hide year of birth</string>
+    <string name="edit_profile_title">Editing profile</string>
+    <string name="edit_profile_contacts">Contacts</string>
+    <string name="edit_profile_save">Save</string>
+    <string name="edit_profile_surname">Surname</string>
+    <string name="edit_profile_surname_enter">Enter your surname</string>
+    <string name="edit_profile_firstname">Firstname</string>
+    <string name="edit_profile_firstname_enter">Enter your name</string>
+    <string name="edit_profile_middle_name">Middle name</string>
+    <string name="edit_profile_middle_name_enter">Enter your middle name</string>
+    <string name="edit_profile_invalidNumber">Invalid Number</string>
+    <string name="edit_profile_birthday">Birthday</string>
+    <string name="edit_profile_gender">Gender</string>
+    <string name="edit_profile_invalidEmail">Invalid Email</string>
+    <string name="edit_profile_downloadingANewAvatar">Downloading a New Avatar</string>
+    <string name="edit_profile_fieldsMustBeFilledInCorrectly">Fields must be filled in correctly</string>
+    <string name="edit_profile_office">In Office</string>
+    <string name="edit_profile_vacation">Vacation</string>
+    <string name="edit_profile_remote">Remote</string>
+    <string name="edit_profile_sickLeave">Sick Leave</string>
+    <string name="edit_profile_work">Work</string>
+    <string name="edit_profile_format_work">Format of work</string>
+    <string name="edit_profile_status">Status</string>
+    <string name="edit_profile_male">Male</string>
+    <string name="edit_profile_female">Female</string>
+    <!-- Settings Profile Fragment -->
+    <string name="aboutApp">About App</string>
+    <string name="help">Help</string>
+    <string name="versionOfApp">Version of App</string>
+    <string name="versionOfOS">Version of OS</string>
+    <string name="modelPhone">Model Phone</string>
+    <string name="domen">Domen</string>
+    <string name="region">Region</string>
+    <string name="privacyPolicy">Privacy Policy</string>
+    <string name="userAgreement">User Agreement</string>
+    <string name="general">General</string>
+    <string name="language">Language</string>
+    <string name="russian">Russian</string>
+    <string name="english">English</string>
+    <string name="likeTheSystem">Like the system</string>
+    <string name="current">Current</string>
+    <string name="settings_organizations">Communities</string>
+    <string name="settings_create_organization">Create an community</string>
+    <string name="settings_go_to_organization">Go to community \"%1$s\"?</string>
+    <string name="settings_go_to">Go to</string>
+    <string name="settings_negative">Cancel</string>
+    <!-- Someone's Profile Fragment -->
+    <string name="someone_profile_call_dialog_title">Call</string>
+    <string name="someone_profile_call_dialog_subtitle">Would you like to call %1$s?</string>
+    <string name="someone_profile_call_dialog_positive_btn">Call</string>
+    <string name="someone_profile_dialog_negative_btn">Cancel</string>
+
+    <string name="someone_profile_email_dialog_title">Write a message</string>
+    <string name="someone_profile_email_dialog_subtitle">Would you like to send a message to %1$s?</string>
+    <string name="someone_profile_email_dialog_positive_btn">Write</string>
+    <string name="someone_profile_email_dialog_negative_btn">Cancel</string>
+
+    <!-- Create Organization Fragment -->
+    <string name="create_organization_title">Create an community</string>
+    <string name="create_organization_btn_text">Create</string>
+    <string name="create_organization_select_dates">Selecting period dates</string>
+
+
+    <!-- New Transaction Fragment -->
+    <string name="new_transaction_result_title">Thank You!</string>
+    <string name="new_transaction_result_subtitle">Your transaction is being\nprocessed</string>
+    <string name="new_transaction_result_state">In progress</string>
+    <string name="new_transaction_result_date">Date</string>
+    <string name="new_transaction_result_time">Time</string>
+    <string name="new_transaction_result_whom">Recipient</string>
+    <string name="new_transaction_result_quantity">Amount</string>
+
+    <!-- Main Screen Fragment -->
+    <string name="main_fragment_birthday">Happy birthday!</string>
+    <string name="main_fragment_new_transaction">New thanks \nto you!</string>
+    <string name="main_fragment_new_winner">"New winner of \nchallenge</string>
+    <string name="main_fragment_new_challenge">"New challenge \ncreated"</string>
+    <string name="main_fragment_recommends_title">Recommended</string>
+
+
+
+    <!-- Баланс фрагмент -->
+    <string name="spaceWithContent">%s</string>
+    <string name="registration_button_label">Registration</string>
+    <string name="application_label">Digital Thank You</string>
+    <string name="enter_button_label">Login</string>
+    <string name="user_name_label">Username</string>
+    <string name="period">Select a period</string>
+    <string name="my_count">My Count</string>
+    <string name="distributed">Distributed %s</string>
+    <string name="least_distribute">Left to Distribute</string>
+    <string name="cancelled">Annulment %s</string>
+    <string name="frozen_label">Pending %s</string>
+    <string name="will_burn_after"> Until the end of the period %s</string>
+    <string name="will_burn_today">Will burn today at 6:00 pm</string>
+    <string name="joke">We appreciate your curiosity and in future updates we will definitely add something here &#128522;</string>
+    <string name="balance_all">All</string>
+    <string name="balance_history">Transfers history</string>
+    <string name="balance_transfer">Transfer</string>
+    <string name="balance_new">New</string>
+    <!-- Транзакция фрагмент -->
+    <string name="send">Send</string>
+    <string name="addPhoto">Add Photo</string>
+    <string name="addSticker">Add Sticker</string>
+    <string name="reason_transaction">Description of transfer</string>
+    <string name="unsuccessfulSendCoins">Number of thanks, reason for gratitude/value tag - mandatory fields</string>
+    <string name="isAnon">Anonymously</string>
+    <string name="addValues">Add Values</string>
+    <string name="choiceValues">Choose Value</string>
+    <string name="choiceReceiver">Choose Receiver</string>
+    <string name="applyValues">Apply</string>
+    <string name="values">Values</string>
+    <string name="addedSomeValues">Added %s values. Add more?</string>
+    <string name="addedOneValue">Added %s value. Add more?</string>
+    <string name="available">Distribution account \u0020</string>
+    <string name="personal_account">Personal account \u0020</string>
+    <string name="empty">""</string>
+    <string name="repeateTransaction">Give new thank</string>
+    <string name="historyOfOperations">History of Operations</string>
+    <string name="isPublic">Show everyone</string>
+
+    <!-- item_user -->
+    <string name="name">Name</string>
+    <string name="tgName">\@%s</string>
+    <!-- item_feed -->
+    <string name="dateTime">%s at %s</string>
+    <string name="item_feed_liked">%d Likes</string>
+    <string name="item_feed_comments">%d Comments</string>
+    <string name="item_feed_gratitude">Gratitude</string>
+    <string name="item_feed_victory">Victory</string>
+    <string name="item_feed_challenge">Challenge</string>
+    <string name="item_feed_purchase">Purchase</string>
+    <string name="item_feed_tag">#%s</string>
+
+    <!--История транзакций -->
+    <string name="received_from">Thanks from %s</string>
+    <string name="sended_to">Thanks to %s</string>
+    <string name="G">Waiting for the cancellation period to expire</string>
+    <string name="approved">Approved</string>
+    <string name="on_approval">On approval</string>
+    <string name="annulled">Annulled</string>
+    <string name="refused">Refused</string>
+    <string name="occured">Completed</string>
+    <string name="allHistory">All history</string>
+    <string name="received">   Received   </string>
+    <string name="sended">Sent</string>
+    <string name="cancelTransaction">Cancel the thanks?</string>
+    <string name="successfulCancel">The thanks will be returned to your account :)</string>
+    <string name="setTag">#%s</string>
+    <string name="forWinningInChallenge">for winning in challenge</string>
+    <string name="inFundOfChallenge">in challenge fund</string>
+    <string name="fromFundOfChallenge">from challenge fund</string>
+    <string name="toSystem">to system</string>
+    <string name="history_refund">Refund</string>
+    <string name="history_from_benefit">from the marketplace</string>
+    <string name="history_group_by_user">Group by user</string>
+    <string name="history_list_header_gratitude">Gratitude</string>
+    <string name="history_list_header_system_refill">System Refill</string>
+    <string name="history_list_header_system_debit">System Debit</string>
+    <string name="history_list_header_refund_benefit">Refund Benefit</string>
+    <string name="history_list_header_refund_prize_fund">Refund Prize Fund</string>
+    <string name="history_list_header_win_challenge">Challenge Victory</string>
+    <string name="history_list_header_creating_challenge">Creating Challenge</string>
+    <string name="history_list_header_purchase_benefit">Purchase Benefit</string>
+    <string name="history_list_filter_from">Event start date</string>
+    <string name="history_list_filter_to">Event end date</string>
+
+
+    <!--Группировка -->
+    <string name="group_received_title">Received</string>
+    <string name="group_sent_title">Sent</string>
+
+    <!-- Additional Info Bottom Sheet Dialog Fragment -->
+    <string name="message">Message</string>
+    <string name="photo">Photo</string>
+    <string name="sticker">Sticker</string>
+    <string name="statusTransfer">Gratitude Status</string>
+    <string name="typeTransfer">Type of Gratitude</string>
+    <string name="reasonOfRefusing">Reason of Refusal</string>
+    <string name="youSended">You Sent</string>
+    <string name="youGot">You Got</string>
+    <string name="youWantedToSend">You Wanted To Send</string>
+    <string name="weRefusedYourOperation">We Refused Your Operation</string>
+    <string name="operationWasRefused">Operation Was Refused</string>
+    <string name="iRefusedMyOperation">You Refused Your Operation</string>
+    <string name="comingTransfer">Coming Gratitude</string>
+    <string name="incomingTransfer">Incoming Gratitude</string>
+    <string name="amountThanks">%s Thanks</string>
+    <string name="youGetReturnedThanks">Return</string>
+    <!-- Templates fragment -->
+    <string name="templates_search">Search by templates</string>
+    <string name="templates_my">My</string>
+    <string name="templates_ours">Ours</string>
+    <string name="templates_common">Common</string>
+    <string name="templates_title">Templates</string>
+
+    <!-- Create Templates fragment -->
+    <string name="templates_new">New template</string>
+    <string name="templates_youNeedToFillInfo">Fill in the information about the template</string>
+    <string name="templates_show_only_me">Only visible to me</string>
+    <string name="templates_show_only_my_org">Only visible to my community</string>
+    <string name="templates_showEveryone">Visible to everyone</string>
+    <string name="template_was_created">Template successfully created</string>
+    <string name="template_was_updated">Template successfully changed</string>
+    <string name="template_visibility">Visibility</string>
+    <string name="template_functionality">Functionality</string>
+    <string name="template_save_changes">Save changes</string>
+    <string name="template_edit">Edit template</string>
+    <string name="template_change_template_data">Change the template data</string>
+    <string name="template_save">Save</string>
+    <string name="template_refuse">Cancel</string>
+    <string name="template_categories">Categories</string>
+
+
+    <!-- Челлендж фрагмент -->
+    <string name="createChallenge">Create</string>
+    <string name="templates">Templates</string>
+    <string name="inputNameChallenge">Name</string>
+    <string name="refuse">Cancel</string>
+    <string name="then">Continue</string>
+    <string name="description">Description</string>
+    <string name="dateCloseEvent">End date</string>
+    <string name="dateStartEvent">Start date</string>
+    <string name="pointAtPrizeFund">Prize fund</string>
+    <string name="pointAtPrizePool">Number of winners</string>
+    <string name="backgroundChallenge">Add photo</string>
+    <string name="delayedLaunch">Delayed Launch</string>
+    <string name="change_account">Change debit account</string>
+    <!-- Список челленджей -->
+    <string name="allChallenge">All</string>
+    <string name="activeChallenge">Active</string>
+    <string name="delayedChallenges">Upcoming</string>
+    <string name="challengeChains">Challenge chains</string>
+    <string name="lastUpdateChallenge">Updated: %s</string>
+    <string name="active">Active</string>
+    <string name="list_challenges_fragment_deferred">Deferred</string>
+    <string name="completed">Completed</string>
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="winnersCount">Winners Count</string>
+    <string name="prizeFundThanks">Prize Fund</string>
+    <string name="challenge_list_award">Award</string>
+    <string name="create_challenge_dialog">Create challenge</string>
+    <string name="create_template_dialog">Create template</string>
+    <!-- Список цепочек -->
+    <string name="challenge_chains_comments">Comments</string>
+    <string name="challenge_chains_tasks">Tasks</string>
+    <string name="challenge_chains_contenders">Contenders</string>
+    <!-- Цепочка фрагмент детали -->
+    <string name="challenge_chain_subtitle">Quest</string>
+    <string name="challenge_chain_steps">Chain steps</string>
+    <string name="challenge_chain_steps_2">Steps</string>
+    <string name="challenge_chain_step">Step</string>
+    <string name="challenge_chain_reward">Reward</string>
+    <string name="challenge_chain_status_tasks">Task status</string>
+    <string name="challenge_chain_date_end">End date</string>
+    <string name="challenge_chain_finished">completed</string>
+    <string name="challenge_chain_participants">Participants</string>
+    <string name="challenge_chain_name_prefix"><![CDATA[Quest chains <b>%s</b>]]></string>
+
+    <!-- Создать Челлендж фрагмент -->
+    <string name="allFieldsAreRequired">All fields are required</string>
+    <string name="challengeWasCreated">Challenge successfully created</string>
+    <string name="smthWentWrong">Something went wrong</string>
+    <string name="requiredField">Field is not filled</string>
+    <string name="creatorOfChallenge">by %s %s</string>
+    <string name="forbiddenSetAPastDate">It is forbidden to specify past dates</string>
+    <string name="missStartDate">The start date of the challenge must be earlier than the end date</string>
+    <string name="missEndDate">The end date of the challenge must be later than the start date</string>
+    <string name="baseInfo">Basic info</string>
+    <string name="youNeedToFillInfoOfChallenge">Fill in the challenge information</string>
+    <string name="additionalSettings">Additional settings</string>
+    <string name="successfullySavedSettingsForChallenge">Settings successfully saved</string>
+    <string name="unexpectedError">Ups, no challenge data</string>
+    <string name="create">Create</string>
+    <string name="create_challenge_start_date_picker_title">Select a start date</string>
+    <string name="create_challenge_end_date_picker_title">Select an end date</string>
+    <string name="create_challenge_dialog_title">Return to Draft?</string>
+    <string name="create_challenge_dialog_subtitle">You have already started creating a challenge</string>
+    <string name="create_challenge_dialog_positive_btn">Yes, return</string>
+    <string name="create_challenge_dialog_negative_btn">Start over</string>
+    <!-- Обновить Челлендж фрагмент -->
+    <string name="update_challenge_update">Update</string>
+    <string name="update_challenge_cancel">Cancel</string>
+    <string name="update_challenge_error_not_found_id">Not found object id</string>
+    <string name="update_challenge_success_text">Challenge successfully edited</string>
+    <string name="update_challenge_title">Challenge Editing</string>
+    <string name="update_challenge_subtitle">Change the challenge data</string>
+    <string name="update_challenge_delete">Delete challenge</string>
+    <!-- Настройки Челлендж фрагмента -->
+    <string name="youCanSetRestrictions">Set restrictions if necessary</string>
+    <string name="challengeWithVoting">Challenge with voting</string>
+    <string name="sendingSeveralReports">Multiple reports</string>
+    <string name="showContenders">Show contenders</string>
+    <string name="chooseAccount">Choose Account</string>
+    <string name="personalAccount">Personal account</string>
+
+    <!-- Челлендж фрагмент детали -->
+    <string name="details">Details</string>
+    <string name="detail_challenge_subtitle">Challenge</string>
+    <string name="detail_challenge_subtitle_with_chain"><![CDATA[Challenge in the quest chain <br> <b>%s</b>]]></string>
+    <string name="detail_challenge_type_default">Winners selected by the organizer</string>
+    <string name="detail_challenge_type_voting">Voting</string>
+    <string name="detail_challenge_not_found">Unfortunately the challenge has been deleted</string>
+    <string name="detail_challenge_return_back">To return</string>
+
+    <string name="participants">Participants</string>
+    <string name="contenders">Contenders</string>
+    <string name="myResult">My Result</string>
+    <string name="dependencies">Dependencies</string>
+    <string name="winners">Winners</string>
+    <string name="fund">%s Thanks</string>
+    <string name="occupiedPrizePool">%s / %s</string>
+    <string name="PrizePool">Prize Pool</string>
+    <string name="dateEnd">End Date</string>
+    <string name="dateStart">Start Date</string>
+    <string name="prizeFund">Prize Fund</string>
+    <string name="draft">Draft</string>
+    <string name="gettingReportsActive">Receiving reports is in progress</string>
+    <string name="gettingReportsFinished">Receiving reports is finished</string>
+    <string name="youAreOwnerOfChallenge">You are the organizer of the challenge</string>
+    <string name="youCanSentReport">You can send a report</string>
+    <string name="reportWasSent">Report sent</string>
+    <string name="reportWasApplied">Report confirmed</string>
+    <string name="reportWasRefused">Report rejected</string>
+    <string name="reportWasReward">Reward received</string>
+    <string name="undefined">Not defined</string>
+    <string name="ownerChallenge">Organizer</string>
+    <string name="yourAward">Your reward</string>
+    <string name="notPointAt">Not specified</string>
+    <string name="detail_challenge_delete_title">Delete the challenge?</string>
+    <string name="detail_challenge_delete_subtitle">It will be impossible to restore</string>
+    <string name="detail_challenge_delete_yes">Yes, delete</string>
+    <string name="detail_challenge_delete_no">No, close</string>
+
+    <!-- Results Challenge Fragment -->
+    <string name="results_challenge_title">Results</string>
+    <string name="results_challenge_subtitle"><![CDATA[To the challenge <b>%s</b>]]></string>
+    <string name="results_challenge_winners">Winners</string>
+    <string name="results_challenge_my_result">My Result</string>
+    <string name="results_challenge_contenders">Contenders</string>
+    <string name="results_challenge_edit">Edit</string>
+    <string name="results_challenge_publish">Publish</string>
+    <string name="results_challenge_draft">Draft</string>
+
+
+    <!-- Создание отчета фрагмент -->
+    <string name="spaceSevenTimes">\u0020\u0020\u0020\u0020\u0020\u0020\u0020</string>
+    <string name="result">Result</string>
+    <string name="closeInHeader">Close</string>
+    <string name="sendReport">Send Result</string>
+    <string name="saveWithoutSending">Save without sending</string>
+    <string name="notToPublicResult">Do not publish result</string>
+    <string name="successCreateReport">Report successfully created</string>
+    <string name="mustBePhotoOrDescription">Must be a photo or description</string>
+    <!-- Претендент фрагмент -->
+    <string name="refuseInContender">Refuse</string>
+    <string name="applyInContender">Confirm</string>
+    <string name="applyCheckReport">Report was confirmed</string>
+    <string name="deniedCheckReport">Report was refused</string>
+    <string name="closeMyChoice">Cancel</string>
+    <string name="describeReason">Specify the reason</string>
+    <string name="rejectReport">Reject request</string>
+    <string name="reasonOfRejectionIsNecessary">Reason of rejection is necessary</string>
+    <string name="noApplicantsYet">No applicants yet</string>
+
+    <!--Мой результат -->
+    <string name="thanksWasGot">+%s</string>
+    <string name="updatedDateTime">Updated %s at %s</string>
+    <string name="noYourResultYet">Your results not found yet</string>
+
+    <!--Детали отчета челленджа -->
+    <string name="reportHolder">Sender</string>
+    <string name="userSurnameAndName">%s %s</string>
+    <string name="get">got</string>
+    <string name="textReport">Report text</string>
+    <string name="labelDetailsChallengeReportFragment">Report details</string>
+
+    <!--Info App Fragment-->
+    <string name="licenseEnd">License issued until: %1$s</string>
+
+
+    <!--Utils -->
+    <string name="OK">Ok</string>
+    <string name="networkError">No internet connection</string>
+    <!--Feed -->
+    <string name="someoneToSomeone">\@%s got %s thanks from \@%s</string>
+    <string name="getFrom">Got from</string>
+    <string name="youFromSomeone">You got %s thanks from \@%s</string>
+    <string name="youGetFrom"> got from </string>
+    <string name="youToSomeone">\@%s got %s thanks from you</string>
+    <string name="allEvent">All</string>
+    <string name="mineEvent">My</string>
+    <string name="publicEvent">Public</string>
+    <string name="events_filter_apply">Apply</string>
+    <string name="events_filter_reset">Reset</string>
+    <string name="events_filter_category">Categories</string>
+    <string name="events_filter_title">Filter</string>
+    <string name="events_filter_custom">All</string>
+    <string name="events_filter_winners">Winners</string>
+    <string name="events_filter_transactions">Transactions</string>
+    <string name="events_filter_purchases">Purchases</string>
+    <string name="events_filter_challenges">Challenges</string>
+    <string name="events_celebrate">Celebrate</string>
+
+    <!-- Additional Info Feed Fragment -->
+    <string name="you">You</string>
+    <string name="fromYou">Your</string>
+    <string name="comment">Comment</string>
+    <string name="comments">Comments</string>
+    <string name="reactions">Ratings</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="fioSender">%s %s</string>
+    <string name="errorMaxLengthMessage">Maximum 50 characters allowed</string>
+    <string name="forWhat">For what</string>
+    <string name="photoInFeedDetail">Attachments</string>
+    <string name="stickerInDetail">Sticker</string>
+    <string name="additional_feed_item_amount_like">Likes %s</string>
+    <!-- Utils -->
+    <string name="yesterday">Yesterday</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="nothing"> </string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="whatApproachToGetImage">Get image from camera or gallery?</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="detailOfTransaction">Gratitude</string>
+    <string name="someonesProfile">User\'s Profile</string>
+    <string name="profile">Profile</string>
+    <string name="history_label">History</string>
+    <string name="settings_label">Settings</string>
+    <string name="challenge_label">Challenges</string>
+    <string name="balance_label">Balance</string>
+    <string name="feed_label">News</string>
+    <string name="benefit_detail_label">Benefit</string>
+    <string name="new_transaction_label">New Thank</string>
+    <string name="transaction_result_label">Sent</string>
+    <string name="benefit_cafe_label">Benefits</string>
+    <string name="members_label">Members</string>
+    <string name="awards_label">Awards</string>
+    <string name="main_label">Home</string>
+
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="gallery_title">Gallery title</string>
+    <string name="grant_permission">Grant Permission</string>
+    <!--    Notifications-->
+    <string name="notifications_label">Notifications</string>
+    <string name="notifications_subtitle">You have %s</string>
+    <string name="received_part">You received</string>
+    <string name="thanks_from_part">Thanks from</string>
+    <string name="new_reaction_to">New reaction to</string>
+    <string name="to_transaction">transaction</string>
+    <string name="to_challenge">challenge</string>
+    <string name="to_your_report">your report</string>
+    <string name="new_comment_to">New comment to</string>
+    <string name="transaction">transaction</string>
+    <string name="challenge">challenge</string>
+    <string name="your_report">your report</string>
+    <string name="new_challenge">New challenge</string>
+    <string name="notification_Challenge">Challenge</string>
+    <string name="notification_challenge_ends">ends tomorrow</string>
+    <string name="new_order">New order for</string>
+    <string name="notification_from">from</string>
+    <string name="notification_in">in</string>
+    <string name="new_report_to_challenge">New report to challenge</string>
+    <string name="you_win_challenge">You win challenge</string>
+    <string name="anonymous">anonymous</string>
+    <string name="notifications_questionnaire_closed_now">All participants completed the survey "%1$s"</string>
+    <string name="notifications_questionnaire_closing_to_admin">Tomorrow access to the survey "%2$s" is closed in %1$s</string>
+    <string name="notifications_questionnaire_closing_to_participant">The survey "%2$s" closes tomorrow at %1$s. Hurry up to participate!</string>
+    <string name="notifications_questionnaire_created">A new survey "%1$s" has been created</string>
+    <string name="notifications_questionnaire_create_title">New survey</string>
+    <string name="notifications_questionnaire_expired_soon_title">Survey expiration</string>
+    <string name="notifications_challenge_title">Challenge</string>
+    <string name="notifications_challenge_ending_title">Challenge expiration</string>
+    <string name="notifications_challenge_from">from</string>
+    <string name="notifications_new_order_title">New Order</string>
+    <string name="notifications_winner_title">Challenge Winner</string>
+    <string name="notifications_report_title">Report to the challenge</string>
+    <string name="notifications_new_challenge_title">New Challenge</string>
+    <string name="notifications_new_reaction_title">Reaction</string>
+    <string name="notifications_new_comment_title">Comment</string>
+    <string name="notifications_gratitude_title">Gratitude</string>
+
+
+
+    <!--feed-->
+    <string name="challenge_winner">Winner of the challenge</string>
+    <string name="challenge_created">Challenge created</string>
+    <string name="user_received_thanks">%1$s received %2$d thanks from %3$s</string>
+    <string name="you_received_thanks">You received %1$d thanks from %2$s</string>
+    <string name="user_received_thanks_from_you">%1$s received %2$d thanks from you</string>
+    <string name="got">obtained</string>
+    <string name="from">from</string>
+    <string name="gotFrom">received from</string>
+    <string name="whoCreatedChallenge">user</string>
+    <string name="toDate">until %1$s</string>
+    <string name="thanks">Thanks</string>
+    <string name="transfers">Transfers</string>
+    <string name="events">Events</string>
+    <string name="challenges">Challenges</string>
+    <string name="createdChallenge">Challenge created</string>
+    <string name="youBoughtProduct">You have purchased a product </string>
+    <string name="someoneBoughtProduct">has purchased a product</string>
+    <string name="in">in</string>
+
+    <!--CommentsFragment-->
+    <string name="comments_fragment_empty_text_msg">Be the first to leave \n a comment!</string>
+    <string name="comments_fragment_title">Comments</string>
+    <string name="comments_fragment_subtitle_challenge"><![CDATA[To challenge <b>%s</b>]]></string>
+    <string name="comments_fragment_subtitle_challenge_report"><![CDATA[To the challenge report <b>%s</b>]]></string>
+    <string name="comments_fragment_subtitle_transaction"><![CDATA[To the transaction <b>%s</b>]]></string>
+    <string name="comments_fragment_subtitle_offer"><![CDATA[To the benefit <b>%s</b>]]></string>
+
+
+    <!--ReactionsFragment-->
+    <string name="reactions_fragment_title">Liked</string>
+
+    <!--PickerLang-->
+    <string name="picker_lang_not_supported">is not supported</string>
+
+
+    <!-- Месяцы-->
+    <string name="january">January</string>
+    <string name="february">February</string>
+    <string name="march">March</string>
+    <string name="april">April</string>
+    <string name="may">May</string>
+    <string name="june">June</string>
+    <string name="july">July</string>
+    <string name="august">August</string>
+    <string name="september">September</string>
+    <string name="october">October</string>
+    <string name="november">November</string>
+    <string name="december">December</string>
+
+    <string name="januaryDate">January</string>
+    <string name="februaryDate">February</string>
+    <string name="marchDate">March</string>
+    <string name="aprilDate">April</string>
+    <string name="mayDate">May</string>
+    <string name="juneDate">June</string>
+    <string name="julyDate">July</string>
+    <string name="augustDate">August</string>
+    <string name="septemberDate">September</string>
+    <string name="octoberDate">October</string>
+    <string name="novemberDate">November</string>
+    <string name="decemberDate">December</string>
+
+
+    <string-array name="months_array">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <!--Permissions-->
+    <string name="dontHaveEnoughPermissions">No permissions. Head to settings</string>
+    <string name="good">Good</string>
+
+    <string name="more">More</string>
+
+    <string name="marketplace">Marketplace</string>
+    <string name="analytics">Analytics</string>
+
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+
+    <!--Reviews Fragment-->
+    <string name="reviews_title">Reviews</string>
+    <string name="reviews_empty_list">No reviews</string>
+    <string name="reviews_create_review">Write a review</string>
+    <string name="reviews_has_review">You have appreciated this product.</string>
+    <string name="reviews_check_review">View the review</string>
+    <string name="reviews_check_need_buy_product">*To leave a review for a product, you need to buy it</string>
+    <string name="reviews_check_cant_like_your_review">You can\'t like your review</string>
+
+    <!--Create Review Fragment-->
+    <string name="create_review_title_create">Create review</string>
+    <string name="create_review_title_edit">Edit review</string>
+    <string name="create_review_refuse">Cancel</string>
+    <string name="create_review_terrible">Terrible product</string>
+    <string name="create_review_bad">Bad product</string>
+    <string name="create_review_normal">Normal product</string>
+    <string name="create_review_good">Good product</string>
+    <string name="create_review_great">Great product</string>
+    <string name="create_review_undefined_error">An unknown error has occurred. Try again later.</string>
+    <string name="create_review_successful_created">Your review has been sent</string>
+    <string name="create_review_successful_edited">Your review has been edited</string>
+
+    <!--Review Detail Fragment-->
+    <string name="review_detail_edit">Edit</string>
+    <string name="review_detail_delete">Delete</string>
+    <string name="review_detail_title">Your review</string>
+    <string name="review_detail_dialog_title">Deleting the review</string>
+    <string name="review_detail_dialog_subtitle">Do you really want to delete the review? It will be impossible to cancel this action.</string>
+    <string name="review_detail_dialog_negative">Close</string>
+    <string name="review_detail_successful_deleted">Your review has been deleted</string>
+
+    <!--Benefit Fragment-->
+    <string name="search">Search</string>
+    <string name="noMarket">There are no available markets yet</string>
+
+    <!--Shopping Cart Fragment-->
+    <string name="shoppingCart">Shopping Cart</string>
+    <string name="getBenefits">Pay</string>
+    <string name="totalCost">Total Cost</string>
+    <string name="historyOffersFAB">\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020Offers</string>
+    <string name="historyOffers">Offers</string>
+    <string name="allowUpTo">Valid Until %1$s</string>
+    <string name="orderSuccessful">Order Successful</string>
+    <string name="goToMainPage">Go to Main Page</string>
+    <string name="shopping_cart_no_item_selected">No item selected</string>
+
+
+    <!--Detail Benefit Fragment-->
+    <string name="price">Price</string>
+    <string name="lastAmount">Remaining</string>
+    <string name="amountOfMarkedUsers">Selected by Users</string>
+    <string name="choose">Choose</string>
+    <string name="amount">%1$d pcs.</string>
+    <string name="choosingNow">Currently Choosing %1$s</string>
+    <string name="inCart">In Cart</string>
+    <string name="benefit_detail_bought">Purchased </string>
+    <string name="benefit_detail_rest">Rest</string>
+    <string name="benefit_detail_add_to_cart">Add to cart</string>
+
+    <!-- Filters Benefit Bottom Sheet Dialog Fragment-->
+    <string name="filter">Filter</string>
+    <string name="filterPrice">Price</string>
+    <string name="category">Categories</string>
+    <string name="lowAllowTo">Allow to</string>
+    <string name="reset">Reset</string>
+    <string name="fromPrice">From</string>
+    <string name="toPrice">To</string>
+    <string name="statusFilter">Status</string>
+    <!--History List Orders Fragment-->
+    <string name="dateCreatedOffer">#%1$d Formed in %2$s</string>
+    <string name="inCartStatus">In the cart</string>
+    <string name="considering">Considering</string>
+    <string name="accepted">Accepted, waiting for execution</string>
+    <string name="acceptedByCustomer">Confirmed by the buyer</string>
+    <string name="purchased">Paid</string>
+    <string name="readyForDelivery">Ready for delivery</string>
+    <string name="sentOrDelivered">Sent or delivered</string>
+    <string name="ready">Ready</string>
+    <string name="declined">Declined</string>
+    <string name="cancelledStatus">Canceled</string>
+    <!-- Filters History List Orders Bottom Sheet Dialog Fragment-->
+    <string name="allOfHistoryOrders">All</string>
+    <string name="orderedStatus">Ordered</string>
+    <string name="receivedStatus">Received</string>
+
+    <!-- Filters Employees Fragment-->
+    <string name="fired">Laid off for the current date</string>
+    <string name="inOffice">Office employees</string>
+    <string name="onHoliday">On holiday</string>
+    <string name="emoloyee_sears_member">Find Member</string>
+
+
+    <!-- Awards Fragment-->
+    <string name="awards_all">All</string>
+    <string name="awards_other">Other</string>
+    <string name="awards_my">My Awards</string>
+    <string name="awards_transaction">Points Transfer</string>
+    <string name="awards_challenges">Challenges</string>
+    <string name="awards_unique">Unique</string>
+    <string name="awards_receive">Receive</string>
+    <string name="awards_received">Received</string>
+    <string name="awards_received_date">Receipt date</string>
+    <string name="awards_set_as_status">Set as status</string>
+    <string name="awards_in_status">In status</string>
+    <string name="awards_unique_descr">Unique awards</string>
+    <string name="awards_challenge_descr">Awards for challenges</string>
+    <string name="awards_transaction_descr">Awards for transfers</string>
+
+    <!--MainFlowFragment-->
+    <string name="main_flow_close_dialog_text">Are you sure you want to close the application?</string>
+    <string name="main_flow_close_dialog_yes">Yes</string>
+    <string name="main_flow_close_dialog_no">No</string>
+
+    <!--Header Greeting-->
+    <string name="header_greeting_label">Hello,</string>
+
+
+    <!--Errors-->
+    <string name="cantLoadingPage">Failed to load page</string>
+    <string name="errorConnection">Connection error</string>
+    <string name="shoppingCartEmpty">Looks like the cart is empty</string>
+    <string name="emptyList">List is empty</string>
+
+    <plurals name="plurals_days">
+        <item quantity="one">%1$d dayƒ</item>
+        <item quantity="other">%1$d days</item>
+    </plurals>
+
+    <plurals name="plurals_thanks">
+        <item quantity="one">%1$d thank</item>
+        <item quantity="other">%1$d thanks</item>
+    </plurals>
+
+    <plurals name="plurals_thanks_for_challenge">
+        <item quantity="one">%1$s thank</item>
+        <item quantity="other">%1$s thanks</item>
+    </plurals>
+
+    <plurals name="plurals_users">
+        <item quantity="one">%1$d user</item>
+        <item quantity="other">%1$d users</item>
+    </plurals>
+
+    <plurals name="plurals_new_notifications">
+        <item quantity="one">%1$s new notification</item>
+        <item quantity="other">%1$s new notifications</item>
+    </plurals>
+
+    <string name="category_edit_subtitle">Select one or more categories</string>
+    <string name="category_edit_button">Manage Categories</string>
+    <string name="category_edit_add_button">Add</string>
+    <string name="remove_category">Delete category</string>
+    <string name="category_btn_title">Categories</string>
+    <string name="category_name_title">Categories name</string>
+    <string name="empty_category_message">You don\'t have categories yet</string>
+    <string name="feedback">Feedback</string>
+    <string name="feedback_header">For questions and suggestions please contact</string>
+    <string name="feedback_label">Feedback</string>
+
+    <!-- binding.tvChoosingNow.text = requireContext().getString(R.string.choosingNow,
+     resources.getQuantityString(R.plurals.plurals_users,
+      offer?.selectedByUsers ?: 0,
+       offer?.selectedByUsers))
+-->
+
+    <!-- Common List State -->
+    <string name="common_list_state_empty">There is nothing here yet</string>
+
+</resources>
